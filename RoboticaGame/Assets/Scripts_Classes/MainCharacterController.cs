@@ -44,5 +44,36 @@ public class MainCharacterController : MonoBehaviour {
             }
         }
 
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            if (Physics.Raycast(transform.position, Vector3.right, rayDis))
+            {
+                print("HitWall");
+            }
+            else
+            {
+                transform.Translate(Vector3.right * speed * Input.GetAxis("Horizontal") * Time.deltaTime);
+            }
+        }
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            if (Physics.Raycast(transform.position, Vector3.left, rayDis))
+            {
+                print("HitWall");
+            }
+            else
+            {
+                transform.Translate(Vector3.left * speed * -Input.GetAxis("Horizontal") * Time.deltaTime);
+            }
+        }
+
+    }
+
+    void CameraController ()
+    {
+
+
+
     }
 }
