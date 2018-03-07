@@ -5,16 +5,30 @@ using UnityEngine;
 public class MainCharacterController : MonoBehaviour {
 
     public float speed = 5f;
+    public float sprintSpeed = 3f;
+    public float jumpSpeed = 10f;
     public float rayDis = 1f;
+    public float hCamSpeed = 20f;
+    public float vCamSpeed = 20f;
+
+    float oldSpeed;
+
+    public GameObject mainCam;
 
 
-	void Start () {
-		
+    void Start () {
+
+        oldSpeed = speed;
+
+        LockCursor();
+
 	}
 	
 	void Update () {
 
-        Movement();
+        Movement ();
+        CameraController();
+        Jump();
 		
 	}
 
@@ -68,12 +82,62 @@ public class MainCharacterController : MonoBehaviour {
             }
         }
 
+        if (Input.GetButton("Sprint"))
+        {
+            print("sprint");
+            speed = sprintSpeed;
+
+        }
+        else
+        {
+
+            speed = oldSpeed;
+
+        }
+
+    }
+
+    void Jump ()
+    {
+
+        if(Input.GetButtonDown("Jump"))
+        {
+
+            if(Physics.Raycast(transform.position, Vector3.down, rayDis + (transform.localScale.y / 2)))
+            {
+
+                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 10, 0);
+                
+
+            }
+            else
+            {
+
+                print("cant jump");
+
+            }
+
+
+        }
+
     }
 
     void CameraController ()
     {
 
+        float verticalCam = vCamSpeed * Input.GetAxis("Mouse X") * Time.deltaTime;
+        float horizontalCam = hCamSpeed * -Input.GetAxis("Mouse Y") * Time.deltaTime;
 
+        transform.Rotate(0, verticalCam, 0);
+        mainCam.transform.Rotate(Mathf.Clamp(horizontalCam, -40f, 40f), 0, 0);
 
     }
+
+    void LockCursor ()
+    {
+
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
 }

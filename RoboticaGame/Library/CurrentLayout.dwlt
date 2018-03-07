@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 74
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 75
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -253,8 +253,8 @@ MonoBehaviour:
     y: 0
     width: 1152
     height: 597
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -360,19 +360,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts_Classes
+    - Assets/TestAssets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts_Classes
+  - Assets/TestAssets/Sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\svene\Documents\GitHub\Robotica\RoboticaGame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8c270000
-    m_LastClickedID: 10124
-    m_ExpandedIDs: 000000007827000000ca9a3bffffff7f
+    m_SelectedIDs: 982f0000
+    m_LastClickedID: 12184
+    m_ExpandedIDs: 000000007a270000b427000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -400,7 +400,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000078270000
+    m_ExpandedIDs: 000000007a270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -518,8 +518,8 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 78070000
-    m_LastClickedID: 0
+    m_SelectedIDs: 428afbff
+    m_LastClickedID: -292286
     m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -572,13 +572,13 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 0
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.082897, y: -0.7764193, z: 0.45613995}
+    m_Target: {x: 504.82388, y: 249.59991, z: 89.73781}
     speed: 2
-    m_Value: {x: -9.082897, y: -0.7764193, z: 0.45613995}
+    m_Value: {x: 504.82388, y: 249.59991, z: 89.73781}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -594,27 +594,27 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
-      speed: 2
-      m_Value: 1
-    zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
+    zGrid:
+      m_Target: 1
+      speed: 2
+      m_Value: 1
   m_Rotation:
-    m_Target: {x: -0.03631545, y: 0.7247203, z: -0.038308058, w: -0.6870183}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0.03631545, y: 0.7247203, z: -0.038308058, w: -0.6870183}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.815315
+    m_Target: 979.0549
     speed: 2
-    m_Value: 12.815315
+    m_Value: 979.0549
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LastSceneViewRotation: {x: 0.21776412, y: -0.42153978, z: -0.10503145, w: -0.8739859}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 

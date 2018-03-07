@@ -187,7 +187,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  sprintSpeed: 18
+  jumpSpeed: 10
   rayDis: 1
+  hCamSpeed: 50
+  vCamSpeed: 50
+  mainCam: {fileID: 1371522686699434}
 --- !u!124 &124809436906644018
 Behaviour:
   m_ObjectHideFlags: 1
