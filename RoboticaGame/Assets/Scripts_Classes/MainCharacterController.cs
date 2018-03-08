@@ -5,7 +5,8 @@ using UnityEngine;
 public class MainCharacterController : MonoBehaviour {
 
     public float speed = 5f;
-    public float sprintSpeed = 3f;
+    public float sprintSpeed = 18f;
+    public float boostSpeed = 30f;
     public float jumpSpeed = 10f;
     public float rayDis = 1f;
     public float hCamSpeed = 20f;
@@ -13,7 +14,15 @@ public class MainCharacterController : MonoBehaviour {
 
     float oldSpeed;
 
+    bool mayGiveBackStamina;
+
+    public int health = 100;
+    public float stamina = 100f;
+    public float staminaRegain;
+    public float staminaReduceSprint, staminaReduceJump, staminaReduceBoost;
+
     public GameObject mainCam;
+    public UI_Controller uiController;
 
 
     void Start () {
@@ -28,9 +37,11 @@ public class MainCharacterController : MonoBehaviour {
 
         Movement ();
         CameraController();
-        Jump();
-		
-	}
+        Jump(staminaReduceJump);
+        Boost();
+        GiveStamina(staminaRegain);
+
+    }
 
     void Movement () {
 
@@ -84,8 +95,19 @@ public class MainCharacterController : MonoBehaviour {
 
         if (Input.GetButton("Sprint"))
         {
-            print("sprint");
-            speed = sprintSpeed;
+            if(stamina >= 0.1f)
+            {
+
+                speed = sprintSpeed;
+                ReduceStamina(staminaReduceSprint, false);
+
+            }
+            else
+            {
+
+                speed = oldSpeed;
+
+            }
 
         }
         else
@@ -97,7 +119,7 @@ public class MainCharacterController : MonoBehaviour {
 
     }
 
-    void Jump ()
+    void Jump (float staminaAmount)
     {
 
         if(Input.GetButtonDown("Jump"))
@@ -105,18 +127,98 @@ public class MainCharacterController : MonoBehaviour {
 
             if(Physics.Raycast(transform.position, Vector3.down, rayDis + (transform.localScale.y / 2)))
             {
+                if(stamina >= staminaAmount)
+                {
 
-                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 10, 0);
-                
+                    gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, jumpSpeed + speed / 2, 0);
+                    ReduceStamina(staminaAmount, true);
+
+
+                }
+
+            }
+
+        }
+
+    }
+
+    void Boost ()
+    {
+
+        if (Input.GetButton("Boost"))
+        {
+
+            if (stamina >= 0.1f)
+            {
+
+                speed = boostSpeed;
+                ReduceStamina(staminaReduceBoost, false);
 
             }
             else
             {
 
-                print("cant jump");
+                speed = oldSpeed;
 
             }
 
+        }
+        else
+        {
+
+            speed = oldSpeed;
+
+        }
+
+    }
+
+    void ReduceStamina (float lostStamina, bool jumped)
+    {
+
+        if(jumped == false)
+        {
+
+            stamina -= lostStamina * Time.deltaTime;
+            uiController.UpdateStaminaBar(stamina);
+
+        }
+        else
+        {
+
+            stamina -= lostStamina;
+            uiController.UpdateStaminaBar(stamina);
+
+        }
+
+        if(mayGiveBackStamina == false)
+        {
+
+            StartCoroutine(GiveStaminaOverTime(3f));
+
+        }
+
+    }
+
+    private IEnumerator GiveStaminaOverTime (float timer)
+    {
+
+       mayGiveBackStamina = true;
+
+       yield return new WaitForSeconds(timer);
+
+       mayGiveBackStamina = false;
+
+    }
+
+    void GiveStamina (float staminaGained)
+    {
+
+        if (mayGiveBackStamina == false && stamina < 100f)
+        {
+
+            stamina += staminaGained * Time.deltaTime;
+
+            uiController.UpdateStaminaBar(stamina);
 
         }
 
@@ -137,6 +239,19 @@ public class MainCharacterController : MonoBehaviour {
     {
 
         Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
+    void CheckHealth (int damage)
+    {
+        health -= damage;
+
+        if(health < 1)
+        {
+
+            print("death");
+
+        }
 
     }
 

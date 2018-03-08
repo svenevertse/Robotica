@@ -188,11 +188,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   sprintSpeed: 18
-  jumpSpeed: 10
+  boostSpeed: 30
+  jumpSpeed: 5
   rayDis: 1
   hCamSpeed: 50
   vCamSpeed: 50
+  health: 100
+  stamina: 100
+  staminaRegain: 15
+  staminaReduceSprint: 20
+  staminaReduceJump: 10
+  staminaReduceBoost: 75
   mainCam: {fileID: 1371522686699434}
+  uiController: {fileID: 0}
 --- !u!124 &124809436906644018
 Behaviour:
   m_ObjectHideFlags: 1
