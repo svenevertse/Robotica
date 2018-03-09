@@ -1,0 +1,14 @@
+      
+stand = 1 tm 5
+walk(loop) = 12 tm 43
+Side step R = 48 tm 63
+Side step L = 63 tm 78
+Turn step R = 78 tm 87
+Turn step L = 87 tm 96
+
+Jump Up = 			96 tm 106
+Jump Air time(loop) = 106 tm 112
+Jump Land = 		113 tm 120
+
+Duck Down = 120 tm 127
+Duck Up   = 127 tm 134

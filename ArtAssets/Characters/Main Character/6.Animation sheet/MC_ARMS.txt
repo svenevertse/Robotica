@@ -1,0 +1,38 @@
+Shot gun Equip = 10 tm 30
+SHot gun Walk = 30 tm 62
+Shot gun Fire/Remove shell = 63 110
+Shot gun Un equip = 112 tm 130
+Shot gun Reload = 136 tm 160
+
+Hand gun Unequip = 177 tm 215
+Hand gun Equip = 215 tm 247
+Hand gun Shoot = 247 tm 280
+Hand gun Walk = 280 tm 401
+Hand gun Reload = 401 tm 537
+Hand gun Suicide = 537 tm 616
+
+Cleaver Equip = 635 tm 677
+Cleaver idle = 677 tm 708
+Cleaver Walk = 708 tm 757
+Cleaver Attack = 757 tm 807
+Cleaver UnEquip = 807 tm 819
+
+AK47 Equip = 864 tm 881
+AK Walk = 881 tm 920
+Ak47 Shot = 920 tm 940
+Ak 47 Repeat Shot 940 tm 970 loop
+Ak 47 Reload = 970 tm 1070
+Ak 47 Un Equip = 1070 1125
+
+
+HGun Aim start =  1155 tm 1162
+HGun Aim Idle = 1162tm 1164
+HGun Aim Fire =  1164 tm 1197
+HGun Aim Stop = 1197 tm 1203
+
+AK47 Aim start =  1220 tm 1226
+Ak47 Aim Idle = 1224 tm 1226
+Ak47 Aim Fire  = 1226 tm 1242
+Ak47 Aim stop = 1242 tm 1247
+
+
