@@ -69,19 +69,19 @@ public class FullAutoGun : MonoBehaviour {
 
         UIController.UpdateAmmoCount(ammoMagazine);
 
-        Debug.DrawRay(transform.position, new Vector3(Screen.width / 2, Screen.height / 2, 0), Color.red, range);
+        Debug.DrawRay(transform.position, transform.TransformDirection(0, 0, range), Color.red, range);
 
-        if (Physics.Raycast(transform.position, Vector3.forward, out rayHit, range))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(0, 0, range), out rayHit, range))
         {
-            
 
-            if(rayHit.transform.tag == "Enemy")
+            print("Hit");
+
+            if (rayHit.transform.tag == "Enemy")
             {
-
+                print("Hit Enemy");
                 rayHit.transform.gameObject.GetComponent<TestEnemy>().GetDamage(10);
 
             }
-
         }
 
         yield return new WaitForSeconds(fireRate);

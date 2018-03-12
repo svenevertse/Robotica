@@ -317,12 +317,12 @@ GameObject:
   - component: {fileID: 599451584}
   - component: {fileID: 599451583}
   - component: {fileID: 599451582}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!23 &599451582
 MeshRenderer:
@@ -877,7 +877,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4774290276070320, guid: 7c2d199fc5871c846ba2bb548e6b301d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9.52
+      value: -9.4
       objectReference: {fileID: 0}
     - target: {fileID: 4774290276070320, guid: 7c2d199fc5871c846ba2bb548e6b301d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -902,6 +902,16 @@ Prefab:
     - target: {fileID: 4774290276070320, guid: 7c2d199fc5871c846ba2bb548e6b301d, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 65836011107139552, guid: 7c2d199fc5871c846ba2bb548e6b301d,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65836011107139552, guid: 7c2d199fc5871c846ba2bb548e6b301d,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c2d199fc5871c846ba2bb548e6b301d, type: 2}
@@ -1252,7 +1262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4512123503387140, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -8.1
       objectReference: {fileID: 0}
     - target: {fileID: 4512123503387140, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1278,20 +1288,38 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114886014667490192, guid: 65364977bfa03014e9fb7351e2d9fd3b,
-        type: 2}
-      propertyPath: uiController
-      value: 
-      objectReference: {fileID: 1109021955}
     - target: {fileID: 114171825106309830, guid: 65364977bfa03014e9fb7351e2d9fd3b,
         type: 2}
       propertyPath: UIController
       value: 
       objectReference: {fileID: 1109021955}
-    - target: {fileID: 114171825106309830, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+    - target: {fileID: 114886014667490192, guid: 65364977bfa03014e9fb7351e2d9fd3b,
         type: 2}
-      propertyPath: range
-      value: 100
+      propertyPath: uiController
+      value: 
+      objectReference: {fileID: 1109021955}
+    - target: {fileID: 136154737837522232, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 136154737837522232, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 136154737837522232, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332989638364808, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.188
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332989638364808, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}

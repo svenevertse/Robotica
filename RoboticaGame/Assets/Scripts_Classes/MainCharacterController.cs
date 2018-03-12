@@ -231,7 +231,7 @@ public class MainCharacterController : MonoBehaviour {
         float horizontalCam = hCamSpeed * -Input.GetAxis("Mouse Y") * Time.deltaTime;
 
         transform.Rotate(0, verticalCam, 0);
-        mainCam.transform.Rotate(Mathf.Clamp(horizontalCam, -40f, 40f), 0, 0);
+        mainCam.transform.Rotate(Mathf.Clamp(horizontalCam, -20f, 20f), 0, 0);
 
     }
 
