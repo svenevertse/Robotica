@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 20124366558283404}
   - component: {fileID: 124809436906644018}
   - component: {fileID: 81632482185530780}
+  - component: {fileID: 114171825106309830}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -42,6 +43,7 @@ GameObject:
   - component: {fileID: 23020440875677682}
   - component: {fileID: 54218455193247754}
   - component: {fileID: 114886014667490192}
+  - component: {fileID: 114829227211836196}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -175,6 +177,34 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1371522686699434}
   m_Enabled: 1
+--- !u!114 &114171825106309830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1371522686699434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de627967f654ce4c81a80cffa8c66df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseGun: {fileID: 114829227211836196}
+  UIController: {fileID: 0}
+  ammoMagazine: 0
+  magazineSize: 35
+  fireRateVar: 1
+  reloadSpeed: 3
+--- !u!114 &114829227211836196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775912770173030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed49bbe05bec2941beec4d4775b99c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114886014667490192
 MonoBehaviour:
   m_ObjectHideFlags: 1

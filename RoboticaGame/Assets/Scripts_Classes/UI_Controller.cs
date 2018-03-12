@@ -7,6 +7,7 @@ public class UI_Controller : MonoBehaviour {
 
 
     public Slider staminaBar;
+    public Text ammoText;
 	
 	void Start () {
 		
@@ -21,6 +22,13 @@ public class UI_Controller : MonoBehaviour {
     {
 
         staminaBar.value = stamina / 100;
+
+    }
+
+    public void UpdateAmmoCount (int ammoAmount)
+    {
+
+        ammoText.text = "Ammo : " + ammoAmount;
 
     }
 }
