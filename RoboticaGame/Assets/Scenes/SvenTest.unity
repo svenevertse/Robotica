@@ -731,6 +731,27 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 973992242}
+--- !u!1 &1072307230 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1371522686699434, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2072527475}
+--- !u!114 &1072307231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072307230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de627967f654ce4c81a80cffa8c66df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseGun: {fileID: 2089732268}
+  ammoMagazine: 0
+  magazineSize: 35
+  fireRate: 600
+  reloadSpeed: 3
 --- !u!1001 &1109021954
 Prefab:
   m_ObjectHideFlags: 0
@@ -1164,3 +1185,19 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2089732267 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1775912770173030, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2072527475}
+--- !u!114 &2089732268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2089732267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed49bbe05bec2941beec4d4775b99c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
