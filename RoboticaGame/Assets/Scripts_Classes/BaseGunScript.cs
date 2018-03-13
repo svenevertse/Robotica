@@ -9,6 +9,9 @@ public class BaseGunScript : MonoBehaviour {
     public FireGun fireGun;
     public Reload reload;
 
+    public FullAutoGun fullAuto;
+    public SemiAutoGun semiAuto;
+
 
 	void Start () {
 		

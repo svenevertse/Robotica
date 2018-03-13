@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FullAutoGun : MonoBehaviour {
+public class SemiAutoGun : MonoBehaviour {
 
     public BaseGunScript baseGun;
     public UI_Controller UIController;
@@ -17,9 +17,10 @@ public class FullAutoGun : MonoBehaviour {
 
     bool canFire;
     RaycastHit rayHit;
-    
 
-	void Start () {
+
+    void Start()
+    {
 
         ammoMagazine = magazineSize;
         canFire = true;
@@ -29,18 +30,19 @@ public class FullAutoGun : MonoBehaviour {
         baseGun.reload = Reload;
 
     }
-	
-	void Update () {
+
+    void Update()
+    {
 
         baseGun.fireGun(ammoMagazine, fireRateVar * Time.deltaTime);
         baseGun.reload(magazineSize, reloadSpeed);
 
     }
 
-    void FireGun (int ammo, float fireRate)
+    void FireGun(int ammo, float fireRate)
     {
 
-        if(Input.GetButton ("Fire1") && ammoMagazine >= 1 && canFire == true)
+        if (Input.GetButtonDown("Fire1") && ammoMagazine >= 1 && canFire == true)
         {
 
             StartCoroutine(ShootGun(fireRate));
@@ -48,10 +50,10 @@ public class FullAutoGun : MonoBehaviour {
         }
     }
 
-    void Reload (int newAmmo, float reloadSpeed)
+    void Reload(int newAmmo, float reloadSpeed)
     {
 
-        if(Input.GetButtonDown("Reload"))
+        if (Input.GetButtonDown("Reload"))
         {
 
             StartCoroutine(ReloadTimer(reloadSpeed, newAmmo));
@@ -60,7 +62,7 @@ public class FullAutoGun : MonoBehaviour {
 
     }
 
-    IEnumerator ShootGun (float fireRate)
+    IEnumerator ShootGun(float fireRate)
     {
 
         canFire = false;
@@ -91,7 +93,7 @@ public class FullAutoGun : MonoBehaviour {
 
     }
 
-    IEnumerator ReloadTimer (float speed, int newAmmo)
+    IEnumerator ReloadTimer(float speed, int newAmmo)
     {
 
         yield return new WaitForSeconds(speed);
