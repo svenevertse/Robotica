@@ -50,16 +50,20 @@ public class BaseGunScript : MonoBehaviour {
         {
 
             case 0:
-                semiAuto.enabled = false;
                 fullAuto.enabled = true;
+                semiAuto.enabled = false;
+
+                fullAuto.GetDelegate();
 
                 UIController.UpdateWeaponText(fullAuto.weaponName);
                 UIController.UpdateAmmoCount(fullAuto.ammoMagazine);
                 break;
 
             case 1:
-                fullAuto.enabled = false;
                 semiAuto.enabled = true;
+                fullAuto.enabled = false;
+
+                semiAuto.GetDelegate();
 
                 UIController.UpdateWeaponText(semiAuto.weaponName);
                 UIController.UpdateAmmoCount(semiAuto.ammoMagazine);

@@ -28,8 +28,7 @@ public class SemiAutoGun : MonoBehaviour {
         canFire = true;
         UIController.UpdateAmmoCount(ammoMagazine);
 
-        baseGun.fireGun = FireGun;
-        baseGun.reload = Reload;
+        GetDelegate();
 
     }
 
@@ -38,6 +37,15 @@ public class SemiAutoGun : MonoBehaviour {
 
         baseGun.fireGun(ammoMagazine, fireRateVar * Time.deltaTime);
         baseGun.reload(magazineSize, reloadSpeed);
+
+    }
+
+    public void GetDelegate()
+    {
+
+        baseGun.fireGun = FireGun;
+        baseGun.reload = Reload;
+
 
     }
 

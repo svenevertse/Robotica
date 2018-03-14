@@ -27,15 +27,24 @@ public class FullAutoGun : MonoBehaviour {
         canFire = true;
         UIController.UpdateAmmoCount(ammoMagazine);
 
-        baseGun.fireGun = FireGun;
-        baseGun.reload = Reload;
+        GetDelegate();
 
+       
     }
 	
 	void Update () {
 
         baseGun.fireGun(ammoMagazine, fireRateVar * Time.deltaTime);
         baseGun.reload(magazineSize, reloadSpeed);
+
+    }
+
+    public void GetDelegate ()
+    {
+
+        baseGun.fireGun = FireGun;
+        baseGun.reload = Reload;
+
 
     }
 
