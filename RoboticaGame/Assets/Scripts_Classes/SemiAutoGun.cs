@@ -92,7 +92,7 @@ public class SemiAutoGun : MonoBehaviour {
             if (rayHit.transform.tag == "Enemy")
             {
                 print("Hit Enemy");
-                rayHit.transform.gameObject.GetComponent<TestEnemy>().GetDamage(damage);
+                rayHit.transform.gameObject.GetComponent<EnemyRobot>().GetDamage(damage);
 
             }
         }
