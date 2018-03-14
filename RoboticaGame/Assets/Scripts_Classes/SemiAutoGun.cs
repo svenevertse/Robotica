@@ -18,6 +18,7 @@ public class SemiAutoGun : MonoBehaviour {
     public string weaponName;
 
     bool canFire;
+    bool mayReload;
     RaycastHit rayHit;
 
 
@@ -63,7 +64,14 @@ public class SemiAutoGun : MonoBehaviour {
     void Reload(int newAmmo, float reloadSpeed)
     {
 
-        if (Input.GetButtonDown("Reload"))
+        if(ammoMagazine < magazineSize)
+        {
+
+            mayReload = true;
+
+        }
+
+        if (Input.GetButtonDown("Reload") && mayReload == true)
         {
 
             StartCoroutine(ReloadTimer(reloadSpeed, newAmmo));
@@ -106,10 +114,14 @@ public class SemiAutoGun : MonoBehaviour {
     IEnumerator ReloadTimer(float speed, int newAmmo)
     {
 
+        canFire = false;
+        mayReload = false;
+
         yield return new WaitForSeconds(speed);
 
         ammoMagazine = newAmmo;
         UIController.UpdateAmmoCount(ammoMagazine);
+        canFire = true;
 
     }
 }
