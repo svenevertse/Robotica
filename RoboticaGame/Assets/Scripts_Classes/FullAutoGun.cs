@@ -15,6 +15,8 @@ public class FullAutoGun : MonoBehaviour {
     public float reloadSpeed;
     public float range;
 
+    public string weaponName;
+
     bool canFire;
     RaycastHit rayHit;
     

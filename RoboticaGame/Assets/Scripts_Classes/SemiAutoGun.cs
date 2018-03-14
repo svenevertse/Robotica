@@ -15,6 +15,8 @@ public class SemiAutoGun : MonoBehaviour {
     public float reloadSpeed;
     public float range;
 
+    public string weaponName;
+
     bool canFire;
     RaycastHit rayHit;
 

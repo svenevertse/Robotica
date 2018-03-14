@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 646, y: -417}
+  m_AnchoredPosition: {x: 643, y: -452}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229581403
@@ -543,6 +543,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 823859484}
+--- !u!1 &836630361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 836630364}
+  - component: {fileID: 836630363}
+  - component: {fileID: 836630362}
+  m_Layer: 5
+  m_Name: WeaponText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &836630362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836630361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.50735295, g: 0.50735295, b: 0.50735295, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Weapon : '
+--- !u!222 &836630363
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836630361}
+--- !u!224 &836630364
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836630361}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 943313302}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 378, y: -452}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &919956635
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +739,7 @@ RectTransform:
   - {fileID: 238094667}
   - {fileID: 664925021}
   - {fileID: 229581402}
+  - {fileID: 836630364}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -855,6 +930,11 @@ Prefab:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 229581403}
+    - target: {fileID: 114019988099649532, guid: ba634d63a0460f34383524520972fe4c,
+        type: 2}
+      propertyPath: weaponText
+      value: 
+      objectReference: {fileID: 836630362}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba634d63a0460f34383524520972fe4c, type: 2}
   m_IsPrefabParent: 0
@@ -1042,6 +1122,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1289346746}
+--- !u!114 &1532294884 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114637422760559898, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2072527475}
+  m_Script: {fileID: 11500000, guid: c0de729c71851cd439cd647b2535baf5, type: 3}
 --- !u!1 &1649764088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,6 +1379,36 @@ Prefab:
       propertyPath: UIController
       value: 
       objectReference: {fileID: 1109021955}
+    - target: {fileID: 114171825106309830, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114637422760559898, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114829227211836196, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: semiAuto
+      value: 
+      objectReference: {fileID: 1532294884}
+    - target: {fileID: 114829227211836196, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: UIController
+      value: 
+      objectReference: {fileID: 1109021955}
+    - target: {fileID: 114171825106309830, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: weaponName
+      value: Full Automatic Assault Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114637422760559898, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: weaponName
+      value: Semi Automatic Hand Pistol
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
   m_IsPrefabParent: 0
