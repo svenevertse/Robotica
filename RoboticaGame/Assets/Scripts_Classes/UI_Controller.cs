@@ -9,8 +9,11 @@ public class UI_Controller : MonoBehaviour {
     public Slider healthBar;
     public Text ammoText;
     public Text weaponText;
+    public Text currentPointText;
 	
 	void Start () {
+
+        UpdatePoints(0);
 		
 	}
 	
@@ -44,6 +47,13 @@ public class UI_Controller : MonoBehaviour {
     {
 
         healthBar.value = health / 100;
+
+    }
+
+    public void UpdatePoints (int points)
+    {
+
+        currentPointText.text = "Points : " + points;
 
     }
 }

@@ -9,6 +9,7 @@ public class EnemyRobot : EnemyBaseClass {
 
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         agent.speed = speed;
 		
@@ -26,7 +27,15 @@ public class EnemyRobot : EnemyBaseClass {
     {
 
         player.GetComponent<MainCharacterController>().CheckHealth(attackDamage);
-        
+
+     
+        if(mayAttack == true)
+        {
+
+            StartCoroutine(AttackRate());
+
+        }
+  
     }
 
     public override void Movement()
@@ -44,9 +53,19 @@ public class EnemyRobot : EnemyBaseClass {
         if(health < 1)
         {
 
+            gameManager.GetPoints(points);
             Destroy(gameObject);
 
         }
+        
+    }
+
+    public IEnumerator AttackRate ()
+    {
+
+        yield return new WaitForSeconds(attackRate);
+
+        Attack();
         
     }
 

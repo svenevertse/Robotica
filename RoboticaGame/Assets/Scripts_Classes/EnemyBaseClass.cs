@@ -12,9 +12,13 @@ abstract public class EnemyBaseClass : MonoBehaviour {
     public int attackDamage;
     public int points;
 
+    public bool mayAttack;
+
     public NavMeshAgent agent;
 
     public GameObject player;
+
+    public GameManager gameManager;
 
     public enum Difficulty
     {

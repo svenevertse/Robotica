@@ -22,10 +22,20 @@ public class EnemyDamageGiver : MonoBehaviour {
         if (trigger.transform.tag == "Player")
         {
 
+            enemyController.mayAttack = true;
             enemyController.Attack();
-            print("Hit Player");
+   
 
         }
 
     }
+
+    void OnTriggerExit ()
+    {
+
+        enemyController.mayAttack = false;
+        enemyController.StopCoroutine(enemyController.AttackRate());
+
+    }
+
 }
