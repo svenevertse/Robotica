@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UI_Controller : MonoBehaviour {
 
-
     public Slider staminaBar;
+    public Slider healthBar;
     public Text ammoText;
     public Text weaponText;
 	
@@ -37,6 +37,13 @@ public class UI_Controller : MonoBehaviour {
     {
 
         weaponText.text = "Weapon : " + weaponName;
+
+    }
+
+    public void UpdateHealthBar(float health)
+    {
+
+        healthBar.value = health / 100;
 
     }
 }

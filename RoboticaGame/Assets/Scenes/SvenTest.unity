@@ -927,6 +927,11 @@ Prefab:
       objectReference: {fileID: 664925022}
     - target: {fileID: 114019988099649532, guid: ba634d63a0460f34383524520972fe4c,
         type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 238094668}
+    - target: {fileID: 114019988099649532, guid: ba634d63a0460f34383524520972fe4c,
+        type: 2}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 229581403}
@@ -982,11 +987,6 @@ Prefab:
     - target: {fileID: 4774290276070320, guid: 7c2d199fc5871c846ba2bb548e6b301d, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114437860544488666, guid: 7c2d199fc5871c846ba2bb548e6b301d,
-        type: 2}
-      propertyPath: speed
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c2d199fc5871c846ba2bb548e6b301d, type: 2}
@@ -1363,12 +1363,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114829227211836196, guid: 65364977bfa03014e9fb7351e2d9fd3b,
-        type: 2}
-      propertyPath: UIController
-      value: 
-      objectReference: {fileID: 1109021955}
-    - target: {fileID: 114171825106309830, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+    - target: {fileID: 114637422760559898, guid: 65364977bfa03014e9fb7351e2d9fd3b,
         type: 2}
       propertyPath: UIController
       value: 
@@ -1378,15 +1373,16 @@ Prefab:
       propertyPath: uiController
       value: 
       objectReference: {fileID: 1109021955}
-    - target: {fileID: 114637422760559898, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+    - target: {fileID: 114171825106309830, guid: 65364977bfa03014e9fb7351e2d9fd3b,
         type: 2}
       propertyPath: UIController
       value: 
       objectReference: {fileID: 1109021955}
-    - target: {fileID: 1775912770173030, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
+    - target: {fileID: 114829227211836196, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: UIController
+      value: 
+      objectReference: {fileID: 1109021955}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
   m_IsPrefabParent: 0

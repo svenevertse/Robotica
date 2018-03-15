@@ -52,5 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 0}
+  healthBar: {fileID: 0}
   ammoText: {fileID: 0}
   weaponText: {fileID: 0}

@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class EnemyRobot : EnemyBaseClass {
 
-
 	void Start () {
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -26,7 +25,7 @@ public class EnemyRobot : EnemyBaseClass {
     public override void Attack()
     {
 
-
+        player.GetComponent<MainCharacterController>().CheckHealth(attackDamage);
         
     }
 
@@ -50,4 +49,5 @@ public class EnemyRobot : EnemyBaseClass {
         }
         
     }
+
 }

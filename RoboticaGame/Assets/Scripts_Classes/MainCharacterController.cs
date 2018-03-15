@@ -242,9 +242,11 @@ public class MainCharacterController : MonoBehaviour {
 
     }
 
-    void CheckHealth (int damage)
+    public void CheckHealth (int damage)
     {
         health -= damage;
+
+        uiController.UpdateHealthBar((float)health);
 
         if(health < 1)
         {
