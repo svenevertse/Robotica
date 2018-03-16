@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour {
     {
 
         currentAmountEnemies--;
+        waveSystem.curInLevel--;
 
         if(currentAmountEnemies < 1)
         {

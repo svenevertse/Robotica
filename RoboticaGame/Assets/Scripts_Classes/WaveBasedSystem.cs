@@ -12,6 +12,7 @@ public class WaveBasedSystem : MonoBehaviour {
 
     public float increasePercentage;
     public float timeTillWave;
+    public float timeTillNewEnemySpawn;
 
     public GameObject[] spawnPositions;
     public GameManager gameManager;
@@ -47,13 +48,40 @@ public class WaveBasedSystem : MonoBehaviour {
 
         gameManager.UpdateEnemyAmount(enemyAmount);
 
-        for(int i = 0; i < enemyAmount; i++)
+        StartCoroutine(SpawnNewInWave(0));
+
+    }
+
+    public void SpawnNewEnemiesInWave ()
+    {
+        int spacing;
+
+        spacing = enemyInLevelCap - curInLevel;
+
+        if(spacing > enemyAmount)
+        {
+
+            spacing = enemyAmount;
+
+        }
+
+        if(spacing > gameManager.currentAmountEnemies)
+        {
+
+            spacing = gameManager.currentAmountEnemies;
+
+        }
+
+        //curInLevel spacing enemyCap
+        for (int i = 0; i < spacing; i++)
         {
 
             int r = Random.Range(0, spawnPositions.Length);
             GameObject instancedEnemy = Instantiate(Resources.Load("TestEnemy", typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
+            curInLevel = i + 1;
 
         }
+
 
     }
 
@@ -64,6 +92,16 @@ public class WaveBasedSystem : MonoBehaviour {
         yield return new WaitForSeconds(waitTime);
 
         SpawnEnemies();
+
+
+    }
+
+    public IEnumerator SpawnNewInWave (float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+
+        SpawnNewEnemiesInWave();
 
 
     }

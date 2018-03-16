@@ -53,10 +53,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAmount: 8
-  enemyInLevelCap: 0
+  enemyInLevelCap: 20
   curInLevel: 0
   increasePercentage: 40
   timeTillWave: 3
+  timeTillNewEnemySpawn: 0
   spawnPositions:
   - {fileID: 0}
   - {fileID: 0}
