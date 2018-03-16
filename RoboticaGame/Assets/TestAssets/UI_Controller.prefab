@@ -56,3 +56,4 @@ MonoBehaviour:
   ammoText: {fileID: 0}
   weaponText: {fileID: 0}
   currentPointText: {fileID: 0}
+  waveText: {fileID: 0}

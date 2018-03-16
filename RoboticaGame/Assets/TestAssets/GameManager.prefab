@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4448935359741312}
   - component: {fileID: 114605678434652574}
+  - component: {fileID: 114468780465415980}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -40,6 +41,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114468780465415980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698491471576772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38ed737f8f8c3c42a15901dc9450653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAmount: 8
+  enemyInLevelCap: 0
+  curInLevel: 0
+  increasePercentage: 40
+  timeTillWave: 3
+  spawnPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  gameManager: {fileID: 114605678434652574}
+  UIController: {fileID: 0}
 --- !u!114 &114605678434652574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,4 +77,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPoints: 0
   highScore: 0
+  currentAmountEnemies: 0
   UIController: {fileID: 0}
+  waveSystem: {fileID: 114468780465415980}

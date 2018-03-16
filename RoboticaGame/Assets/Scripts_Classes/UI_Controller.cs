@@ -7,9 +7,11 @@ public class UI_Controller : MonoBehaviour {
 
     public Slider staminaBar;
     public Slider healthBar;
+
     public Text ammoText;
     public Text weaponText;
     public Text currentPointText;
+    public Text waveText;
 	
 	void Start () {
 
@@ -54,6 +56,13 @@ public class UI_Controller : MonoBehaviour {
     {
 
         currentPointText.text = "Points : " + points;
+
+    }
+
+    public void UpdateWaveText (int currentWave)
+    {
+
+        waveText.text = "Wave : " + currentWave;
 
     }
 }

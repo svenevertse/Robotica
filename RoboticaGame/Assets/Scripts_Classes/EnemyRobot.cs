@@ -54,6 +54,7 @@ public class EnemyRobot : EnemyBaseClass {
         {
 
             gameManager.GetPoints(points);
+            gameManager.EraseEnemy();
             Destroy(gameObject);
 
         }

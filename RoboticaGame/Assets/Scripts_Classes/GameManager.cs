@@ -6,8 +6,10 @@ public class GameManager : MonoBehaviour {
 
     public int currentPoints;
     public int highScore;
+    public int currentAmountEnemies;
 
     public UI_Controller UIController;
+    public WaveBasedSystem waveSystem;
 
 	void Start () {
 		
@@ -22,6 +24,27 @@ public class GameManager : MonoBehaviour {
 
         currentPoints += givenPoints;
         UIController.UpdatePoints(currentPoints);
+
+    }
+
+    public void EraseEnemy ()
+    {
+
+        currentAmountEnemies--;
+
+        if(currentAmountEnemies < 1)
+        {
+
+            waveSystem.CalculateEnemyAmount(waveSystem.enemyAmount);
+
+        }
+
+    }
+
+    public void UpdateEnemyAmount(int enemyAmount)
+    {
+
+        currentAmountEnemies = enemyAmount;
 
     }
 }
