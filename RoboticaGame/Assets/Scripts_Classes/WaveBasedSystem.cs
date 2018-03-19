@@ -14,6 +14,8 @@ public class WaveBasedSystem : MonoBehaviour {
     public float timeTillWave;
     public float timeTillNewEnemySpawn;
 
+    public string pathEnemyPrefab;
+
     public GameObject[] spawnPositions;
     public GameManager gameManager;
     public UI_Controller UIController;
@@ -22,6 +24,7 @@ public class WaveBasedSystem : MonoBehaviour {
 
         StartCoroutine(StartWave(timeTillWave));
 
+        StartCoroutine(SpawnNewInWave(timeTillNewEnemySpawn));
 		
 	}
 	
@@ -40,48 +43,67 @@ public class WaveBasedSystem : MonoBehaviour {
 
     }
 
-    public void SpawnEnemies ()
+    public void StartWaveSpawning ()
     {
+
+        int spawnAmount;
+
+        if(enemyAmount > enemyInLevelCap)
+        {
+
+            spawnAmount = enemyInLevelCap;
+
+        }
+        else
+        {
+
+            spawnAmount = enemyAmount;
+
+        }
+
+        for (int i = 0; i < spawnAmount; i++)
+        {
+
+            int r = Random.Range(0, spawnPositions.Length);
+            GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
+            curInLevel = i + 1;
+
+        }
 
         currentWave++;
         UIController.UpdateWaveText(currentWave);
 
         gameManager.UpdateEnemyAmount(enemyAmount);
 
-        StartCoroutine(SpawnNewInWave(0));
+        
+
 
     }
 
     public void SpawnNewEnemiesInWave ()
     {
+
         int spacing;
 
-        spacing = enemyInLevelCap - curInLevel;
+        spacing = gameManager.currentAmountEnemies - curInLevel;
 
-        if(spacing > enemyAmount)
+        print(spacing);
+
+        if (spacing >= 1 && curInLevel < enemyInLevelCap)
         {
 
-            spacing = enemyAmount;
+            for (int i = 0; i < spacing; i++)
+            {
+
+                int r = Random.Range(0, spawnPositions.Length);
+                GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
+                curInLevel += i + 1;
+
+            }
 
         }
 
-        if(spacing > gameManager.currentAmountEnemies)
-        {
-
-            spacing = gameManager.currentAmountEnemies;
-
-        }
-
-        //curInLevel spacing enemyCap
-        for (int i = 0; i < spacing; i++)
-        {
-
-            int r = Random.Range(0, spawnPositions.Length);
-            GameObject instancedEnemy = Instantiate(Resources.Load("TestEnemy", typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
-            curInLevel = i + 1;
-
-        }
-
+        StartCoroutine(SpawnNewInWave(timeTillNewEnemySpawn));
 
     }
 
@@ -91,7 +113,7 @@ public class WaveBasedSystem : MonoBehaviour {
 
         yield return new WaitForSeconds(waitTime);
 
-        SpawnEnemies();
+        StartWaveSpawning();
 
 
     }
