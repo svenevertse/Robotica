@@ -6,6 +6,7 @@ public class FullAutoGun : MonoBehaviour {
 
     public BaseGunScript baseGun;
     public UI_Controller UIController;
+    public Transform muzzleFlashPos;
 
     public int ammoMagazine;
     public int magazineSize;
@@ -86,6 +87,8 @@ public class FullAutoGun : MonoBehaviour {
         ammoMagazine--;
 
         UIController.UpdateAmmoCount(ammoMagazine);
+
+        Instantiate(Resources.Load("TestShoot"), muzzleFlashPos.position, Quaternion.identity);
 
         Debug.DrawRay(transform.position, transform.TransformDirection(0, 0, range), Color.red, range);
 
