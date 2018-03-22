@@ -8,6 +8,7 @@ public class WaveBasedSystem : MonoBehaviour {
     public int enemyInLevelCap;
     public int curInLevel;
     public int spacing;
+    public int newEnemyAmount;
 
     int currentWave;
 
@@ -31,6 +32,8 @@ public class WaveBasedSystem : MonoBehaviour {
 	
 
 	void Update () {
+
+        CalculateNewEnemies();
 		
 	}
 
@@ -86,22 +89,38 @@ public class WaveBasedSystem : MonoBehaviour {
 
     }
 
+    public void CalculateNewEnemies ()
+    {
+
+        if (enemyAmount >= enemyInLevelCap)
+        {
+
+            newEnemyAmount = enemyInLevelCap - curInLevel;
+
+        }
+        else
+        {
+
+            newEnemyAmount = spacing;
+
+        }
+
+    }
+
     public void SpawnNewEnemiesInWave ()
     {
 
         if (spacing >= 1 && curInLevel < enemyInLevelCap)
         {
 
-            for (int i = 0; i < spacing; i++)
+            for (int i = 0; i < newEnemyAmount; i++)
             {
-
-                print(i);
 
                 int r = Random.Range(0, spawnPositions.Length);
                 GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
-                instancedEnemy.name = "Enemy" + (i + 1);
                 spacing--;
                 curInLevel++;
+                instancedEnemy.name = "Enemy" + curInLevel;
 
             }
 
