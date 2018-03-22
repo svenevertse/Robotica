@@ -5,10 +5,17 @@ using UnityEngine.UI;
 
 public class UI_Controller : MonoBehaviour {
 
-
     public Slider staminaBar;
+    public Slider healthBar;
+
+    public Text ammoText;
+    public Text weaponText;
+    public Text currentPointText;
+    public Text waveText;
 	
 	void Start () {
+
+        UpdatePoints(0);
 		
 	}
 	
@@ -21,6 +28,41 @@ public class UI_Controller : MonoBehaviour {
     {
 
         staminaBar.value = stamina / 100;
+
+    }
+
+    public void UpdateAmmoCount (int ammoAmount)
+    {
+
+        ammoText.text = "Ammo : " + ammoAmount;
+
+    }
+
+    public void UpdateWeaponText (string weaponName)
+    {
+
+        weaponText.text = "Weapon : " + weaponName;
+
+    }
+
+    public void UpdateHealthBar(float health)
+    {
+
+        healthBar.value = health / 100;
+
+    }
+
+    public void UpdatePoints (int points)
+    {
+
+        currentPointText.text = "Points : " + points;
+
+    }
+
+    public void UpdateWaveText (int currentWave)
+    {
+
+        waveText.text = "Wave : " + currentWave;
 
     }
 }
