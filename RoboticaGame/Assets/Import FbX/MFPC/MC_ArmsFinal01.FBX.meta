@@ -1,0 +1,660 @@
+fileFormatVersion: 2
+guid: ccf8b678992c77a41b2c6c5fcfbeacfe
+timeCreated: 1520599990
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: AK Clip
+    100002: AK L HandHot
+    100004: AK R HandHot
+    100006: AK47
+    100008: Ak47 Barrel
+    100010: barrel
+    100012: Bip001
+    100014: Bip001 L Clavicle
+    100016: Bip001 L Finger0
+    100018: Bip001 L Finger01
+    100020: Bip001 L Finger02
+    100022: Bip001 L Finger0Nub
+    100024: Bip001 L Finger1
+    100026: Bip001 L Finger11
+    100028: Bip001 L Finger12
+    100030: Bip001 L Finger1Nub
+    100032: Bip001 L Finger2
+    100034: Bip001 L Finger21
+    100036: Bip001 L Finger22
+    100038: Bip001 L Finger2Nub
+    100040: Bip001 L Finger3
+    100042: Bip001 L Finger31
+    100044: Bip001 L Finger32
+    100046: Bip001 L Finger3Nub
+    100048: Bip001 L Finger4
+    100050: Bip001 L Finger41
+    100052: Bip001 L Finger42
+    100054: Bip001 L Finger4Nub
+    100056: Bip001 L Forearm
+    100058: Bip001 L Hand
+    100060: Bip001 L UpperArm
+    100062: Bip001 Neck
+    100064: Bip001 Pelvis
+    100066: Bip001 R Clavicle
+    100068: Bip001 R Finger0
+    100070: Bip001 R Finger01
+    100072: Bip001 R Finger02
+    100074: Bip001 R Finger0Nub
+    100076: Bip001 R Finger1
+    100078: Bip001 R Finger11
+    100080: Bip001 R Finger12
+    100082: Bip001 R Finger1Nub
+    100084: Bip001 R Finger2
+    100086: Bip001 R Finger21
+    100088: Bip001 R Finger22
+    100090: Bip001 R Finger2Nub
+    100092: Bip001 R Finger3
+    100094: Bip001 R Finger31
+    100096: Bip001 R Finger32
+    100098: Bip001 R Finger3Nub
+    100100: Bip001 R Finger4
+    100102: Bip001 R Finger41
+    100104: Bip001 R Finger42
+    100106: Bip001 R Finger4Nub
+    100108: Bip001 R Forearm
+    100110: Bip001 R Hand
+    100112: Bip001 R UpperArm
+    100114: Bip001 Spine
+    100116: Bip001 Spine1
+    100118: Bip001 Spine2
+    100120: Bip001 Spine3
+    100122: Cleaver
+    100124: Dummy001
+    100126: Dummy002
+    100128: Grip
+    100130: grip
+    100132: Gun
+    100134: Gun Clip
+    100136: GunHandHOtSpot
+    100138: hammer
+    100140: hand
+    100142: Hand_L01
+    100144: Hand_R01
+    100146: handgrip
+    100148: HandGun
+    100150: HandGunFlashL
+    100152: knife
+    100154: light
+    100156: Loop
+    100158: Mag
+    100160: mag
+    100162: //RootNode
+    100164: PumpAction
+    100166: SgunTogether
+    100168: ShotGun
+    100170: ShotGunLhandHOTSPOT
+    100172: Sleeve01_L
+    100174: Sleeve01_R
+    100176: slide
+    100178: Trigger
+    100180: trigger
+    400000: AK Clip
+    400002: AK L HandHot
+    400004: AK R HandHot
+    400006: AK47
+    400008: Ak47 Barrel
+    400010: barrel
+    400012: Bip001
+    400014: Bip001 L Clavicle
+    400016: Bip001 L Finger0
+    400018: Bip001 L Finger01
+    400020: Bip001 L Finger02
+    400022: Bip001 L Finger0Nub
+    400024: Bip001 L Finger1
+    400026: Bip001 L Finger11
+    400028: Bip001 L Finger12
+    400030: Bip001 L Finger1Nub
+    400032: Bip001 L Finger2
+    400034: Bip001 L Finger21
+    400036: Bip001 L Finger22
+    400038: Bip001 L Finger2Nub
+    400040: Bip001 L Finger3
+    400042: Bip001 L Finger31
+    400044: Bip001 L Finger32
+    400046: Bip001 L Finger3Nub
+    400048: Bip001 L Finger4
+    400050: Bip001 L Finger41
+    400052: Bip001 L Finger42
+    400054: Bip001 L Finger4Nub
+    400056: Bip001 L Forearm
+    400058: Bip001 L Hand
+    400060: Bip001 L UpperArm
+    400062: Bip001 Neck
+    400064: Bip001 Pelvis
+    400066: Bip001 R Clavicle
+    400068: Bip001 R Finger0
+    400070: Bip001 R Finger01
+    400072: Bip001 R Finger02
+    400074: Bip001 R Finger0Nub
+    400076: Bip001 R Finger1
+    400078: Bip001 R Finger11
+    400080: Bip001 R Finger12
+    400082: Bip001 R Finger1Nub
+    400084: Bip001 R Finger2
+    400086: Bip001 R Finger21
+    400088: Bip001 R Finger22
+    400090: Bip001 R Finger2Nub
+    400092: Bip001 R Finger3
+    400094: Bip001 R Finger31
+    400096: Bip001 R Finger32
+    400098: Bip001 R Finger3Nub
+    400100: Bip001 R Finger4
+    400102: Bip001 R Finger41
+    400104: Bip001 R Finger42
+    400106: Bip001 R Finger4Nub
+    400108: Bip001 R Forearm
+    400110: Bip001 R Hand
+    400112: Bip001 R UpperArm
+    400114: Bip001 Spine
+    400116: Bip001 Spine1
+    400118: Bip001 Spine2
+    400120: Bip001 Spine3
+    400122: Cleaver
+    400124: Dummy001
+    400126: Dummy002
+    400128: Grip
+    400130: grip
+    400132: Gun
+    400134: Gun Clip
+    400136: GunHandHOtSpot
+    400138: hammer
+    400140: hand
+    400142: Hand_L01
+    400144: Hand_R01
+    400146: handgrip
+    400148: HandGun
+    400150: HandGunFlashL
+    400152: knife
+    400154: light
+    400156: Loop
+    400158: Mag
+    400160: mag
+    400162: //RootNode
+    400164: PumpAction
+    400166: SgunTogether
+    400168: ShotGun
+    400170: ShotGunLhandHOTSPOT
+    400172: Sleeve01_L
+    400174: Sleeve01_R
+    400176: slide
+    400178: Trigger
+    400180: trigger
+    2100000: Default Material
+    2100002: 02 - Default
+    2100004: Grip
+    2100006: Loop
+    2100008: Pump Action
+    2100010: No Name
+    2100012: handguard
+    2100014: slide
+    2100016: hammer
+    2100018: trigger
+    2100020: barrel
+    2100022: mac
+    2100024: light
+    2100026: Trigger
+    2100028: Mag
+    2100030: Hand
+    2100032: Gun
+    2100034: Stock
+    2300000: Ak47 Barrel
+    2300002: barrel
+    2300004: Grip
+    2300006: grip
+    2300008: hammer
+    2300010: knife
+    2300012: light
+    2300014: Loop
+    2300016: slide
+    2300018: Trigger
+    2300020: trigger
+    3300000: Ak47 Barrel
+    3300002: barrel
+    3300004: Grip
+    3300006: grip
+    3300008: hammer
+    3300010: knife
+    3300012: light
+    3300014: Loop
+    3300016: slide
+    3300018: Trigger
+    3300020: trigger
+    4300000: Sleeve01_L
+    4300002: Hand_L01
+    4300004: Sleeve01_R
+    4300006: Hand_R01
+    4300008: Grip
+    4300010: Loop
+    4300012: PumpAction
+    4300014: grip
+    4300016: knife
+    4300018: handgrip
+    4300020: slide
+    4300022: hammer
+    4300024: trigger
+    4300026: barrel
+    4300028: mag
+    4300030: light
+    4300032: Trigger
+    4300034: Mag
+    4300036: hand
+    4300038: Ak47 Barrel
+    4300040: Gun
+    7400000: HandGun Equip
+    7400002: HandGun Walk
+    7400004: HandGun Shoot
+    7400006: HandGun Reload
+    7400008: Hand Gun UnEquip
+    7400010: Assault Rifle Equip
+    7400012: Assault Rifle walk
+    7400014: Assault Rifle Shot
+    7400016: Assault Rifle Repeat
+    7400018: Assault Rifle Reload
+    7400020: Assault Rifle UnEquip
+    9500000: //RootNode
+    13700000: Gun
+    13700002: hand
+    13700004: Hand_L01
+    13700006: Hand_R01
+    13700008: handgrip
+    13700010: Mag
+    13700012: mag
+    13700014: PumpAction
+    13700016: Sleeve01_L
+    13700018: Sleeve01_R
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: HandGun Equip
+      takeName: Take 001
+      firstFrame: 215
+      lastFrame: 247
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: HandGun Walk
+      takeName: Take 001
+      firstFrame: 280
+      lastFrame: 401
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: HandGun Shoot
+      takeName: Take 001
+      firstFrame: 247
+      lastFrame: 280
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: HandGun Reload
+      takeName: Take 001
+      firstFrame: 401
+      lastFrame: 537
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hand Gun UnEquip
+      takeName: Take 001
+      firstFrame: 177
+      lastFrame: 215
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Assault Rifle Equip
+      takeName: Take 001
+      firstFrame: 864
+      lastFrame: 881
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Assault Rifle walk
+      takeName: Take 001
+      firstFrame: 881
+      lastFrame: 920
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Assault Rifle Shot
+      takeName: Take 001
+      firstFrame: 920
+      lastFrame: 940
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Assault Rifle Repeat
+      takeName: Take 001
+      firstFrame: 940
+      lastFrame: 970
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Assault Rifle Reload
+      takeName: Take 001
+      firstFrame: 970
+      lastFrame: 1070
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Assault Rifle UnEquip
+      takeName: Take 001
+      firstFrame: 1088
+      lastFrame: 1118
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
