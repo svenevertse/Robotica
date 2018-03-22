@@ -55,9 +55,11 @@ MonoBehaviour:
   enemyAmount: 8
   enemyInLevelCap: 20
   curInLevel: 0
+  spacing: 0
+  newEnemyAmount: 0
   increasePercentage: 40
   timeTillWave: 3
-  timeTillNewEnemySpawn: 0
+  timeTillNewEnemySpawn: 5
   pathEnemyPrefab: TestEnemy
   spawnPositions:
   - {fileID: 0}
