@@ -56,6 +56,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.forward * speed * Input.GetAxis("Vertical") * Time.deltaTime);
+                mainCharAnimLegs.SetFloat("Move", 1);
             }
         }
 
@@ -68,6 +69,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.back * speed * -Input.GetAxis("Vertical") * Time.deltaTime);
+                mainCharAnimLegs.SetFloat("Move", 1);
             }
         }
 
@@ -80,6 +82,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.right * speed * Input.GetAxis("Horizontal") * Time.deltaTime);
+                mainCharAnimLegs.SetFloat("Move", 1);
             }
         }
 
@@ -92,6 +95,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.left * speed * -Input.GetAxis("Horizontal") * Time.deltaTime);
+                mainCharAnimLegs.SetFloat("Move", 1);
             }
         }
 
@@ -102,12 +106,14 @@ public class MainCharacterController : MonoBehaviour {
 
                 speed = sprintSpeed;
                 ReduceStamina(staminaReduceSprint, false);
+                mainCharAnimLegs.SetBool("StrafeOn", true);
 
             }
             else
             {
 
                 speed = oldSpeed;
+                mainCharAnimLegs.SetBool("StrafeOn", false);
 
             }
 
@@ -116,6 +122,7 @@ public class MainCharacterController : MonoBehaviour {
         {
 
             speed = oldSpeed;
+            mainCharAnimLegs.SetBool("StrafeOn", false);
 
         }
 
