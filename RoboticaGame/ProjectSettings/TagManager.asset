@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - MC_Body
+  - MC_Bones
+  - MC_Arms
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - 
   - 
   - Weapon
-  - 
+  - MainChar
   - 
   - 
   - 

@@ -7,6 +7,7 @@ public class FullAutoGun : MonoBehaviour {
     public BaseGunScript baseGun;
     public UI_Controller UIController;
     public Transform muzzleFlashPos;
+    public MainCharacterController player;
 
     public int ammoMagazine;
     public int magazineSize;
@@ -53,10 +54,20 @@ public class FullAutoGun : MonoBehaviour {
     void FireGun (int ammo, float fireRate)
     {
 
-        if(Input.GetButton ("Fire1") && ammoMagazine >= 1 && canFire == true)
+        if (Input.GetButton("Fire1") && ammoMagazine >= 1)
         {
 
-            StartCoroutine(ShootGun(fireRate));
+            if (canFire == true)
+            {
+
+                StartCoroutine(ShootGun(fireRate));
+
+            }
+        }
+        else
+        {
+
+            player.mainCharAnimArms.SetBool("Rapid", false);
 
         }
     }
@@ -89,6 +100,7 @@ public class FullAutoGun : MonoBehaviour {
         UIController.UpdateAmmoCount(ammoMagazine);
 
         Instantiate(Resources.Load("TestShoot"), muzzleFlashPos.position, Quaternion.identity);
+        player.mainCharAnimArms.SetBool("Rapid", true);
 
         Debug.DrawRay(transform.position, transform.TransformDirection(0, 0, range), Color.red, range);
 

@@ -23,6 +23,8 @@ public class MainCharacterController : MonoBehaviour {
 
     public GameObject mainCam;
     public UI_Controller uiController;
+    public Animator mainCharAnimArms;
+    public Animator mainCharAnimLegs;
 
 
     void Start () {
@@ -131,6 +133,7 @@ public class MainCharacterController : MonoBehaviour {
                 {
 
                     gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, jumpSpeed + speed / 2, 0);
+                    mainCharAnimLegs.SetTrigger("Jump");
                     ReduceStamina(staminaAmount, true);
 
 
