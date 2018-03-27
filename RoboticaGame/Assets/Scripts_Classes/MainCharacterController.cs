@@ -26,7 +26,6 @@ public class MainCharacterController : MonoBehaviour {
     public Animator mainCharAnimArms;
     public Animator mainCharAnimLegs;
 
-
     void Start () {
 
         oldSpeed = speed;
@@ -106,14 +105,15 @@ public class MainCharacterController : MonoBehaviour {
 
                 speed = sprintSpeed;
                 ReduceStamina(staminaReduceSprint, false);
-                mainCharAnimLegs.SetBool("StrafeOn", true);
+                mainCharAnimLegs.SetFloat("SprintSpeedMulti", 3f);
+                
 
             }
             else
             {
 
                 speed = oldSpeed;
-                mainCharAnimLegs.SetBool("StrafeOn", false);
+                mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
 
             }
 
@@ -121,8 +121,7 @@ public class MainCharacterController : MonoBehaviour {
         else
         {
 
-            speed = oldSpeed;
-            mainCharAnimLegs.SetBool("StrafeOn", false);
+            mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
 
         }
 
@@ -163,12 +162,14 @@ public class MainCharacterController : MonoBehaviour {
 
                 speed = boostSpeed;
                 ReduceStamina(staminaReduceBoost, false);
+                mainCharAnimLegs.SetFloat("SprintSpeedMulti", 6f);
 
             }
             else
             {
 
                 speed = oldSpeed;
+                mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
 
             }
 
@@ -177,6 +178,7 @@ public class MainCharacterController : MonoBehaviour {
         {
 
             speed = oldSpeed;
+            mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
 
         }
 
