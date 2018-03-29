@@ -99,7 +99,8 @@ public class FullAutoGun : MonoBehaviour {
 
         UIController.UpdateAmmoCount(ammoMagazine);
 
-        Instantiate(Resources.Load("TestShoot"), muzzleFlashPos.position, Quaternion.identity);
+        Instantiate(Resources.Load("TestShoot4"), muzzleFlashPos.position, Quaternion.identity);
+
         player.mainCharAnimArms.SetBool("Rapid", true);
 
         Debug.DrawRay(transform.position, transform.TransformDirection(0, 0, range), Color.red, range);
