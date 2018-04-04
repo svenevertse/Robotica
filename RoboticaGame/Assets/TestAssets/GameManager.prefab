@@ -66,6 +66,23 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  spawnPosRecruit:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnPosEasy: []
+  spawnPosMedium:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnPosHard: []
+  spawnPosVeteran:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   gameManager: {fileID: 114605678434652574}
   UIController: {fileID: 0}
 --- !u!114 &114605678434652574
@@ -84,3 +101,4 @@ MonoBehaviour:
   currentAmountEnemies: 0
   UIController: {fileID: 0}
   waveSystem: {fileID: 114468780465415980}
+  enemyDifficulty: 0

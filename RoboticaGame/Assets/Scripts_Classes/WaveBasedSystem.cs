@@ -19,6 +19,12 @@ public class WaveBasedSystem : MonoBehaviour {
     public string pathEnemyPrefab;
 
     public GameObject[] spawnPositions;
+    public GameObject[] spawnPosRecruit;
+    public GameObject[] spawnPosEasy;
+    public GameObject[] spawnPosMedium;
+    public GameObject[] spawnPosHard;
+    public GameObject[] spawnPosVeteran;
+
     public GameManager gameManager;
     public UI_Controller UIController;
 
@@ -71,6 +77,7 @@ public class WaveBasedSystem : MonoBehaviour {
         for (int i = 0; i < spawnAmount; i++)
         {
 
+            CheckDifficulty(gameManager.enemyDifficulty);
             int r = Random.Range(0, spawnPositions.Length);
             GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
             instancedEnemy.name = "Enemy" + (i + 1);
@@ -117,6 +124,7 @@ public class WaveBasedSystem : MonoBehaviour {
             for (int i = 0; i < newEnemyAmount; i++)
             {
 
+                CheckDifficulty(gameManager.enemyDifficulty);
                 int r = Random.Range(0, spawnPositions.Length);
                 GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
                 instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(gameManager.enemyDifficulty);
@@ -129,6 +137,32 @@ public class WaveBasedSystem : MonoBehaviour {
         }
 
         StartCoroutine(SpawnNewInWave(timeTillNewEnemySpawn));
+
+    }
+
+    public void CheckDifficulty (GameManager.Difficulty enemyDiff)
+    {
+
+        switch (enemyDiff)
+        {
+
+            case GameManager.Difficulty.Recruit:
+
+                spawnPositions = spawnPosRecruit;
+                break;
+
+            case GameManager.Difficulty.Medium:
+
+                spawnPositions = spawnPosMedium;
+                break;
+
+            case GameManager.Difficulty.Veteran:
+
+                spawnPositions = spawnPosVeteran;
+                break;
+
+
+        }
 
     }
 
