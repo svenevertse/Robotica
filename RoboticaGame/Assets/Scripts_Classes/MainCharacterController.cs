@@ -36,11 +36,17 @@ public class MainCharacterController : MonoBehaviour {
 	
 	void Update () {
 
-        Movement ();
+        GiveStamina(staminaRegain);
+
+    }
+
+    void FixedUpdate ()
+    {
+
+        Movement();
         CameraController();
         Jump(staminaReduceJump);
         Boost();
-        GiveStamina(staminaRegain);
 
     }
 
