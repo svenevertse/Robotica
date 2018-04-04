@@ -12,6 +12,9 @@ public class BaseGunScript : MonoBehaviour {
     public FullAutoGun fullAuto;
     public SemiAutoGun semiAuto;
 
+    public GameObject fullAutoMesh;
+    public GameObject semiAutoMesh;
+
     public UI_Controller UIController;
 
 
@@ -55,6 +58,9 @@ public class BaseGunScript : MonoBehaviour {
 
                 fullAuto.GetDelegate();
 
+                fullAutoMesh.SetActive(true);
+                semiAutoMesh.SetActive(false);
+
                 UIController.UpdateWeaponText(fullAuto.weaponName);
                 UIController.UpdateAmmoCount(fullAuto.ammoMagazine);
                 break;
@@ -62,6 +68,9 @@ public class BaseGunScript : MonoBehaviour {
             case 1:
                 semiAuto.enabled = true;
                 fullAuto.enabled = false;
+
+                fullAutoMesh.SetActive(false);
+                semiAutoMesh.SetActive(true);
 
                 semiAuto.GetDelegate();
 

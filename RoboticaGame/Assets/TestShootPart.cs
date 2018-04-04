@@ -5,18 +5,25 @@ using UnityEngine;
 public class TestShootPart : MonoBehaviour {
 
     public float speed;
+    public float destroyTime;
 
     public Transform direction;
 
 	void Start () {
 
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, destroyTime);
 		
 	}
 	
 	void FixedUpdate () {
 
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed * Time.deltaTime);
+        GetComponent<Rigidbody>().velocity = direction.forward * speed * Time.deltaTime;
+
+    }
+
+    void OnCollisionEnter (Collision col) {
+
+        Destroy(gameObject);
 
     }
 

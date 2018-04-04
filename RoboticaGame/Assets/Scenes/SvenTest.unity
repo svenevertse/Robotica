@@ -302,7 +302,7 @@ Prefab:
     - target: {fileID: 114468780465415980, guid: c9446d91640ec16498cedf3b79e0e425,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9446d91640ec16498cedf3b79e0e425, type: 2}
@@ -312,6 +312,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4226234683909868, guid: de8c7e805b7349a4ca54378823360d0a,
     type: 2}
   m_PrefabInternal: {fileID: 1031588894}
+--- !u!1 &315909690 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1255870182231888, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+    type: 2}
+  m_PrefabInternal: {fileID: 571146744}
 --- !u!1 &340985138
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,21 +579,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114829227211836196, guid: 65364977bfa03014e9fb7351e2d9fd3b,
-        type: 2}
-      propertyPath: UIController
-      value: 
-      objectReference: {fileID: 1109021955}
-    - target: {fileID: 114171825106309830, guid: 65364977bfa03014e9fb7351e2d9fd3b,
-        type: 2}
-      propertyPath: UIController
-      value: 
-      objectReference: {fileID: 1109021955}
-    - target: {fileID: 114637422760559898, guid: 65364977bfa03014e9fb7351e2d9fd3b,
-        type: 2}
-      propertyPath: UIController
-      value: 
-      objectReference: {fileID: 1109021955}
     - target: {fileID: 114886014667490192, guid: 65364977bfa03014e9fb7351e2d9fd3b,
         type: 2}
       propertyPath: uiController
@@ -604,6 +594,47 @@ Prefab:
       propertyPath: mainCharAnimLegs
       value: 
       objectReference: {fileID: 1523960671}
+    - target: {fileID: 114637422760559898, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: UIController
+      value: 
+      objectReference: {fileID: 1109021955}
+    - target: {fileID: 114171825106309830, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: UIController
+      value: 
+      objectReference: {fileID: 1109021955}
+    - target: {fileID: 114829227211836196, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: UIController
+      value: 
+      objectReference: {fileID: 1109021955}
+    - target: {fileID: 1461846150214794, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255870182231888, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114829227211836196, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: fullAutoMesh
+      value: 
+      objectReference: {fileID: 755070768}
+    - target: {fileID: 114829227211836196, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: semiAutoMesh
+      value: 
+      objectReference: {fileID: 315909690}
+    - target: {fileID: 4500613614660942, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500613614660942, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
   m_IsPrefabParent: 0
