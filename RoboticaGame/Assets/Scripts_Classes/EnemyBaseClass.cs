@@ -20,18 +20,6 @@ abstract public class EnemyBaseClass : MonoBehaviour {
 
     public GameManager gameManager;
 
-    public enum Difficulty
-    {
-        Recruit,
-        Easy,
-        Medium,
-        Hard,
-        Veteran
-
-    };
-
-    public Difficulty enemyDifficulty;
-
     public abstract void Movement();
 
     public abstract void Attack();

@@ -11,7 +11,22 @@ public class GameManager : MonoBehaviour {
     public UI_Controller UIController;
     public WaveBasedSystem waveSystem;
 
+    public enum Difficulty
+    {
+
+        Recruit = 0,
+        Easy = 1,
+        Medium = 2,
+        Hard = 3,
+        Veteran = 4
+
+    }
+
+    public Difficulty enemyDifficulty;
+
 	void Start () {
+
+        enemyDifficulty = Difficulty.Veteran;
 		
 	}
 	
