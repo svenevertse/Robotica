@@ -16,7 +16,7 @@ public class EnemyRobot : EnemyBaseClass {
 	}
 	
 
-	void Update () {
+	void FixedUpdate () {
 
         Movement();
 
@@ -74,14 +74,14 @@ public class EnemyRobot : EnemyBaseClass {
                 break;
 
             case GameManager.Difficulty.Medium:
-                speed = 7;
+                speed = 10;
                 attackDamage = 15;
                 points = 50;
                 health = 150;
                 break;
 
             case GameManager.Difficulty.Veteran:
-                speed = 7;
+                speed = 13;
                 attackDamage = 20;
                 points = 100;
                 health = 250;
