@@ -61,7 +61,6 @@ public class MainCharacterController : MonoBehaviour {
             {
                 transform.Translate(Vector3.forward * speed * Input.GetAxis("Vertical") * Time.deltaTime);
                 mainCharAnimLegs.SetFloat("Move", 1);
-                Boost();
             }
         }
 
@@ -75,7 +74,6 @@ public class MainCharacterController : MonoBehaviour {
             {
                 transform.Translate(Vector3.back * speed * -Input.GetAxis("Vertical") * Time.deltaTime);
                 mainCharAnimLegs.SetFloat("Move", 1);
-                Boost();
             }
         }
 
@@ -89,7 +87,6 @@ public class MainCharacterController : MonoBehaviour {
             {
                 transform.Translate(Vector3.right * speed * Input.GetAxis("Horizontal") * Time.deltaTime);
                 mainCharAnimLegs.SetFloat("Move", 1);
-                Boost();
             }
         }
 
@@ -103,8 +100,28 @@ public class MainCharacterController : MonoBehaviour {
             {
                 transform.Translate(Vector3.left * speed * -Input.GetAxis("Horizontal") * Time.deltaTime);
                 mainCharAnimLegs.SetFloat("Move", 1);
-                Boost();
             }
+        }
+
+
+        if (Input.GetButton("Sprint"))
+        {
+
+            Boost(sprintSpeed, 3f, staminaReduceSprint);
+
+        }
+        else if (Input.GetButton("Boost"))
+        {
+
+            Boost(boostSpeed, 6f, staminaReduceBoost);
+
+        }
+        else
+        {
+
+            speed = oldSpeed;
+            mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
+
         }
 
     }
@@ -133,61 +150,16 @@ public class MainCharacterController : MonoBehaviour {
 
     }
 
-    void Boost ()
+    void Boost (float newSpeed, float animSpeed, float reduceStamina)
     {
 
-        if (Input.GetButton("Sprint"))
-        {
-            if (stamina >= 0.1f)
-            {
+        if (stamina >= 0.1f)
+           {
 
-                speed = sprintSpeed;
-                ReduceStamina(staminaReduceSprint, false);
-                mainCharAnimLegs.SetFloat("SprintSpeedMulti", 3f);
+             speed = newSpeed;
+             ReduceStamina(reduceStamina, false);
+             mainCharAnimLegs.SetFloat("SprintSpeedMulti", animSpeed);
 
-
-            }
-            else
-            {
-
-                speed = oldSpeed;
-                mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
-
-            }
-
-        }
-        else
-        {
-
-            mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
-
-        }
-
-        if (Input.GetButton("Boost"))
-        {
-
-            if (stamina >= 0.1f)
-            {
-
-                speed = boostSpeed;
-                ReduceStamina(staminaReduceBoost, false);
-                mainCharAnimLegs.SetFloat("SprintSpeedMulti", 6f);
-
-            }
-            else
-            {
-
-                speed = oldSpeed;
-                mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
-
-            }
-
-        }
-        else
-        {
-
-            speed = oldSpeed;
-            mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
 
         }
 
