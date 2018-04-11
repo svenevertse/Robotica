@@ -518,19 +518,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\svene\Documents\GitHub\Robotica\RoboticaGame
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 242b0000
-    m_LastClickedID: 11044
-    m_ExpandedIDs: 000000005e28000066290000ea2a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 47}
+    m_SelectedIDs: 5e280000
+    m_LastClickedID: 10334
+    m_ExpandedIDs: 000000005e2800007428000066290000ea2a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -676,9 +676,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: f42a0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff00000000
+    m_ExpandedIDs: ecbffeff62fbffff72fbffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -729,14 +729,14 @@ MonoBehaviour:
     height: 603
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1796.5797529597635
+  lastFramingTime: 2700.4441979518683
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -24.63507, y: 6.8000474, z: -2.2930207}
+    m_Target: {x: 3.4794443, y: -6.9408135, z: 3.6463344}
     speed: 2
-    m_Value: {x: -24.63507, y: 6.8000474, z: -2.2930207}
+    m_Value: {x: 3.4794443, y: -6.9408135, z: 3.6463344}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -760,13 +760,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.040582504, y: -0.4174072, z: -0.018663576, w: -0.9076211}
+    m_Target: {x: -0.033985287, y: 0.40495306, z: 0.015064057, w: 0.9135815}
     speed: 2
-    m_Value: {x: 0.040582504, y: -0.4174072, z: -0.018663576, w: -0.9076211}
+    m_Value: {x: -0.033985287, y: 0.40495306, z: 0.015064057, w: 0.9135815}
   m_Size:
-    m_Target: 10.962974
+    m_Target: 12.7843
     speed: 2
-    m_Value: 10.962974
+    m_Value: 12.7843
   m_Ortho:
     m_Target: 0
     speed: 2

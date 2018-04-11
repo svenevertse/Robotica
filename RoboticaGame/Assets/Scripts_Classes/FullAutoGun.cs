@@ -104,8 +104,6 @@ public class FullAutoGun : MonoBehaviour {
 
         player.mainCharAnimArms.SetBool("Rapid", true);
 
-        Debug.DrawRay(transform.position, transform.TransformDirection(0, 0, range), Color.red, range);
-
         if (Physics.Raycast(transform.position, transform.TransformDirection(0, 0, range), out rayHit, range))
         {
 

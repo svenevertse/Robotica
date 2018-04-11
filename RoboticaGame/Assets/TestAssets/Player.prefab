@@ -57,7 +57,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1371522686699434
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1473443050923636
 GameObject:
   m_ObjectHideFlags: 1
@@ -226,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1034073545427108}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.71, y: 0.48266792, z: -1.33}
+  m_LocalPosition: {x: 1.08, y: 1.07, z: -1.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4801475420666392}
@@ -502,7 +502,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!81 &81632482185530780
 AudioListener:
@@ -583,6 +583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullAuto: {fileID: 114171825106309830}
   semiAuto: {fileID: 114637422760559898}
+  fullAutoMesh: {fileID: 0}
+  semiAutoMesh: {fileID: 1255870182231888}
   UIController: {fileID: 0}
 --- !u!114 &114886014667490192
 MonoBehaviour:
@@ -596,7 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  sprintSpeed: 18
+  sprintSpeed: 20
   boostSpeed: 30
   jumpSpeed: 3.5
   rayDis: 1
