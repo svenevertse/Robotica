@@ -620,6 +620,11 @@ Prefab:
       propertyPath: UIController
       value: 
       objectReference: {fileID: 1109021955}
+    - target: {fileID: 114468780465415980, guid: c9446d91640ec16498cedf3b79e0e425,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9446d91640ec16498cedf3b79e0e425, type: 2}
   m_IsPrefabParent: 0
