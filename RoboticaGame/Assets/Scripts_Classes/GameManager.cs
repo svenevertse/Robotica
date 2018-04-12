@@ -5,11 +5,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public int currentPoints;
-    public int highScore;
     public int currentAmountEnemies;
 
     public UI_Controller UIController;
     public WaveBasedSystem waveSystem;
+
+    public Highscore hsSerializer = new Highscore();
 
     public enum Difficulty
     {
@@ -42,7 +43,7 @@ public class GameManager : MonoBehaviour {
         currentPoints += givenPoints;
         UIController.UpdatePoints(currentPoints);
 
-        if(currentPoints > highScore)
+        if(currentPoints > hsSerializer.highscore)
         {
 
             UpdateHighscore();
@@ -54,8 +55,9 @@ public class GameManager : MonoBehaviour {
     public void UpdateHighscore ()
     {
 
-        highScore = currentPoints;
-        UIController.UpdateHighscoreText(highScore);
+        hsSerializer.highscore = currentPoints;
+        UIController.UpdateHighscoreText(hsSerializer.highscore);
+        
 
     }
 
