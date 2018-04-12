@@ -2029,6 +2029,12 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!114 &986060762 stripped
 MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114327302850618318, guid: 0e3da2f91b7504344ba52f551902db82,
+    type: 2}
+  m_PrefabInternal: {fileID: 986060761}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &986060763 stripped
+MonoBehaviour:
   m_PrefabParentObject: {fileID: 114266782379391336, guid: 0e3da2f91b7504344ba52f551902db82,
     type: 2}
   m_PrefabInternal: {fileID: 986060761}
@@ -2916,6 +2922,11 @@ Prefab:
       propertyPath: waveText
       value: 
       objectReference: {fileID: 720253303}
+    - target: {fileID: 114019988099649532, guid: ba634d63a0460f34383524520972fe4c,
+        type: 2}
+      propertyPath: highscoreText
+      value: 
+      objectReference: {fileID: 986060763}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba634d63a0460f34383524520972fe4c, type: 2}
   m_IsPrefabParent: 0

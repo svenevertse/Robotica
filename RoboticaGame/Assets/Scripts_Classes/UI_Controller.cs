@@ -12,6 +12,7 @@ public class UI_Controller : MonoBehaviour {
     public Text weaponText;
     public Text currentPointText;
     public Text waveText;
+    public Text highscoreText;
 	
 	void Start () {
 
@@ -63,6 +64,13 @@ public class UI_Controller : MonoBehaviour {
     {
 
         waveText.text = "Wave : " + currentWave;
+
+    }
+
+    public void UpdateHighscoreText (int highscore)
+    {
+
+        highscoreText.text = "Highscore : " + highscore;
 
     }
 }

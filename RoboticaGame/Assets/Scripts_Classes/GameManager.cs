@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 
         enemyDifficulty = Difficulty.Veteran;
+
+        UpdateHighscore();
 		
 	}
 	
@@ -39,6 +41,21 @@ public class GameManager : MonoBehaviour {
 
         currentPoints += givenPoints;
         UIController.UpdatePoints(currentPoints);
+
+        if(currentPoints > highScore)
+        {
+
+            UpdateHighscore();
+
+        }
+
+    }
+
+    public void UpdateHighscore ()
+    {
+
+        highScore = currentPoints;
+        UIController.UpdateHighscoreText(highScore);
 
     }
 
