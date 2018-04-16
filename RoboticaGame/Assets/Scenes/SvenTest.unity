@@ -2220,16 +2220,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1030002067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd3ff1b618f59e9488502b3e46bcffc4, type: 3}
+  m_Script: {fileID: 11500000, guid: ffb2f7b759c781a479521f786103533b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 1030002070}
---- !u!114 &1030002070 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114605678434652574, guid: c9446d91640ec16498cedf3b79e0e425,
-    type: 2}
-  m_PrefabInternal: {fileID: 270616109}
-  m_Script: {fileID: 11500000, guid: 41db62db42d0ef544a1bf9e9f8478648, type: 3}
+  hsData:
+    highscoreList:
+    - highscore: 0
 --- !u!1001 &1031588894
 Prefab:
   m_ObjectHideFlags: 0

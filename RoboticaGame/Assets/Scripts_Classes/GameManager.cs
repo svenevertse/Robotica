@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour {
     public UI_Controller UIController;
     public WaveBasedSystem waveSystem;
 
-    public Highscore hsSerializer = new Highscore();
-
     public enum Difficulty
     {
 
@@ -27,9 +25,10 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
 
-        enemyDifficulty = Difficulty.Veteran;
+        XmlManager.ins.Load();
+        UIController.UpdateHighscoreText(XmlManager.ins.newHighscore.highscore);
 
-        UpdateHighscore();
+        enemyDifficulty = Difficulty.Veteran;
 		
 	}
 	
@@ -43,21 +42,21 @@ public class GameManager : MonoBehaviour {
         currentPoints += givenPoints;
         UIController.UpdatePoints(currentPoints);
 
-        if(currentPoints > hsSerializer.highscore)
+        if(currentPoints > XmlManager.ins.newHighscore.highscore)
         {
 
-            UpdateHighscore();
+            UpdateHighscore ();
 
-        }
+        } 
 
     }
 
     public void UpdateHighscore ()
     {
 
-        hsSerializer.highscore = currentPoints;
-        UIController.UpdateHighscoreText(hsSerializer.highscore);
-        
+        XmlManager.ins.newHighscore.highscore = currentPoints;
+        XmlManager.ins.Save();
+        UIController.UpdateHighscoreText(XmlManager.ins.newHighscore.highscore);
 
     }
 
