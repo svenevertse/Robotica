@@ -13,6 +13,7 @@ public class UI_Controller : MonoBehaviour {
     public Text currentPointText;
     public Text waveText;
     public Text highscoreText;
+    public Text difficultyText;
 	
 	void Start () {
 
@@ -71,6 +72,13 @@ public class UI_Controller : MonoBehaviour {
     {
 
         highscoreText.text = "Highscore : " + highscore;
+
+    }
+
+    public void UpdateDifficultyText (GameManager.Difficulty difficulty)
+    {
+
+        difficultyText.text = "Diffuclty : " + difficulty;
 
     }
 }
