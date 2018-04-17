@@ -1234,15 +1234,32 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: High
-      m_Image: {fileID: 0}
-    - m_Text: Medium
+    - m_Text: Very Low
       m_Image: {fileID: 0}
     - m_Text: Low
       m_Image: {fileID: 0}
+    - m_Text: Medium
+      m_Image: {fileID: 0}
+    - m_Text: High
+      m_Image: {fileID: 0}
+    - m_Text: Very High
+      m_Image: {fileID: 0}
+    - m_Text: Ultra
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1068935297}
+        m_MethodName: GraphicsSettings
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &614144671
@@ -1600,7 +1617,18 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1068935297}
+        m_MethodName: SetResolution
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1029015555
@@ -1731,6 +1759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a0c1f06a3b69348bc3845b605d493e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterAudio: {fileID: 24100000, guid: bf3e0caae4f8dbf4e84bb56fbbbf4f62, type: 2}
+  resDropdown: {fileID: 1029015554}
+  graphDropDown: {fileID: 614144670}
 --- !u!1 &1295649828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,10 +2081,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 170844767}
   m_HandleRect: {fileID: 444196759}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2523,7 +2554,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: High
+  m_Text: Very Low
 --- !u!222 &1747622208
 CanvasRenderer:
   m_ObjectHideFlags: 0
