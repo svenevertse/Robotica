@@ -217,6 +217,14 @@ public class MainCharacterController : MonoBehaviour {
 
     }
 
+    public void StaminaPickup (float addedStamina)
+    {
+
+        stamina += addedStamina;
+        uiController.UpdateStaminaBar(stamina);
+
+    }
+
     void CameraController ()
     {
 

@@ -3143,6 +3143,53 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1001 &1481394608
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4589218275263148, guid: 8ee5fdb1ddc300b4db04eb92f6430874, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.402828
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589218275263148, guid: 8ee5fdb1ddc300b4db04eb92f6430874, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -9.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589218275263148, guid: 8ee5fdb1ddc300b4db04eb92f6430874, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.280471
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589218275263148, guid: 8ee5fdb1ddc300b4db04eb92f6430874, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589218275263148, guid: 8ee5fdb1ddc300b4db04eb92f6430874, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589218275263148, guid: 8ee5fdb1ddc300b4db04eb92f6430874, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589218275263148, guid: 8ee5fdb1ddc300b4db04eb92f6430874, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589218275263148, guid: 8ee5fdb1ddc300b4db04eb92f6430874, type: 2}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 114354927124873524, guid: 8ee5fdb1ddc300b4db04eb92f6430874,
+        type: 2}
+      propertyPath: pType
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8ee5fdb1ddc300b4db04eb92f6430874, type: 2}
+  m_IsPrefabParent: 0
 --- !u!95 &1523960671 stripped
 Animator:
   m_PrefabParentObject: {fileID: 95980074461795962, guid: de8c7e805b7349a4ca54378823360d0a,
