@@ -13,8 +13,8 @@ public class Pickup : MonoBehaviour {
     public enum PickupType
     {
 
-        Health,
-        Stamina
+        Health = 0,
+        Stamina = 1
 
     }
 
