@@ -131,6 +131,7 @@ cab9bc61a5cb2a826b1023875be7f64c Assembly-CSharp.dll:.WaveBasedSystem
 ad0843dc5844295eb779e75691b6f0e1 Assembly-CSharp.dll:.TestEnemy
 399b87d0ce0b87de89fa1e02716f8e2d Assembly-CSharp.dll:.XmlManager
 479baeee05ee2af98bf2ad70aca7e35b Assembly-CSharp.dll:.Ragdoll
+8cfe3d0ea46ee63b55f79a34e2b39656 Assembly-CSharp.dll:.PauseMenu
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -151,6 +152,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 70254f668056afed9fe2961f14ac75e1 Assembly-CSharp.dll:.MainCharacterController
+5b9561c2af9f1e200fb76f43fb873879 Assembly-CSharp.dll:.PauseMenuActivator
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
