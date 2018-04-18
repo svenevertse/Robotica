@@ -40,6 +40,7 @@ public class PauseMenuActivator : MonoBehaviour {
         {
 
             Time.timeScale = 0;
+            pauseMenu.GetComponent<PauseMenu>().DissableButtons(0);
 
         }
         else

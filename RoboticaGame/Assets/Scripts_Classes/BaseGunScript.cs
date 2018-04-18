@@ -34,12 +34,12 @@ public class BaseGunScript : MonoBehaviour {
     void CheckScrollInput()
     {
 
-        if(Input.GetAxis("Mouse ScrollWheel") > 0)
+        if(Input.GetAxis("Mouse ScrollWheel") > 0 && Time.timeScale == 1)
         {
             SwitchWeapon(0);
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0 && Time.timeScale == 1)
         {
             SwitchWeapon(1);
         }

@@ -8,6 +8,10 @@ public class PauseMenu : MonoBehaviour {
 
     public PauseMenuActivator activator;
 
+    public GameObject [] buttons;
+
+    public Text headTextMenu;
+
     void Start ()
     {
 
@@ -22,4 +26,35 @@ public class PauseMenu : MonoBehaviour {
 
     }
 
+    public void RestartGame ()
+    {
+
+        activator.ToggleBool();
+
+        SceneManager.LoadScene("SvenTest", LoadSceneMode.Single);
+
+    }
+
+    public void DissableButtons(int buttonIndex)
+    {
+
+        foreach (GameObject gb in buttons)
+        {
+
+            gb.SetActive(false);
+
+        }
+
+        buttons[buttonIndex].SetActive(true);
+
+    }
+
+
+
+    public void ChangeHeadName(string newHeadText)
+    {
+
+        headTextMenu.text = newHeadText;
+
+    }
 }
