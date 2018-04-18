@@ -53,7 +53,7 @@ public class SemiAutoGun : MonoBehaviour {
     void FireGun(int ammo, float fireRate)
     {
 
-        if (Input.GetButtonDown("Fire1") && ammoMagazine >= 1 && canFire == true)
+        if (Input.GetButtonDown("Fire1") && ammoMagazine >= 1 && canFire == true && Time.timeScale == 1)
         {
 
             StartCoroutine(ShootGun(fireRate));

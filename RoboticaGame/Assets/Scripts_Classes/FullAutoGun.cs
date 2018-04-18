@@ -54,7 +54,7 @@ public class FullAutoGun : MonoBehaviour {
     void FireGun (int ammo, float fireRate)
     {
 
-        if (Input.GetButton("Fire1") && ammoMagazine >= 1)
+        if (Input.GetButton("Fire1") && ammoMagazine >= 1 && Time.timeScale == 1)
         {
 
             if (canFire == true)

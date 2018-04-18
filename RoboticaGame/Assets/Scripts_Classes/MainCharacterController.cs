@@ -30,7 +30,7 @@ public class MainCharacterController : MonoBehaviour {
 
         oldSpeed = speed;
 
-        LockCursor();
+        LockCursor(true);
 
 	}
 	
@@ -236,10 +236,22 @@ public class MainCharacterController : MonoBehaviour {
 
     }
 
-    void LockCursor ()
+    public void LockCursor (bool lockCursor)
     {
 
-        Cursor.lockState = CursorLockMode.Locked;
+        if(lockCursor == true)
+        {
+
+            Cursor.lockState = CursorLockMode.Locked;
+
+        }
+        else
+        {
+
+            Cursor.lockState = CursorLockMode.None;
+
+        }
+            
 
     }
 
