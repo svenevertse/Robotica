@@ -100,7 +100,7 @@ public class WaveBasedSystem : MonoBehaviour {
     public void CalculateNewEnemies ()
     {
 
-        if (enemyAmount >= enemyInLevelCap)
+        if (enemyAmount > enemyInLevelCap)
         {
 
             newEnemyAmount = enemyInLevelCap - curInLevel;
