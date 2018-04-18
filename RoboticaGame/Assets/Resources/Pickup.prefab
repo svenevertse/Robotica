@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1167059476751600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.402828, y: -9.37, z: 4.280471}
+  m_LocalPosition: {x: -7.76673, y: -9.45, z: -1.1093884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,6 +110,9 @@ MonoBehaviour:
   addedHealth: 25
   addedStamina: 25
   materials:
-  - {fileID: 2100000, guid: 5308ac2d711791a40aa33087966f4a2a, type: 2}
-  - {fileID: 2100000, guid: b2b95ba4d5c5f904cae357e2cd3550ed, type: 2}
+  - {fileID: 2100000, guid: b889ecc86d82b6943bb48c9ddd3319cf, type: 2}
+  - {fileID: 2100000, guid: da8c2903379cbec4483e92b801828da4, type: 2}
+  meshes:
+  - {fileID: 33709017026147326, guid: 6a1c24d5ffea7b247ad688b74dd7ec3f, type: 2}
+  - {fileID: 33617963828114836, guid: fcead94d5f92b144c8f86e3b6c8fc166, type: 2}
   pType: 1

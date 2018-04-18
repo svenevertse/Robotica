@@ -9,6 +9,7 @@ public class Pickup : MonoBehaviour {
     public float addedStamina;
 
     public Material[] materials;
+    public MeshFilter[] meshes;
 
     public enum PickupType
     {
@@ -75,11 +76,13 @@ public class Pickup : MonoBehaviour {
 
             case Pickup.PickupType.Health:
 
+                GetComponent<MeshFilter>().sharedMesh = meshes[0].sharedMesh;
                 GetComponent<Renderer>().material = materials[0];
                 break;
 
             case Pickup.PickupType.Stamina:
 
+                GetComponent<MeshFilter>().sharedMesh = meshes[1].sharedMesh;
                 GetComponent<Renderer>().material = materials[1];
                 break;
 
