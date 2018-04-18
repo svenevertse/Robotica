@@ -14,6 +14,8 @@ public class MainMenuController : MonoBehaviour {
 	void Start () {
 
         DissableButtons(0);
+
+        Cursor.lockState = CursorLockMode.None;
 		
 	}
 	

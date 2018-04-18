@@ -57,4 +57,14 @@ public class PauseMenu : MonoBehaviour {
         headTextMenu.text = newHeadText;
 
     }
+
+    public void GetToMainMenu ()
+    {
+
+        activator.ToggleBool();
+
+        SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
+
+    }
+
 }
