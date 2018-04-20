@@ -9,6 +9,8 @@ public class FullAutoGun : MonoBehaviour {
     public Transform muzzleFlashPos;
     public MainCharacterController player;
 
+    public ParticleSystem bullet;
+
     public int ammoMagazine;
     public int magazineSize;
     public int damage;
@@ -99,8 +101,7 @@ public class FullAutoGun : MonoBehaviour {
 
         UIController.UpdateAmmoCount(ammoMagazine);
 
-        GameObject bullet = Instantiate(Resources.Load("TestShoot4"), muzzleFlashPos.position, Quaternion.identity) as GameObject;
-        bullet.GetComponent<TestShootPart>().direction = muzzleFlashPos;
+        bullet.Play();
 
         player.mainCharAnimArms.SetBool("Rapid", true);
 
