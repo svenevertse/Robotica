@@ -59,7 +59,6 @@ public class WaveBasedSystem : MonoBehaviour {
         int spawnAmount;
 
         spacing = enemyAmount;
-        print(spacing);
 
         if(enemyAmount > enemyInLevelCap)
         {

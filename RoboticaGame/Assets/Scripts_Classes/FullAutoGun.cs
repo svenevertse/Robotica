@@ -96,7 +96,6 @@ public class FullAutoGun : MonoBehaviour {
 
         canFire = false;
 
-        print("Fire Gun");
         ammoMagazine--;
 
         UIController.UpdateAmmoCount(ammoMagazine);
@@ -107,8 +106,6 @@ public class FullAutoGun : MonoBehaviour {
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(0, 0, range), out rayHit, range))
         {
-
-            print("Hit");
 
             if (rayHit.transform.tag == "Enemy")
             {

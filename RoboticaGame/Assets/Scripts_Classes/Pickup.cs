@@ -11,6 +11,8 @@ public class Pickup : MonoBehaviour {
     public Material[] materials;
     public MeshFilter[] meshes;
 
+    public Transform spawnedLoc;
+
     public enum PickupType
     {
 
@@ -61,6 +63,8 @@ public class Pickup : MonoBehaviour {
                     break;
 
             }
+
+            spawnedLoc.GetComponent<PickupChecker>().gotPickup = false;
 
             Destroy(gameObject);
 

@@ -24,8 +24,15 @@ public class PickupSpawner : MonoBehaviour {
         int randomIntPickup = Random.Range(0, 2);
         int randomIntSpawn = Random.Range(0, spawnLocations.Length);
 
-        GameObject instancedPickup = Instantiate(Resources.Load(("Pickup"), typeof(GameObject)),  spawnLocations[randomIntSpawn].position, Quaternion.identity) as GameObject;
-        instancedPickup.GetComponent<Pickup>().pType = (Pickup.PickupType)randomIntPickup;
+        if (spawnLocations[randomIntSpawn].GetComponent<PickupChecker>().gotPickup == false)
+        {
+
+            GameObject instancedPickup = Instantiate(Resources.Load(("Pickup"), typeof(GameObject)), spawnLocations[randomIntSpawn].position, Quaternion.identity) as GameObject;
+            spawnLocations[randomIntSpawn].GetComponent<PickupChecker>().gotPickup = true;
+            instancedPickup.GetComponent<Pickup>().pType = (Pickup.PickupType)randomIntPickup;
+            instancedPickup.GetComponent<Pickup>().spawnedLoc = spawnLocations[randomIntSpawn];
+
+        }
 
         StartCoroutine(SpawnTimer(spawnTime));
 

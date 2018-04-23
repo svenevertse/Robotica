@@ -85,7 +85,6 @@ public class SemiAutoGun : MonoBehaviour {
 
         canFire = false;
 
-        print("Fire Gun");
         ammoMagazine--;
 
         UIController.UpdateAmmoCount(ammoMagazine);

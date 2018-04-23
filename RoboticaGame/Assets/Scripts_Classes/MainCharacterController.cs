@@ -53,7 +53,7 @@ public class MainCharacterController : MonoBehaviour {
 
         if (Input.GetAxis("Vertical") > 0)
         {
-            if (Physics.Raycast(transform.position, Vector3.forward, rayDis))
+            if (Physics.Raycast(transform.position, transform.forward, rayDis))
             {
                 print("HitWall");
             }
@@ -66,9 +66,9 @@ public class MainCharacterController : MonoBehaviour {
 
         if (Input.GetAxis("Vertical") < 0)
         {
-            if (Physics.Raycast(transform.position, Vector3.back, rayDis))
+            if (Physics.Raycast(transform.position, -transform.forward, rayDis))
             {
-                print("HitWall");
+
             }
             else
             {
@@ -79,9 +79,9 @@ public class MainCharacterController : MonoBehaviour {
 
         if (Input.GetAxis("Horizontal") > 0)
         {
-            if (Physics.Raycast(transform.position, Vector3.right, rayDis))
+            if (Physics.Raycast(transform.position, transform.right, rayDis))
             {
-                print("HitWall");
+
             }
             else
             {
@@ -92,9 +92,9 @@ public class MainCharacterController : MonoBehaviour {
 
         if (Input.GetAxis("Horizontal") < 0)
         {
-            if (Physics.Raycast(transform.position, Vector3.left, rayDis))
+            if (Physics.Raycast(transform.position, -transform.right, rayDis))
             {
-                print("HitWall");
+
             }
             else
             {
@@ -232,7 +232,9 @@ public class MainCharacterController : MonoBehaviour {
         float horizontalCam = hCamSpeed * -Input.GetAxis("Mouse Y") * Time.deltaTime;
 
         transform.Rotate(0, verticalCam, 0);
-        mainCam.transform.Rotate(Mathf.Clamp(horizontalCam, -20f, 20f), 0, 0);
+
+        mainCam.transform.Rotate(horizontalCam, 0, 0);
+
 
     }
 
