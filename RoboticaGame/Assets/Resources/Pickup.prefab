@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65610060736847770}
   - component: {fileID: 23534993701400434}
   - component: {fileID: 114354927124873524}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,4 +115,5 @@ MonoBehaviour:
   meshes:
   - {fileID: 33709017026147326, guid: 6a1c24d5ffea7b247ad688b74dd7ec3f, type: 2}
   - {fileID: 33617963828114836, guid: fcead94d5f92b144c8f86e3b6c8fc166, type: 2}
+  spawnedLoc: {fileID: 0}
   pType: 1

@@ -47,8 +47,20 @@ public class Pickup : MonoBehaviour {
                     if(trigger.GetComponent<MainCharacterController>().health != 100)
                     {
 
-                        trigger.GetComponent<MainCharacterController>().CheckHealth(-addedHealth);
+                        int newHealth = trigger.GetComponent<MainCharacterController>().health + addedHealth;
+                        
+                        if(newHealth >= 100)
+                        {
 
+                            trigger.GetComponent<MainCharacterController>().health = 100;
+
+                        }
+                        else
+                        {
+
+                            trigger.GetComponent<MainCharacterController>().CheckHealth(-addedHealth);
+
+                        }  
                     }      
                     break;
 
@@ -57,8 +69,20 @@ public class Pickup : MonoBehaviour {
                     if(trigger.GetComponent<MainCharacterController>().stamina != 100)
                     {
 
-                        trigger.GetComponent<MainCharacterController>().StaminaPickup(addedStamina);
+                        float newStamina = trigger.GetComponent<MainCharacterController>().stamina + addedStamina;
 
+                        if(newStamina >= trigger.GetComponent<MainCharacterController>().stamina)
+                        {
+
+                            trigger.GetComponent<MainCharacterController>().stamina = 100;
+
+                        }
+                        else
+                        {
+
+                            trigger.GetComponent<MainCharacterController>().StaminaPickup(addedStamina);
+
+                        }
                     }
                     break;
 
