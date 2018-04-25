@@ -71,7 +71,7 @@ public class Pickup : MonoBehaviour {
 
                         float newStamina = trigger.GetComponent<MainCharacterController>().stamina + addedStamina;
 
-                        if(newStamina >= trigger.GetComponent<MainCharacterController>().stamina)
+                        if(newStamina >= 100)
                         {
 
                             trigger.GetComponent<MainCharacterController>().stamina = 100;

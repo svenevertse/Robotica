@@ -683,6 +683,29 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1217019727027908, guid: d2eada93b2e2d8445aef82b2a8e5eabe, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114260183481741464, guid: d2eada93b2e2d8445aef82b2a8e5eabe,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Michiel Adriaansens : Animator/Rigging
+
+
+        Anthony Schmidt : 3D Art
+
+
+        Carlo Visser : 3D Art
+
+
+        Sven Evertse : Programming
+
+
+        Erwin Smeenge : VFX
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2eada93b2e2d8445aef82b2a8e5eabe, type: 2}
   m_IsPrefabParent: 0

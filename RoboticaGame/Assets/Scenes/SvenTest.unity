@@ -9263,7 +9263,7 @@ Prefab:
     - target: {fileID: 114886014667490192, guid: 65364977bfa03014e9fb7351e2d9fd3b,
         type: 2}
       propertyPath: rayDis
-      value: 2.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114886014667490192, guid: 65364977bfa03014e9fb7351e2d9fd3b,
         type: 2}

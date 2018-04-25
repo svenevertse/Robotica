@@ -121,6 +121,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+1b9d73bbb8b554167d2567a3795f94f1 Assembly-CSharp.dll:.GameOverMenu
 179db0df236f4b202e8649c91166f6ac Assembly-CSharp.dll:.EnemyRobot
 ef3bfe140ecfc319dd94a3acae80ed4c Assembly-CSharp.dll:.FullAutoGun
 1b7f6acbce86577e173da0c2f56757e4 Assembly-CSharp.dll:.EnemyDamageGiver
@@ -165,4 +166,3 @@ f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.
 2dcc6016486f14b4a77da3e3b5189f59 Assembly-CSharp.dll:.SemiAutoGun
 6bababd5f78554afe0490d1a89ebaa83 Assembly-CSharp.dll:.UI_Controller
 5d475aeff25e27d86926eab2da333bd6 Assembly-CSharp.dll:.BaseGunScript
-1b9d73bbb8b554167d2567a3795f94f1 Assembly-CSharp.dll:.GameOverMenu
