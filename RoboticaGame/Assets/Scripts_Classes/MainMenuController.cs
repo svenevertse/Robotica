@@ -51,6 +51,16 @@ public class MainMenuController : MonoBehaviour {
 
     }
 
+    public void ResetHighscore ()
+    {
+
+        XmlManager.ins.newHighscore.highscore = 0;
+        XmlManager.ins.Save();
+
+        GetHighScore();
+
+    }
+
 
 
     public void ChangeHeadName (string newHeadText)

@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
 
+        Time.timeScale = 1;
+
         XmlManager.ins.Load();
         UIController.UpdateHighscoreText(XmlManager.ins.newHighscore.highscore);
 

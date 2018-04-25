@@ -22,6 +22,9 @@ public class MainCharacterController : MonoBehaviour {
     public float staminaReduceSprint, staminaReduceJump, staminaReduceBoost;
 
     public GameObject mainCam;
+    public GameObject gameOverMenu;
+    public GameObject mesh;
+
     public UI_Controller uiController;
     public Animator mainCharAnimArms;
     public Animator mainCharAnimLegs;
@@ -266,6 +269,12 @@ public class MainCharacterController : MonoBehaviour {
         if(health < 1)
         {
 
+            gameOverMenu.SetActive(true);
+            gameOverMenu.GetComponent<GameOverMenu>().LoadHighscore();
+            gameOverMenu.GetComponent<GameOverMenu>().GetCurrentScore();
+            Destroy(mesh);
+            Destroy(gameObject);
+            Time.timeScale = 0;
             print("death");
 
         }
