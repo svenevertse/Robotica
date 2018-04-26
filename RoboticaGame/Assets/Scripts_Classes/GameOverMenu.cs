@@ -14,6 +14,7 @@ public class GameOverMenu : MonoBehaviour
     {
 
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
     }
 

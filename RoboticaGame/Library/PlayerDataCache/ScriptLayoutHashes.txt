@@ -164,5 +164,5 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 2dcc6016486f14b4a77da3e3b5189f59 Assembly-CSharp.dll:.SemiAutoGun
-6bababd5f78554afe0490d1a89ebaa83 Assembly-CSharp.dll:.UI_Controller
+ae4c0bec67841070b0eb1c4f0cce54ff Assembly-CSharp.dll:.UI_Controller
 5d475aeff25e27d86926eab2da333bd6 Assembly-CSharp.dll:.BaseGunScript
