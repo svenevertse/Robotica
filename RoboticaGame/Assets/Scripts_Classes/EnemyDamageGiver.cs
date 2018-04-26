@@ -34,7 +34,7 @@ public class EnemyDamageGiver : MonoBehaviour {
     {
 
         enemyController.mayAttack = false;
-        enemyController.StopCoroutine(enemyController.AttackRate());
+        enemyController.StopCoroutine(enemyController.attackCoroutine);
 
     }
 

@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyRobot : EnemyBaseClass {
 
+    public Coroutine attackCoroutine = null;
+
 	void Start () {
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -32,7 +34,7 @@ public class EnemyRobot : EnemyBaseClass {
         if(mayAttack == true)
         {
 
-            StartCoroutine(AttackRate());
+            attackCoroutine = StartCoroutine(AttackRate());
 
         }
   
