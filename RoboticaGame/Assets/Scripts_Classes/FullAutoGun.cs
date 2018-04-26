@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FullAutoGun : MonoBehaviour {
 
@@ -26,7 +27,8 @@ public class FullAutoGun : MonoBehaviour {
     RaycastHit rayHit;
     
 
-	void Start () {
+	void Start ()
+    {
 
         ammoMagazine = magazineSize;
         canFire = true;
@@ -37,7 +39,8 @@ public class FullAutoGun : MonoBehaviour {
        
     }
 	
-	void Update () {
+	void Update ()
+    {
 
         baseGun.fireGun(ammoMagazine, fireRateVar * Time.deltaTime);
         baseGun.reload(magazineSize, reloadSpeed);
@@ -115,6 +118,13 @@ public class FullAutoGun : MonoBehaviour {
             }
         }
 
+        if (ammoMagazine <= 5)
+        {
+
+            UIController.ShowReloadText(true);
+
+        }
+
         yield return new WaitForSeconds(fireRate);
 
         canFire = true;
@@ -126,11 +136,15 @@ public class FullAutoGun : MonoBehaviour {
 
         canFire = false;
         mayReload = false;
+        UIController.reloadText.GetComponent<Text>().text = "Reloading!";
+        UIController.ShowReloadText(true);
 
         yield return new WaitForSeconds(speed);
 
         ammoMagazine = newAmmo;
         UIController.UpdateAmmoCount(ammoMagazine);
+        UIController.reloadText.GetComponent<Text>().text = UIController.oldReloadText;
+        UIController.ShowReloadText(false);
         canFire = true;
 
     }

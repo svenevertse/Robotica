@@ -14,15 +14,20 @@ public class UI_Controller : MonoBehaviour {
     public Text waveText;
     public Text highscoreText;
     public Text difficultyText;
+
+
+    public string oldReloadText;
+
+    public GameObject reloadText;
 	
-	void Start () {
+	void Start ()
+    {
 
         UpdatePoints(0);
-		
-	}
-	
-	
-	void Update () {
+
+        oldReloadText = reloadText.GetComponent<Text>().text;
+
+        ShowReloadText(false);
 		
 	}
 
@@ -79,6 +84,13 @@ public class UI_Controller : MonoBehaviour {
     {
 
         difficultyText.text = "Diffuclty : " + difficulty;
+
+    }
+
+    public void ShowReloadText (bool toggle)
+    {
+
+        reloadText.SetActive(toggle);
 
     }
 }
