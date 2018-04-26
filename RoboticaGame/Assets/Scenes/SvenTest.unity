@@ -1472,6 +1472,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114468780465415980, guid: c9446d91640ec16498cedf3b79e0e425,
+        type: 2}
+      propertyPath: timeTillNewEnemySpawn
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9446d91640ec16498cedf3b79e0e425, type: 2}
   m_IsPrefabParent: 0
