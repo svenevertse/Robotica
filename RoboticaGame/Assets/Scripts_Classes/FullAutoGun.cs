@@ -22,6 +22,8 @@ public class FullAutoGun : MonoBehaviour {
 
     public string weaponName;
 
+    public GameObject hitMarker;
+
     bool canFire;
     bool mayReload;
     RaycastHit rayHit;
@@ -112,7 +114,8 @@ public class FullAutoGun : MonoBehaviour {
 
             if (rayHit.transform.tag == "Enemy")
             {
-                print("Hit Enemy");
+
+                StartCoroutine(Hitmarker(0.5f));
                 rayHit.transform.gameObject.GetComponent<EnemyRobot>().GetDamage(damage);
 
             }
@@ -146,6 +149,17 @@ public class FullAutoGun : MonoBehaviour {
         UIController.reloadText.GetComponent<Text>().text = UIController.oldReloadText;
         UIController.ShowReloadText(false);
         canFire = true;
+
+    }
+
+    IEnumerator Hitmarker (float disTime)
+    {
+
+        hitMarker.SetActive(true);
+
+        yield return new WaitForSeconds(disTime);
+
+        hitMarker.SetActive(false);
 
     }
 }
