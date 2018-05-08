@@ -117,6 +117,8 @@ public class FullAutoGun : MonoBehaviour {
 
                 StartCoroutine(Hitmarker(0.5f));
                 rayHit.transform.gameObject.GetComponent<EnemyRobot>().GetDamage(damage);
+                rayHit.transform.gameObject.GetComponent<EnemyRobot>().animator.SetInteger("DamageID", Random.Range(0, 2));
+                rayHit.transform.gameObject.GetComponent<EnemyRobot>().animator.SetTrigger("Damage");
 
             }
         }

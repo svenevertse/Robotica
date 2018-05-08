@@ -7,6 +7,8 @@ public class EnemyRobot : EnemyBaseClass {
 
     public Coroutine attackCoroutine = null;
 
+    public Animator animator;
+
 	void Start () {
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -14,6 +16,7 @@ public class EnemyRobot : EnemyBaseClass {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         agent.speed = speed;
+
 
 	}
 	
@@ -29,6 +32,7 @@ public class EnemyRobot : EnemyBaseClass {
     {
 
         player.GetComponent<MainCharacterController>().CheckHealth(attackDamage);
+        animator.SetTrigger("Attack");
 
      
         if(mayAttack == true)
@@ -43,8 +47,13 @@ public class EnemyRobot : EnemyBaseClass {
     public override void Movement()
     {
 
-        agent.SetDestination(player.transform.position);
-        
+        if(agent.enabled == true && player != null)
+        {
+
+            agent.SetDestination(player.transform.position);
+
+        }
+
     }
 
     public override void GetDamage(int damage)
@@ -57,7 +66,9 @@ public class EnemyRobot : EnemyBaseClass {
 
             gameManager.GetPoints(points);
             gameManager.EraseEnemy();
-            Destroy(gameObject);
+            agent.enabled = false;
+            animator.SetTrigger("Death");
+            Destroy(gameObject, 3f);
 
         }
         
