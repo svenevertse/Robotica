@@ -9,6 +9,8 @@ public class EnemyRobot : EnemyBaseClass {
 
     public Animator animator;
 
+    bool isDead;
+
 	void Start () {
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -31,17 +33,22 @@ public class EnemyRobot : EnemyBaseClass {
     public override void Attack()
     {
 
-        player.GetComponent<MainCharacterController>().CheckHealth(attackDamage);
-        animator.SetTrigger("Attack");
-
-     
-        if(mayAttack == true)
+        if(isDead == false)
         {
 
-            attackCoroutine = StartCoroutine(AttackRate());
+            player.GetComponent<MainCharacterController>().CheckHealth(attackDamage);
+            animator.SetTrigger("Attack");
+
+
+            if (mayAttack == true)
+            {
+
+                attackCoroutine = StartCoroutine(AttackRate());
+
+            }
 
         }
-  
+   
     }
 
     public override void Movement()
@@ -61,14 +68,15 @@ public class EnemyRobot : EnemyBaseClass {
 
         health -= damage;
 
-        if(health < 1)
+        if (health < 1 && isDead == false)
         {
 
             gameManager.GetPoints(points);
             gameManager.EraseEnemy();
             agent.enabled = false;
             animator.SetTrigger("Death");
-            Destroy(gameObject, 3f);
+            isDead = true;
+            Destroy(gameObject, 4f);
 
         }
         

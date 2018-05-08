@@ -53,6 +53,7 @@ public class Pickup : MonoBehaviour {
                         {
 
                             trigger.GetComponent<MainCharacterController>().health = 100;
+                            trigger.GetComponent<MainCharacterController>().uiController.UpdateHealthBar((float)100);
 
                         }
                         else
