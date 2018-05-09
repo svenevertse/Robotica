@@ -33,8 +33,6 @@ public class MainCharacterController : MonoBehaviour {
 
         oldSpeed = speed;
 
-        LockCursor(true);
-
 	}
 	
 	void Update () {

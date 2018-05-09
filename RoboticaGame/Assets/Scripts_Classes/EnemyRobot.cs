@@ -11,7 +11,8 @@ public class EnemyRobot : EnemyBaseClass {
 
     bool isDead;
 
-	void Start () {
+	void Start ()
+    {
 
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
@@ -19,14 +20,21 @@ public class EnemyRobot : EnemyBaseClass {
 
         agent.speed = speed;
 
+        StartCoroutine(WaitForNewDestination(0));
 
-	}
+
+    }
 	
 
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
 
-        Movement();
+        if(player != null && isDead == false)
+        {
 
+            transform.LookAt(player.transform);
+
+        }
 
     }
 
@@ -60,6 +68,8 @@ public class EnemyRobot : EnemyBaseClass {
             agent.SetDestination(player.transform.position);
 
         }
+
+        StartCoroutine(WaitForNewDestination(0.2f));
 
     }
 
@@ -109,6 +119,15 @@ public class EnemyRobot : EnemyBaseClass {
                 break;
 
         }
+
+    }
+
+    IEnumerator WaitForNewDestination (float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+
+        Movement ();
 
     }
 
