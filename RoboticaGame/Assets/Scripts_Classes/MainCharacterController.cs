@@ -63,7 +63,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.forward * speed * Input.GetAxis("Vertical") * Time.deltaTime);
-                MainCharAnim.SetFloat("Speed", 1);
+                MainCharAnim.SetFloat("Speed", Input.GetAxis("Vertical"));
             }
         }
 
@@ -76,7 +76,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.back * speed * -Input.GetAxis("Vertical") * Time.deltaTime);
-                MainCharAnim.SetFloat("Speed", 1);
+                MainCharAnim.SetFloat("Speed", -Input.GetAxis("Vertical"));
             }
         }
 
@@ -89,7 +89,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.right * speed * Input.GetAxis("Horizontal") * Time.deltaTime);
-                MainCharAnim.SetFloat("Speed", 1);
+                MainCharAnim.SetFloat("Speed", Input.GetAxis("Horizontal"));
             }
         }
 
@@ -102,7 +102,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.left * speed * -Input.GetAxis("Horizontal") * Time.deltaTime);
-                MainCharAnim.SetFloat("Speed", 1);
+                MainCharAnim.SetFloat("Speed", -Input.GetAxis("Horizontal"));
             }
         }
 
