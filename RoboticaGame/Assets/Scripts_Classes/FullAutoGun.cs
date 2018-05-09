@@ -74,7 +74,7 @@ public class FullAutoGun : MonoBehaviour {
         else
         {
 
-            player.mainCharAnimArms.SetBool("Rapid", false);
+            player.MainCharAnim.SetBool("Shoot", false);
 
         }
     }
@@ -107,7 +107,7 @@ public class FullAutoGun : MonoBehaviour {
 
         bullet.Play();
 
-        player.mainCharAnimArms.SetBool("Rapid", true);
+        player.MainCharAnim.SetBool("Shoot", true);
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(0, 0, range), out rayHit, range))
         {

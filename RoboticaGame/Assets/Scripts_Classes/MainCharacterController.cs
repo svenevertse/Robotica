@@ -29,6 +29,8 @@ public class MainCharacterController : MonoBehaviour {
     public Animator mainCharAnimArms;
     public Animator mainCharAnimLegs;
 
+    public Animator MainCharAnim;
+
     void Start () {
 
         oldSpeed = speed;
@@ -61,7 +63,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.forward * speed * Input.GetAxis("Vertical") * Time.deltaTime);
-                mainCharAnimLegs.SetFloat("Move", 1);
+                MainCharAnim.SetFloat("Speed", 1);
             }
         }
 
@@ -74,7 +76,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.back * speed * -Input.GetAxis("Vertical") * Time.deltaTime);
-                mainCharAnimLegs.SetFloat("Move", 1);
+                MainCharAnim.SetFloat("Speed", 1);
             }
         }
 
@@ -87,7 +89,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.right * speed * Input.GetAxis("Horizontal") * Time.deltaTime);
-                mainCharAnimLegs.SetFloat("Move", 1);
+                MainCharAnim.SetFloat("Speed", 1);
             }
         }
 
@@ -100,7 +102,7 @@ public class MainCharacterController : MonoBehaviour {
             else
             {
                 transform.Translate(Vector3.left * speed * -Input.GetAxis("Horizontal") * Time.deltaTime);
-                mainCharAnimLegs.SetFloat("Move", 1);
+                MainCharAnim.SetFloat("Speed", 1);
             }
         }
 
@@ -121,7 +123,7 @@ public class MainCharacterController : MonoBehaviour {
         {
 
             speed = oldSpeed;
-            mainCharAnimLegs.SetFloat("SprintSpeedMulti", 1f);
+            MainCharAnim.SetFloat("SprintSpeedMulti", 1f);
 
         }
 
@@ -159,7 +161,7 @@ public class MainCharacterController : MonoBehaviour {
 
              speed = newSpeed;
              ReduceStamina(reduceStamina, false);
-             mainCharAnimLegs.SetFloat("SprintSpeedMulti", animSpeed);
+             MainCharAnim.SetFloat("SprintSpeedMulti", animSpeed);
 
 
         }
