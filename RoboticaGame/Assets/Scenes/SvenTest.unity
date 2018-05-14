@@ -1520,6 +1520,21 @@ MonoBehaviour:
   HUD: {fileID: 2133202189}
   mc: {fileID: 214497391}
   activationToggle: 0
+--- !u!114 &270616112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 270616110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5007b9f50aedf4bb3bde6457ba5e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0a000000000000000f0000000000000014000000
+  speed: 07000000000000000a000000000000000d000000
+  points: 1900000000000000320000000000000064000000
+  health: 64000000000000009600000000000000fa000000
 --- !u!1 &283169397
 GameObject:
   m_ObjectHideFlags: 0

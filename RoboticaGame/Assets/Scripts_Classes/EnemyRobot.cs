@@ -11,17 +11,22 @@ public class EnemyRobot : EnemyBaseClass {
 
     bool isDead;
 
+    GameObject managerObject;
+
 	void Start ()
     {
 
         player = GameObject.FindGameObjectWithTag("Player");
+
         agent = GetComponent<NavMeshAgent>();
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        managerObject = GameObject.Find("GameManager");
+        gameManager = managerObject.GetComponent<GameManager>();
+        diffStats = managerObject.GetComponent<DifficultyStats>();
 
         agent.speed = speed;
 
         StartCoroutine(WaitForNewDestination(0));
-
 
     }
 	
@@ -98,24 +103,24 @@ public class EnemyRobot : EnemyBaseClass {
         {
 
             case GameManager.Difficulty.Recruit :
-                speed = 7;
-                attackDamage = 10;
-                points = 25;
-                health = 100;
+                speed = diffStats.speed[0];
+                attackDamage = diffStats.damage[0];
+                points = diffStats.points[0];
+                health = diffStats.health[0];
                 break;
 
             case GameManager.Difficulty.Medium:
-                speed = 10;
-                attackDamage = 15;
-                points = 50;
-                health = 150;
+                speed = diffStats.speed[2];
+                attackDamage = diffStats.damage[2];
+                points = diffStats.points[2];
+                health = diffStats.health[2];
                 break;
 
             case GameManager.Difficulty.Veteran:
-                speed = 13;
-                attackDamage = 20;
-                points = 100;
-                health = 250;
+                speed = diffStats.speed[4];
+                attackDamage = diffStats.damage[4];
+                points = diffStats.points[4];
+                health = diffStats.health[4];
                 break;
 
         }

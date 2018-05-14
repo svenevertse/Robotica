@@ -80,9 +80,9 @@ public class WaveBasedSystem : MonoBehaviour {
             int r = Random.Range(0, spawnPositions.Length);
             GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
             instancedEnemy.name = "Enemy" + (i + 1);
-            instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(gameManager.enemyDifficulty);
             spacing --;
             curInLevel = i + 1;
+            instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(gameManager.enemyDifficulty);
 
         }
 
@@ -125,10 +125,10 @@ public class WaveBasedSystem : MonoBehaviour {
             CheckDifficulty(gameManager.enemyDifficulty);
             int r = Random.Range(0, spawnPositions.Length);
             GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
-            instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(gameManager.enemyDifficulty);
             curInLevel++;
             spacing--;
             instancedEnemy.name = "Enemy" + curInLevel;
+            instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(gameManager.enemyDifficulty);
 
 
 

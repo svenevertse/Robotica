@@ -20,6 +20,8 @@ abstract public class EnemyBaseClass : MonoBehaviour {
 
     public GameManager gameManager;
 
+    public DifficultyStats diffStats;
+
     public abstract void Movement();
 
     public abstract void Attack();
