@@ -9,7 +9,7 @@ public class EnemyRobot : EnemyBaseClass {
 
     public Animator animator;
 
-    bool isDead;
+    public bool isDead;
 
 	void Start ()
     {
