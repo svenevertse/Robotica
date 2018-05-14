@@ -82,6 +82,7 @@ public class WaveBasedSystem : MonoBehaviour {
             instancedEnemy.name = "Enemy" + (i + 1);
             spacing --;
             curInLevel = i + 1;
+            instancedEnemy.GetComponent<EnemyRobot>().diffStats = GameObject.Find("GameManager").GetComponent<DifficultyStats>();
             instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(gameManager.enemyDifficulty);
 
         }
@@ -128,6 +129,7 @@ public class WaveBasedSystem : MonoBehaviour {
             curInLevel++;
             spacing--;
             instancedEnemy.name = "Enemy" + curInLevel;
+            instancedEnemy.GetComponent<EnemyRobot>().diffStats = GameObject.Find("GameManager").GetComponent<DifficultyStats>();
             instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(gameManager.enemyDifficulty);
 
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DifficultyStats : MonoBehaviour {
 
     public int [] damage;
-    public int [] speed;
+    public float [] speed;
     public int [] points;
     public int [] health;
 

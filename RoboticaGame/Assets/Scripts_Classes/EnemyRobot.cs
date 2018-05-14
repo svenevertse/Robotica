@@ -11,8 +11,6 @@ public class EnemyRobot : EnemyBaseClass {
 
     bool isDead;
 
-    GameObject managerObject;
-
 	void Start ()
     {
 
@@ -20,9 +18,7 @@ public class EnemyRobot : EnemyBaseClass {
 
         agent = GetComponent<NavMeshAgent>();
 
-        managerObject = GameObject.Find("GameManager");
-        gameManager = managerObject.GetComponent<GameManager>();
-        diffStats = managerObject.GetComponent<DifficultyStats>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         agent.speed = speed;
 
