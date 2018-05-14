@@ -97,7 +97,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 492}
   m_MaxSize: {x: 16012, y: 14042}
   vertical: 0
-  controlID: 144
+  controlID: 161
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -639,33 +639,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts_Classes
+    - Assets/Sci-Fi Gun 2/Model
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts_Classes
+  - Assets/Sci-Fi Gun 2/Model
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\svene\Documents\GitHub\Robotica\RoboticaGame
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 106}
-    m_SelectedIDs: 022a0000
-    m_LastClickedID: 10754
-    m_ExpandedIDs: 0000000080280000822a0000ce2a0000de2a0000d62c0000402d00005e2d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 54}
+    m_SelectedIDs: a63a0000
+    m_LastClickedID: 15014
+    m_ExpandedIDs: 0000000080280000822a0000ce2a0000de2a0000d62c00005e2d0000943a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Particles
+      m_OriginalName: Particles
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 11654
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 7}
     m_SearchString: 
@@ -797,9 +797,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 24070000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff00000000982f0000
+    m_SelectedIDs: 88b0ffff
+    m_LastClickedID: -20344
+    m_ExpandedIDs: 4cf7ffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -855,9 +855,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.049626, y: -7.167815, z: 1454.0402}
+    m_Target: {x: -20.172098, y: -6.0834813, z: 1456.2627}
     speed: 2
-    m_Value: {x: -3.049626, y: -7.167815, z: 1454.0402}
+    m_Value: {x: -20.172098, y: -6.0834813, z: 1456.2627}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -881,13 +881,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.022180485, y: 0.8248682, z: -0.032442387, w: -0.5639575}
+    m_Target: {x: 0.007346746, y: 0.6929321, z: 0.007061193, w: -0.7209308}
     speed: 2
-    m_Value: {x: -0.022180483, y: 0.8248682, z: -0.03244239, w: -0.5639575}
+    m_Value: {x: 0.007346746, y: 0.6929321, z: 0.007061193, w: -0.7209308}
   m_Size:
-    m_Target: 5.6432533
+    m_Target: 21.474205
     speed: 2
-    m_Value: 5.6432533
+    m_Value: 21.474205
   m_Ortho:
     m_Target: 0
     speed: 2
