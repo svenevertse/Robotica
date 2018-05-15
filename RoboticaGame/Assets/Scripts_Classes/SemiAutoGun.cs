@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SemiAutoGun : MonoBehaviour {
 
     public BaseGunScript baseGun;
     public UI_Controller UIController;
+    public Transform muzzleFlashPos;
+    public MainCharacterController player;
+
+    public ParticleSystem bullet;
 
     public int ammoMagazine;
     public int magazineSize;
@@ -16,6 +21,8 @@ public class SemiAutoGun : MonoBehaviour {
     public float range;
 
     public string weaponName;
+
+    public GameObject hitMarker;
 
     bool canFire;
     bool mayReload;
@@ -56,7 +63,17 @@ public class SemiAutoGun : MonoBehaviour {
         if (Input.GetButtonDown("Fire1") && ammoMagazine >= 1 && canFire == true && Time.timeScale == 1)
         {
 
-            StartCoroutine(ShootGun(fireRate));
+            if(canFire == true)
+            {
+
+                StartCoroutine(ShootGun(fireRate));
+
+            }
+        }
+        else
+        {
+
+            player.MainCharAnim.SetBool("Shoot", false);
 
         }
     }
@@ -89,19 +106,29 @@ public class SemiAutoGun : MonoBehaviour {
 
         UIController.UpdateAmmoCount(ammoMagazine);
 
-        Debug.DrawRay(transform.position, transform.TransformDirection(0, 0, range), Color.red, range);
+        bullet.Play();
+
+        player.MainCharAnim.SetBool("Shoot", true);
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(0, 0, range), out rayHit, range))
         {
 
-            print("Hit");
-
             if (rayHit.transform.tag == "Enemy")
             {
-                print("Hit Enemy");
+
+                StartCoroutine(Hitmarker(0.5f));
                 rayHit.transform.gameObject.GetComponent<EnemyRobot>().GetDamage(damage);
+                rayHit.transform.gameObject.GetComponent<EnemyRobot>().animator.SetInteger("DamageID", Random.Range(0, 2));
+                rayHit.transform.gameObject.GetComponent<EnemyRobot>().animator.SetTrigger("Damage");
 
             }
+        }
+
+        if (ammoMagazine <= 2)
+        {
+
+            UIController.ShowReloadText(true);
+
         }
 
         yield return new WaitForSeconds(fireRate);
@@ -110,17 +137,32 @@ public class SemiAutoGun : MonoBehaviour {
 
     }
 
-    IEnumerator ReloadTimer(float speed, int newAmmo)
+    IEnumerator ReloadTimer (float speed, int newAmmo)
     {
 
         canFire = false;
         mayReload = false;
+        UIController.reloadText.GetComponent<Text>().text = "Reloading!";
+        UIController.ShowReloadText(true);
 
         yield return new WaitForSeconds(speed);
 
         ammoMagazine = newAmmo;
         UIController.UpdateAmmoCount(ammoMagazine);
+        UIController.reloadText.GetComponent<Text>().text = UIController.oldReloadText;
+        UIController.ShowReloadText(false);
         canFire = true;
+
+    }
+
+    IEnumerator Hitmarker (float disTime)
+    {
+
+        hitMarker.SetActive(true);
+
+        yield return new WaitForSeconds(disTime);
+
+        hitMarker.SetActive(false);
 
     }
 }

@@ -17,8 +17,12 @@ public class BaseGunScript : MonoBehaviour {
 
     public UI_Controller UIController;
 
+    public MainCharacterController mc;
+
 
 	void Start () {
+
+        mc = GetComponent<MainCharacterController>();
 
         SwitchWeapon(0);
 		
@@ -63,6 +67,8 @@ public class BaseGunScript : MonoBehaviour {
 
                 UIController.UpdateWeaponText(fullAuto.weaponName);
                 UIController.UpdateAmmoCount(fullAuto.ammoMagazine);
+
+                mc.MainCharAnim.SetInteger("CurWeapon", 0);
                 break;
 
             case 1:
@@ -76,6 +82,8 @@ public class BaseGunScript : MonoBehaviour {
 
                 UIController.UpdateWeaponText(semiAuto.weaponName);
                 UIController.UpdateAmmoCount(semiAuto.ammoMagazine);
+
+                mc.MainCharAnim.SetInteger("CurWeapon", 1);
                 break;
 
 
