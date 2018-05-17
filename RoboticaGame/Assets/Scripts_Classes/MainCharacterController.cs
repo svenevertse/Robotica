@@ -141,7 +141,6 @@ public class MainCharacterController : MonoBehaviour {
                 {
 
                     gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, jumpSpeed + (speed / 3.5f), 0);
-                    mainCharAnimLegs.SetTrigger("Jump");
                     ReduceStamina(staminaAmount, true);
 
 
