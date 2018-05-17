@@ -48,6 +48,7 @@ public class EnemyRobot : EnemyBaseClass {
             player.GetComponent<MainCharacterController>().CheckHealth(attackDamage);
             animator.SetTrigger("Attack");
 
+            agent.isStopped = true;
 
             if (mayAttack == true)
             {
@@ -66,6 +67,7 @@ public class EnemyRobot : EnemyBaseClass {
         if(agent.enabled == true && player != null)
         {
 
+            agent.isStopped = false;
             agent.SetDestination(player.transform.position);
 
         }
@@ -103,6 +105,7 @@ public class EnemyRobot : EnemyBaseClass {
                 attackDamage = diffStats.damage[0];
                 points = diffStats.points[0];
                 health = diffStats.health[0];
+                animator.SetFloat("Speed", 0.4f);
                 break;
 
             case GameManager.Difficulty.Medium:
@@ -110,6 +113,7 @@ public class EnemyRobot : EnemyBaseClass {
                 attackDamage = diffStats.damage[2];
                 points = diffStats.points[2];
                 health = diffStats.health[2];
+                animator.SetFloat("Speed", 0.4f);
                 break;
 
             case GameManager.Difficulty.Veteran:
@@ -117,6 +121,7 @@ public class EnemyRobot : EnemyBaseClass {
                 attackDamage = diffStats.damage[4];
                 points = diffStats.points[4];
                 health = diffStats.health[4];
+                animator.SetFloat("Speed", 0.7f);
                 break;
 
         }

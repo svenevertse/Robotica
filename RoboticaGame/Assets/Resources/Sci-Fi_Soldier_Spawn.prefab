@@ -793,7 +793,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1199032312038496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.354001, y: -9.95, z: 8.016804}
+  m_LocalPosition: {x: 8.672978, y: -9.95, z: -8.907265}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 4517330993717646}
@@ -1081,8 +1081,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1818407222095822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.026, y: 0.395, z: 0.179}
-  m_LocalScale: {x: 0.43856007, y: 0.7654221, z: 0.20132221}
+  m_LocalPosition: {x: 0.026, y: 0.395, z: 0.206}
+  m_LocalScale: {x: 0.43856007, y: 0.7654221, z: 0.2679989}
   m_Children: []
   m_Father: {fileID: 4043895561857980}
   m_RootOrder: 3
@@ -1620,7 +1620,9 @@ MonoBehaviour:
   agent: {fileID: 0}
   player: {fileID: 0}
   gameManager: {fileID: 0}
+  diffStats: {fileID: 0}
   animator: {fileID: 95334584508510562}
+  isDead: 0
 --- !u!137 &137312576852551604
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1721,7 +1723,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1199032312038496}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.2
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1733,4 +1735,4 @@ NavMeshAgent:
   m_Height: 1
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 3
+  m_ObstacleAvoidanceType: 4

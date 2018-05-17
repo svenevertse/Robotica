@@ -125,7 +125,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 1b9d73bbb8b554167d2567a3795f94f1 Assembly-CSharp.dll:.GameOverMenu
-2614fe6f789a19077649bc2107902eec Assembly-CSharp.dll:.EnemyRobot
+e2641055f2dcd1fc01b63de24f88378b Assembly-CSharp.dll:.EnemyRobot
 83c4d107e68d1715a86f4db746906d5d Assembly-CSharp.dll:.FullAutoGun
 1b7f6acbce86577e173da0c2f56757e4 Assembly-CSharp.dll:.EnemyDamageGiver
 cab9bc61a5cb2a826b1023875be7f64c Assembly-CSharp.dll:.WaveBasedSystem
@@ -151,6 +151,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+e746460f8313d869f1aedfc7ba867198 Assembly-CSharp.dll:.DifficultyStats
 5959242de309d71a25b75c9a773bbc8c Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -167,6 +168,6 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 bc5f3fffc9cd08f55609ec5b85c39554 Assembly-CSharp.dll:.GameManager
 f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-2dcc6016486f14b4a77da3e3b5189f59 Assembly-CSharp.dll:.SemiAutoGun
+83c4d107e68d1715a86f4db746906d5d Assembly-CSharp.dll:.SemiAutoGun
 ae4c0bec67841070b0eb1c4f0cce54ff Assembly-CSharp.dll:.UI_Controller
-5d475aeff25e27d86926eab2da333bd6 Assembly-CSharp.dll:.BaseGunScript
+42ecd68c21e4b6e69b9cb23027602e7c Assembly-CSharp.dll:.BaseGunScript
