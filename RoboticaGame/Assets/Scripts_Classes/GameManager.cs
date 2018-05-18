@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public MainCharacterController cController;
 
+    DifficultyStats difficultyStats;
+
     public enum Difficulty
     {
 
@@ -31,6 +33,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
+        difficultyStats = GetComponent <DifficultyStats>();
 
         StartCoroutine(FadeImage(true));
 
@@ -80,7 +84,9 @@ public class GameManager : MonoBehaviour
         if (currentAmountEnemies < 1)
         {
 
+            difficultyStats.CalulateDifficulty();
             waveSystem.CalculateEnemyAmount(waveSystem.enemyAmount);
+            
 
         }
 
