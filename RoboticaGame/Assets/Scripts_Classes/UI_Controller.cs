@@ -9,12 +9,13 @@ public class UI_Controller : MonoBehaviour {
     public Slider healthBar;
 
     public Text ammoText;
-    public Text weaponText;
     public Text currentPointText;
     public Text waveText;
     public Text highscoreText;
     public Text difficultyText;
 
+    public Image hgSelected;
+    public Image scarSelected;
 
     public string oldReloadText;
 
@@ -45,10 +46,26 @@ public class UI_Controller : MonoBehaviour {
 
     }
 
-    public void UpdateWeaponText (string weaponName)
+    public void UpdateWeaponText (int wType)
     {
 
-        weaponText.text = "Weapon : " + weaponName;
+        switch (wType)
+        {
+
+            case 0 :
+
+                scarSelected.enabled = true;
+                hgSelected.enabled = false;
+                break;
+
+            case 1:
+
+                hgSelected.enabled = true;
+                scarSelected.enabled = false;
+                break;
+
+
+        }
 
     }
 
