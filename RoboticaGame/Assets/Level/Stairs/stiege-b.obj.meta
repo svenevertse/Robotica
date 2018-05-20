@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: bf8499a338ebed045914a0f3e63815d0
+timeCreated: 1526561796
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: stiege-b_Ebene
+    100004: stiege-b_Ebene_1
+    100006: stiege-b_Floors
+    100008: stiege-b_g-balken1
+    100010: stiege-b_g-balken1_1
+    100012: stiege-b_s-balken1
+    100014: stiege-b_s-balken2
+    100016: stiege-b_s-balken3
+    100018: stiege-b_s-balken4
+    100020: stiege-b_s-balken4_1
+    100022: stiege-b_s-balken4_2
+    400000: //RootNode
+    400002: stiege-b_Ebene
+    400004: stiege-b_Ebene_1
+    400006: stiege-b_Floors
+    400008: stiege-b_g-balken1
+    400010: stiege-b_g-balken1_1
+    400012: stiege-b_s-balken1
+    400014: stiege-b_s-balken2
+    400016: stiege-b_s-balken3
+    400018: stiege-b_s-balken4
+    400020: stiege-b_s-balken4_1
+    400022: stiege-b_s-balken4_2
+    2100000: stiege-b_EbeneMat
+    2100002: stiege-b_Ebene_1Mat
+    2100004: stiege-b_FloorsMat
+    2100006: stiege-b_g-balken1Mat
+    2100008: stiege-b_g-balken1_1Mat
+    2100010: stiege-b_s-balken1Mat
+    2100012: stiege-b_s-balken2Mat
+    2100014: stiege-b_s-balken3Mat
+    2100016: stiege-b_s-balken4Mat
+    2100018: stiege-b_s-balken4_1Mat
+    2100020: stiege-b_s-balken4_2Mat
+    2300000: stiege-b_Ebene
+    2300002: stiege-b_Ebene_1
+    2300004: stiege-b_Floors
+    2300006: stiege-b_g-balken1
+    2300008: stiege-b_g-balken1_1
+    2300010: stiege-b_s-balken1
+    2300012: stiege-b_s-balken2
+    2300014: stiege-b_s-balken3
+    2300016: stiege-b_s-balken4
+    2300018: stiege-b_s-balken4_1
+    2300020: stiege-b_s-balken4_2
+    3300000: stiege-b_Ebene
+    3300002: stiege-b_Ebene_1
+    3300004: stiege-b_Floors
+    3300006: stiege-b_g-balken1
+    3300008: stiege-b_g-balken1_1
+    3300010: stiege-b_s-balken1
+    3300012: stiege-b_s-balken2
+    3300014: stiege-b_s-balken3
+    3300016: stiege-b_s-balken4
+    3300018: stiege-b_s-balken4_1
+    3300020: stiege-b_s-balken4_2
+    4300000: stiege-b_Ebene
+    4300002: stiege-b_Ebene_1
+    4300004: stiege-b_Floors
+    4300006: stiege-b_g-balken1
+    4300008: stiege-b_g-balken1_1
+    4300010: stiege-b_s-balken1
+    4300012: stiege-b_s-balken2
+    4300014: stiege-b_s-balken3
+    4300016: stiege-b_s-balken4
+    4300018: stiege-b_s-balken4_1
+    4300020: stiege-b_s-balken4_2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.05
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

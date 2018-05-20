@@ -31,7 +31,6 @@ public class FullAutoGun : MonoBehaviour {
 
 	void Start ()
     {
-
         ammoMagazine = magazineSize;
         canFire = true;
         UIController.UpdateAmmoCount(ammoMagazine);
@@ -46,6 +45,8 @@ public class FullAutoGun : MonoBehaviour {
 
         baseGun.fireGun(ammoMagazine, fireRateVar * Time.deltaTime);
         baseGun.reload(magazineSize, reloadSpeed);
+
+        ReloadImg();
 
     }
 
@@ -136,6 +137,18 @@ public class FullAutoGun : MonoBehaviour {
 
     }
 
+    void ReloadImg ()
+    {
+
+        if (UIController.reloadImg.enabled == true)
+        {
+
+            UIController.reloadImg.fillAmount += Mathf.Lerp(0f, 1f, reloadSpeed / 100 * 0.48f);
+
+        }
+
+    }
+
     IEnumerator ReloadTimer (float speed, int newAmmo)
     {
 
@@ -143,13 +156,16 @@ public class FullAutoGun : MonoBehaviour {
         mayReload = false;
         UIController.reloadText.GetComponent<Text>().text = "Reloading!";
         UIController.ShowReloadText(true);
-
+        UIController.reloadImg.enabled = true;
+        
         yield return new WaitForSeconds(speed);
 
         ammoMagazine = newAmmo;
         UIController.UpdateAmmoCount(ammoMagazine);
         UIController.reloadText.GetComponent<Text>().text = UIController.oldReloadText;
         UIController.ShowReloadText(false);
+        UIController.reloadImg.enabled = false;
+        UIController.reloadImg.fillAmount = 0f;
         canFire = true;
 
     }

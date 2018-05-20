@@ -16,6 +16,7 @@ public class UI_Controller : MonoBehaviour {
 
     public Image hgSelected;
     public Image scarSelected;
+    public Image reloadImg;
 
     public string oldReloadText;
 

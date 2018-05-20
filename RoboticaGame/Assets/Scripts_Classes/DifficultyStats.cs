@@ -10,48 +10,51 @@ public class DifficultyStats : MonoBehaviour {
     public float [] speed;
     public int [] points;
     public int [] health;
+    public int [] max;
 
     public void CalulateDifficulty ()
     {
 
-        for(int i = 0; i < damage.Length; i++)
+        for (int i = 0; i < damage.Length; i++)
         {
 
-            float damageF = (float)damage[i];
+            if (!(damage[i] > max[0]))
+            {
 
-            damageF += damageF / 100f * increasePercentage;
-            damage[i] = Mathf.RoundToInt(damageF);
+                float damageF = (float)damage[i];
 
-        }
+                damageF += damageF / 100f * increasePercentage;
+                damage[i] = Mathf.RoundToInt(damageF);
+
+            }
+        }      
 
         for (int i = 0; i < speed.Length; i++)
         {
 
-            float speedF = speed[i];
+            if (!(speed[i] > (float)max[1]))
+            {
 
-            speedF += speedF / 100f * increasePercentage;
-            speed[i] = speedF;
+                float speedF = speed[i];
 
-        }
+                speedF += speedF / 100f * increasePercentage;
+                speed[i] = speedF;
 
-        for (int i = 0; i < points.Length; i++)
-        {
-
-            float pointsF = (float)points[i];
-
-            pointsF += pointsF / 100f * increasePercentage;
-            points[i] = Mathf.RoundToInt(pointsF);
-
+            }
         }
 
         for (int i = 0; i < health.Length; i++)
         {
 
-            float healthF = (float)health[i];
+            if(!(health[i] > max[2]))
+            {
 
-            healthF += healthF / 100f * increasePercentage;
-            health[i] = Mathf.RoundToInt(healthF);
+                float healthF = (float)health[i];
 
+                healthF += healthF / 100f * increasePercentage;
+                health[i] = Mathf.RoundToInt(healthF);
+
+            }
         }
 
     }

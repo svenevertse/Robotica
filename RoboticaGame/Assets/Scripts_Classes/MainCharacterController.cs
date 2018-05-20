@@ -9,6 +9,7 @@ public class MainCharacterController : MonoBehaviour {
     public float boostSpeed = 30f;
     public float jumpSpeed = 10f;
     public float rayDis = 1f;
+    public float rayDisJump;
     public float hCamSpeed = 20f;
     public float vCamSpeed = 20f;
 
@@ -26,9 +27,6 @@ public class MainCharacterController : MonoBehaviour {
     public GameObject mesh;
 
     public UI_Controller uiController;
-    public Animator mainCharAnimArms;
-    public Animator mainCharAnimLegs;
-
     public Animator MainCharAnim;
 
     void Start () {
@@ -135,7 +133,7 @@ public class MainCharacterController : MonoBehaviour {
         if(Input.GetButtonDown("Jump"))
         {
 
-            if(Physics.Raycast(transform.position, Vector3.down, rayDis + (transform.localScale.y / 2)))
+            if(Physics.Raycast(transform.position, Vector3.down, rayDisJump + (transform.localScale.y / 2)))
             {
                 if(stamina >= staminaAmount)
                 {
