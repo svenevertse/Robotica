@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BaseGunScript : MonoBehaviour {
 
-    public delegate void FireGun(int ammoMagazine, float fireRate);
+    public delegate void FireGun(int ammoMagazine, float fireRate); //Delegate functies voor het vuren en herladen van de wapens
     public delegate void Reload(int newAmmo, float reloadSpeed);
     public FireGun fireGun;
     public Reload reload;
 
-    public FullAutoGun fullAuto;
+    public FullAutoGun fullAuto; 
     public SemiAutoGun semiAuto;
 
     public GameObject fullAutoMesh;
@@ -22,35 +22,35 @@ public class BaseGunScript : MonoBehaviour {
 
 	void Start () {
 
-        mc = GetComponent<MainCharacterController>();
+        mc = GetComponent<MainCharacterController>();   //set de variable van de MainCharacterController
 
-        SwitchWeapon(0);
+        SwitchWeapon(0);                                //activeert de functie die het wapen selecteerd
 		
 	}
 	
 
 	void Update () {
 
-        CheckScrollInput();
+        CheckScrollInput();                             //activeert de functie het scrollwheel checked
 		
 	}
 
-    void CheckScrollInput()
+    void CheckScrollInput()                             //functie die checked of je het scrollwheel gebruikt
     {
 
-        if(Input.GetAxis("Mouse ScrollWheel") > 0 && Time.timeScale == 1)
+        if(Input.GetAxis("Mouse ScrollWheel") > 0 && Time.timeScale == 1)   //conditie die checked of er naar boven gescrolled word
         {
-            SwitchWeapon(0);
+            SwitchWeapon(0);                            
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0 && Time.timeScale == 1)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0 && Time.timeScale == 1)  //conditie die checked of er naar beneden gescrolled word
         {
             SwitchWeapon(1);
         }
 
     }
 
-    void SwitchWeapon (int currentWeapon)
+    void SwitchWeapon (int currentWeapon)               //functie die de wapens switched en al de benodigde variablen set
     {
 
         switch (currentWeapon)

@@ -20,40 +20,40 @@ public class EnemyRobot : EnemyBaseClass {
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        agent.speed = speed;
+        agent.speed = speed;                                                            //set de snelheids waarde van de navagent
 
-        StartCoroutine(WaitForNewDestination(0));
+        StartCoroutine(WaitForNewDestination(0));                                       //Start de coroutine die om de paar miliseconden checked waar de speler is
 
     }
 	
 
-	void FixedUpdate ()
+	void Update ()         
     {
 
-        if(player != null && isDead == false)
+        if(player != null && isDead == false)                                           //conditie die checked of de speler in de scene is en of de enemy niet dood is
         {
 
-            transform.LookAt(player.transform);
+            transform.LookAt(player.transform);                                         //LookAt functie om de enemy naar de speler te laten kijken
 
         }
 
     }
 
-    public override void Attack()
+    public override void Attack()                                                       //functie die overgenomen is van de EnemyBaseClass class
     {
 
-        if(isDead == false)
+        if(isDead == false)                                                             //conditie die checked of de enemy niet dood is om er voor te zorgen dat hij deze functie niet uitvoert als hij dood is
         {
-
-            player.GetComponent<MainCharacterController>().CheckHealth(attackDamage);
+            
+            player.GetComponent<MainCharacterController>().CheckHealth(attackDamage);       //geeft damage aan de speler en set de aanval animatie trigger
             animator.SetTrigger("Attack");
+            
+            agent.isStopped = true;                                                     //laat de navagent stoppen met bewegen om er voor de zorgen dat de enemy niet loopt en slaat tegelijk
 
-            agent.isStopped = true;
-
-            if (mayAttack == true)
+            if (mayAttack == true)                                                      //checked of de speler nog steeds in de hitbox van de enemy zit om dan nog een aanval uit te voeren
             {
 
-                attackCoroutine = StartCoroutine(AttackRate());
+                attackCoroutine = StartCoroutine(AttackRate());                         //cached de coroutine om hem later ook uit te kunnen zetten
 
             }
 
@@ -61,30 +61,30 @@ public class EnemyRobot : EnemyBaseClass {
    
     }
 
-    public override void Movement()
+    public override void Movement()                                                     //functie die overgenomen is van de EnemyBaseClass class        
     {
 
-        if(agent.enabled == true && player != null)
+        if(agent.enabled == true && player != null)                                     //conditie checked of de navagent aanstaat en de speler niet dood is om ervoor te zorgen dat de enemy alleen mag bewegen als dat moet
         {
 
-            agent.isStopped = false;
-            agent.SetDestination(player.transform.position);
+            agent.isStopped = false;                                                     //staat toe dat de navagent kan bewegen
+            agent.SetDestination(player.transform.position);                            //laat de enemy bewegen naar de speler
 
         }
 
-        StartCoroutine(WaitForNewDestination(0.2f));
+        StartCoroutine(WaitForNewDestination(0.2f));                                    //start de coroutine om naar de nieuwe locatie van de speler te zoeken
 
     }
 
-    public override void GetDamage(int damage)
+    public override void GetDamage(int damage)                                          //functie die schade ontvangt die door de speler gemaakt is
     {
 
-        health -= damage;
+        health -= damage;                                                               
 
-        if (health < 1 && isDead == false)
+        if (health < 1 && isDead == false)                                              //conditie die checked of de enemy geen health meer heeft en of de enemy niet al dood is
         {
 
-            gameManager.GetPoints(points);
+            gameManager.GetPoints(points);                                              //voert alle functies uit die uitgevoert moeten worden en set alle variablen op het moment als de enemy dood is
             gameManager.EraseEnemy();
             agent.enabled = false;
             animator.SetTrigger("Death");
@@ -95,12 +95,12 @@ public class EnemyRobot : EnemyBaseClass {
         
     }
 
-    public void CheckDifficulty (GameManager.Difficulty enemyDiff) {
+    public void CheckDifficulty (GameManager.Difficulty enemyDiff) {                    //functie alle statistieken van de enemy set gebaseerd op welke moeilijkheidsgraad de speler op dat moment is
 
         switch (enemyDiff)
         {
 
-            case GameManager.Difficulty.Recruit :
+            case GameManager.Difficulty.Recruit :                                       //set alle waardes voor de statistieken van de enemy
                 speed = diffStats.speed[0];
                 attackDamage = diffStats.damage[0];
                 points = diffStats.points[0];
@@ -128,7 +128,7 @@ public class EnemyRobot : EnemyBaseClass {
 
     }
 
-    IEnumerator WaitForNewDestination (float waitTime)
+    IEnumerator WaitForNewDestination (float waitTime)                              //coroutine die na enkele milisconden de movement laat uitvoeren
     {
 
         yield return new WaitForSeconds(waitTime);
@@ -137,8 +137,8 @@ public class EnemyRobot : EnemyBaseClass {
 
     }
 
-    public IEnumerator AttackRate ()
-    {
+    public IEnumerator AttackRate ()                                               //coroutine die na enkele seconden  de enemy opnieuw laat aanvallen
+    {  
 
         yield return new WaitForSeconds(attackRate);
 

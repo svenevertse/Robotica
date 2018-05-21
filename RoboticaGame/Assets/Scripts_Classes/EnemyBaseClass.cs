@@ -12,7 +12,7 @@ abstract public class EnemyBaseClass : MonoBehaviour {
     public int attackDamage;
     public int points;
 
-    public bool mayAttack;
+    public bool mayAttack;                              //boolean die aan kan geven of de enemy kan aanvallen
 
     public NavMeshAgent agent;
 
@@ -22,9 +22,9 @@ abstract public class EnemyBaseClass : MonoBehaviour {
 
     public DifficultyStats diffStats;
 
-    public abstract void Movement();
+    public abstract void Movement();                    //abstracte functie voor de movement van de enemy
 
-    public abstract void Attack();
+    public abstract void Attack();                      //abstracte functie voor de aanval van de enmemy
 
-    public abstract void GetDamage(int damage);
+    public abstract void GetDamage(int damage);         //abstracte functie voor het krijgen van damage van de enemy
 }
