@@ -274,7 +274,6 @@ public class MainCharacterController : MonoBehaviour {
             Destroy(mesh);
             Destroy(gameObject);
             Time.timeScale = 0;
-            print("death");
 
         }
 
