@@ -8,7 +8,6 @@ public class MainMenuController : MonoBehaviour {
 
     public GameObject[] buttons;
 
-    public Text headTextMenu;
     public Text highScoreText;
 
 	void Start () {
@@ -59,15 +58,6 @@ public class MainMenuController : MonoBehaviour {
         XmlManager.ins.Save();
 
         GetHighScore();
-
-    }
-
-
-
-    public void ChangeHeadName (string newHeadText)
-    {
-
-        headTextMenu.text = newHeadText;
 
     }
 
