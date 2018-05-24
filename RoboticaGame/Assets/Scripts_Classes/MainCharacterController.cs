@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class MainCharacterController : MonoBehaviour {
 
@@ -29,11 +30,21 @@ public class MainCharacterController : MonoBehaviour {
     public UI_Controller uiController;
     public Animator MainCharAnim;
 
+    public ChromaticAberrationModel caModel;
+    public PostProcessingProfile pProfile;
+    
+
     void Start () {
 
         oldSpeed = speed;
 
-	}
+        var behaviour = mainCam.GetComponent<PostProcessingBehaviour>();
+        pProfile = behaviour.profile;
+
+        caModel = pProfile.chromaticAberration;
+
+
+    }
 	
 	void Update () {
 
@@ -108,13 +119,13 @@ public class MainCharacterController : MonoBehaviour {
         if (Input.GetButton("Sprint"))
         {
 
-            Boost(sprintSpeed, 3f, staminaReduceSprint);
+            Boost(sprintSpeed, 3f, staminaReduceSprint, 0.4f);
 
         }
         else if (Input.GetButton("Boost"))
         {
 
-            Boost(boostSpeed, 6f, staminaReduceBoost);
+            Boost(boostSpeed, 6f, staminaReduceBoost, 0.7f);
 
         }
         else
@@ -122,6 +133,7 @@ public class MainCharacterController : MonoBehaviour {
 
             speed = oldSpeed;
             MainCharAnim.SetFloat("SprintSpeedMulti", 1f);
+            ChangeCA(0f);
 
         }
 
@@ -150,18 +162,32 @@ public class MainCharacterController : MonoBehaviour {
 
     }
 
-    void Boost (float newSpeed, float animSpeed, float reduceStamina)
+    void Boost (float newSpeed, float animSpeed, float reduceStamina, float caAmount)
     {
+
 
         if (stamina >= 0.1f)
            {
 
-             speed = newSpeed;
+            ChangeCA(caAmount);
+            
+            speed = newSpeed;
              ReduceStamina(reduceStamina, false);
              MainCharAnim.SetFloat("SprintSpeedMulti", animSpeed);
 
 
         }
+
+    }
+
+    void ChangeCA (float amount)
+    {
+
+        var ca = caModel.settings;
+
+        ca.intensity = amount;
+
+        pProfile.chromaticAberration.settings = ca;
 
     }
 

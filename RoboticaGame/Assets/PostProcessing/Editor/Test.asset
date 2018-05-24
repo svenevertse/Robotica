@@ -121,7 +121,7 @@ MonoBehaviour:
         neutralWhiteClip: 6.18
       basic:
         postExposure: 1
-        temperature: 18
+        temperature: 3
         tint: -6
         hueShift: -23
         saturation: 0.77
@@ -281,7 +281,7 @@ MonoBehaviour:
       lut: {fileID: 0}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
       intensity: 0
