@@ -79072,7 +79072,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31abb8c8ce3a759429db6a17b45a7715, type: 3}
       propertyPath: m_RootOrder
-      value: 76
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31abb8c8ce3a759429db6a17b45a7715, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -84504,6 +84504,15 @@ Prefab:
     - target: {fileID: 114886014667490192, guid: 65364977bfa03014e9fb7351e2d9fd3b,
         type: 2}
       propertyPath: rayDisJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371522686699434, guid: 65364977bfa03014e9fb7351e2d9fd3b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20124366558283404, guid: 65364977bfa03014e9fb7351e2d9fd3b,
+        type: 2}
+      propertyPath: m_RenderingPath
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
