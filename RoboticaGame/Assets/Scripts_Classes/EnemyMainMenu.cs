@@ -17,6 +17,8 @@ public class EnemyMainMenu : MonoBehaviour {
     int randomDes;                                              //Int die word gerandomized en word gebruikt om een random Transform te pakken uit de destinations array
     float randomSpeed;                                          //float word gerandomized en word gebruikt om random navagent speed + een random animatie te geven
 
+    bool isDead;
+
     void Start () {
 
         animator = GetComponent<Animator>();
@@ -44,14 +46,29 @@ public class EnemyMainMenu : MonoBehaviour {
 	
 	void Update () {
 
-        distance.z = Vector3.Distance(transform.position, destinations[randomDes].position);        //de z waarde van de distance variable word elk frame geset om te kijken of de enemy uit beeld is
-
-        if(distance.z < maxDistance)                                                                 //conditie die checked of de afstand klijner is dan maximaal mag
+        if (isDead == false)
         {
 
-            Destroy(gameObject);
+            distance.z = Vector3.Distance(transform.position, destinations[randomDes].position);        //de z waarde van de distance variable word elk frame geset om te kijken of de enemy uit beeld is
+
+            if (distance.z < maxDistance)                                                                 //conditie die checked of de afstand klijner is dan maximaal mag
+            {
+
+                Destroy(gameObject);
+
+            }
 
         }
 		
 	}
+
+    public void Death ()
+    {
+
+        agent.isStopped = true;
+        GetComponent<BoxCollider>().enabled = false;
+        animator.SetTrigger("Death");
+        isDead = true;
+
+    }
 }
