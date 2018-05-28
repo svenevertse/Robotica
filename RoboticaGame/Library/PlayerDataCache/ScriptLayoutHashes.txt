@@ -230,7 +230,7 @@ b2afa82eac953650c2276744679856c5 Assembly-CSharp.dll:.DifficultyStats
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 aa9d1bd0cc771545f2ae1f63a6d0ed6a Assembly-CSharp.dll:TMPro.Examples.TMP_TextEventCheck
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
-c62160dad7aada87bf74f10f07236b98 Assembly-CSharp.dll:.MainCharacterController
+efc784a0f5adbd52df7767e3d93995ca Assembly-CSharp.dll:.MainCharacterController
 f0f0ab6b8a39d0572cfa4ea315d84fbf Assembly-CSharp.dll:TMPro.Examples.Benchmark04
 7a39db61faaedb7c5c3e5eb9340e917a Assembly-CSharp.dll:.EnemyMMSpawner
 5b9561c2af9f1e200fb76f43fb873879 Assembly-CSharp.dll:.PauseMenuActivator

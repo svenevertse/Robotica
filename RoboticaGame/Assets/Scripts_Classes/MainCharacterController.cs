@@ -30,8 +30,8 @@ public class MainCharacterController : MonoBehaviour {
     public UI_Controller uiController;
     public Animator MainCharAnim;
 
-    public ChromaticAberrationModel caModel;
-    public PostProcessingProfile pProfile;
+    private ChromaticAberrationModel caModel;
+    private PostProcessingProfile pProfile;
     
 
     void Start () {
@@ -119,13 +119,13 @@ public class MainCharacterController : MonoBehaviour {
         if (Input.GetButton("Sprint"))
         {
 
-            Boost(sprintSpeed, 3f, staminaReduceSprint, 0.4f);
+            Boost(sprintSpeed, 3f, staminaReduceSprint, 0.7f);
 
         }
         else if (Input.GetButton("Boost"))
         {
 
-            Boost(boostSpeed, 6f, staminaReduceBoost, 0.7f);
+            Boost(boostSpeed, 6f, staminaReduceBoost, 1f);
 
         }
         else
