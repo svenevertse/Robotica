@@ -22,7 +22,13 @@ public class EnemyRobot : EnemyBaseClass {
 
         agent.speed = speed;                                                            //set de snelheids waarde van de navagent
 
-        StartCoroutine(WaitForNewDestination(0));                                       //Start de coroutine die om de paar miliseconden checked waar de speler is
+        StartCoroutine(WaitForNewDestination(2f));                                       //Start de coroutine die om de paar miliseconden checked waar de speler is
+
+        GameObject particle = Instantiate(Resources.Load("SmokeEffect 1", typeof(GameObject)), transform.position, Quaternion.identity) as GameObject;
+        particle.transform.Rotate(-90f, 0, 0);
+        particle.GetComponent<ParticleSystem>().Play();
+
+        Destroy(particle, 3f);
 
     }
 	
