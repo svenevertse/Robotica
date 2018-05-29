@@ -27,7 +27,6 @@ public class MainCharacterController : MonoBehaviour {
     public GameObject gameOverMenu;
     public GameObject mesh;
 
-    public UI_Controller uiController;
     public Animator MainCharAnim;
 
     private ChromaticAberrationModel caModel;
@@ -198,14 +197,14 @@ public class MainCharacterController : MonoBehaviour {
         {
 
             stamina -= lostStamina * Time.deltaTime;
-            uiController.UpdateStaminaBar(stamina);
+            UI_Controller.ins.UpdateStaminaBar(stamina);
 
         }
         else
         {
 
             stamina -= lostStamina;
-            uiController.UpdateStaminaBar(stamina);
+            UI_Controller.ins.UpdateStaminaBar(stamina);
 
         }
 
@@ -237,7 +236,7 @@ public class MainCharacterController : MonoBehaviour {
 
             stamina += staminaGained * Time.deltaTime;
 
-            uiController.UpdateStaminaBar(stamina);
+            UI_Controller.ins.UpdateStaminaBar(stamina);
 
         }
 
@@ -247,7 +246,7 @@ public class MainCharacterController : MonoBehaviour {
     {
 
         stamina += addedStamina;
-        uiController.UpdateStaminaBar(stamina);
+        UI_Controller.ins.UpdateStaminaBar(stamina);
 
     }
 
@@ -289,7 +288,7 @@ public class MainCharacterController : MonoBehaviour {
     {
         health -= damage;
 
-        uiController.UpdateHealthBar((float)health);
+        UI_Controller.ins.UpdateHealthBar((float)health);
 
         if(health < 1)
         {

@@ -18,8 +18,6 @@ public class EnemyRobot : EnemyBaseClass {
 
         agent = GetComponent<NavMeshAgent>();
 
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-
         agent.speed = speed;                                                            //set de snelheids waarde van de navagent
 
         StartCoroutine(WaitForNewDestination(2f));                                       //Start de coroutine die om de paar miliseconden checked waar de speler is
@@ -32,7 +30,6 @@ public class EnemyRobot : EnemyBaseClass {
 
     }
 	
-
 	void Update ()         
     {
 
@@ -90,8 +87,8 @@ public class EnemyRobot : EnemyBaseClass {
         if (health < 1 && isDead == false)                                              //conditie die checked of de enemy geen health meer heeft en of de enemy niet al dood is
         {
 
-            gameManager.GetPoints(points);                                              //voert alle functies uit die uitgevoert moeten worden en set alle variablen op het moment als de enemy dood is
-            gameManager.EraseEnemy();
+            GameManager.ins.GetPoints(points);                                              //voert alle functies uit die uitgevoert moeten worden en set alle variablen op het moment als de enemy dood is
+            GameManager.ins.EraseEnemy();
             agent.enabled = false;
             animator.SetTrigger("Death");
             isDead = true;

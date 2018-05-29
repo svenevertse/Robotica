@@ -6,13 +6,7 @@ public class SetNewDifficulty : MonoBehaviour {
 
     public int difficultyFloor;
 
-    GameManager gameManager;
-    UI_Controller uiController;
-
 	void Start () {
-
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        uiController = GameObject.Find("UI_Controller").GetComponent<UI_Controller>();
 
     }
 	
@@ -26,8 +20,8 @@ public class SetNewDifficulty : MonoBehaviour {
         if(trigger.transform.tag == "Player")
         {
 
-            gameManager.enemyDifficulty = (GameManager.Difficulty)difficultyFloor;
-            uiController.UpdateDifficultyText((GameManager.Difficulty)difficultyFloor);
+            GameManager.ins.enemyDifficulty = (GameManager.Difficulty)difficultyFloor;
+            UI_Controller.ins.UpdateDifficultyText((GameManager.Difficulty)difficultyFloor);
 
         }
     }

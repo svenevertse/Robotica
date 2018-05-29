@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class FullAutoGun : MonoBehaviour {
 
     public BaseGunScript baseGun;                               //de delegate class voor de wapens
-    public UI_Controller UIController;
     public Transform muzzleFlashPos;                            //de positie waaruit de bullet particle schiet
     public MainCharacterController player;
 
@@ -32,7 +31,7 @@ public class FullAutoGun : MonoBehaviour {
 
         ammoMagazine = magazineSize;                                                //vult het magazijn aan het begin van het spel
         canFire = true;                                                             //laat toe dat het wapen kan schieten zodra het wapen geactiveerd is
-        UIController.UpdateAmmoCount(ammoMagazine);                                 
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);                                 
 
         GetDelegate();                                                              
 
@@ -104,7 +103,7 @@ public class FullAutoGun : MonoBehaviour {
 
         ammoMagazine--;
 
-        UIController.UpdateAmmoCount(ammoMagazine);
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);
 
         bullet.Play();                                              //activeert het particle systeem voor de laser
 
@@ -127,7 +126,7 @@ public class FullAutoGun : MonoBehaviour {
         if (ammoMagazine <= 5)                              //conditie die checked of er minder of evenveel ammo in het magazijn zit
         {
 
-            UIController.ShowReloadText(true);              //ativeert de reload text
+            UI_Controller.ins.ShowReloadText(true);              //ativeert de reload text
 
         }
 
@@ -140,10 +139,10 @@ public class FullAutoGun : MonoBehaviour {
     void ReloadImg ()
     {
 
-        if (UIController.reloadImg.enabled == true)                                                     
+        if (UI_Controller.ins.reloadImg.enabled == true)                                                     
         {
 
-            UIController.reloadImg.fillAmount += Mathf.Lerp(0f, 1f, reloadSpeed / 100 * 0.48f);
+            UI_Controller.ins.reloadImg.fillAmount += Mathf.Lerp(0f, 1f, reloadSpeed / 100 * 0.48f);
 
         }
 
@@ -154,18 +153,18 @@ public class FullAutoGun : MonoBehaviour {
 
         canFire = false;                                                                         //zet deze boolean uit zodat het wapen niet kan vuren als het wapen aan het herladen is
         mayReload = false;                                                                       //zet deze boolean uit zodat je het wapen niet kan herladen als het wapen al aan het herladen is
-        UIController.reloadText.GetComponent<Text>().text = "Reloading!";                       
-        UIController.ShowReloadText(true);                                                       //activeert de reload text
-        UIController.reloadImg.enabled = true;                                                  
+        UI_Controller.ins.reloadText.GetComponent<Text>().text = "Reloading!";
+        UI_Controller.ins.ShowReloadText(true);                                                       //activeert de reload text
+        UI_Controller.ins.reloadImg.enabled = true;                                                  
         
         yield return new WaitForSeconds(speed);
 
         ammoMagazine = newAmmo;                                                                  //vult het magazijn
-        UIController.UpdateAmmoCount(ammoMagazine);                                             //update het UI element van de ammo
-        UIController.reloadText.GetComponent<Text>().text = UIController.oldReloadText;         
-        UIController.ShowReloadText(false);                             
-        UIController.reloadImg.enabled = false;
-        UIController.reloadImg.fillAmount = 0f;
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);                                             //update het UI element van de ammo
+        UI_Controller.ins.reloadText.GetComponent<Text>().text = UI_Controller.ins.oldReloadText;
+        UI_Controller.ins.ShowReloadText(false);
+        UI_Controller.ins.reloadImg.enabled = false;
+        UI_Controller.ins.reloadImg.fillAmount = 0f;
         canFire = true;                                                                         //laat het wapen weer vuren 
 
     }

@@ -9,9 +9,6 @@ public class GameManager : MonoBehaviour
     public int currentPoints;
     public int currentAmountEnemies;
 
-    public UI_Controller UIController;
-    public WaveBasedSystem waveSystem;
-
     public Image img;
 
     public MainCharacterController cController;
@@ -31,6 +28,15 @@ public class GameManager : MonoBehaviour
 
     public Difficulty enemyDifficulty;
 
+    public static GameManager ins;
+
+    void Awake ()
+    {
+
+        ins = this;
+
+    }
+
     void Start()
     {
 
@@ -45,7 +51,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
 
         XmlManager.ins.Load();
-        UIController.UpdateHighscoreText(XmlManager.ins.newHighscore.highscore);
+        UI_Controller.ins.UpdateHighscoreText(XmlManager.ins.newHighscore.highscore);
 
         enemyDifficulty = Difficulty.Veteran;
 
@@ -55,7 +61,7 @@ public class GameManager : MonoBehaviour
     {
 
         currentPoints += givenPoints;
-        UIController.UpdatePoints(currentPoints);
+        UI_Controller.ins.UpdatePoints(currentPoints);
 
         if (currentPoints > XmlManager.ins.newHighscore.highscore)
         {
@@ -71,7 +77,7 @@ public class GameManager : MonoBehaviour
 
         XmlManager.ins.newHighscore.highscore = currentPoints;
         XmlManager.ins.Save();
-        UIController.UpdateHighscoreText(XmlManager.ins.newHighscore.highscore);
+        UI_Controller.ins.UpdateHighscoreText(XmlManager.ins.newHighscore.highscore);
 
     }
 
@@ -79,13 +85,13 @@ public class GameManager : MonoBehaviour
     {
 
         currentAmountEnemies--;
-        waveSystem.curInLevel--;
+        WaveBasedSystem.ins.curInLevel--;
 
         if (currentAmountEnemies < 1)
         {
 
             difficultyStats.CalulateDifficulty();
-            waveSystem.CalculateEnemyAmount(waveSystem.enemyAmount);
+            WaveBasedSystem.ins.CalculateEnemyAmount(WaveBasedSystem.ins.enemyAmount);
             
 
         }

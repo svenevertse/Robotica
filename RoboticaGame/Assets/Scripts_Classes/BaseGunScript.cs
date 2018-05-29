@@ -15,8 +15,6 @@ public class BaseGunScript : MonoBehaviour {
     public GameObject fullAutoMesh;
     public GameObject semiAutoMesh;
 
-    public UI_Controller UIController;
-
     public MainCharacterController mc;
 
 
@@ -65,8 +63,8 @@ public class BaseGunScript : MonoBehaviour {
                 fullAutoMesh.SetActive(true);
                 semiAutoMesh.SetActive(false);
 
-                UIController.UpdateWeaponText(0);
-                UIController.UpdateAmmoCount(fullAuto.ammoMagazine);
+                UI_Controller.ins.UpdateWeaponText(0);
+                UI_Controller.ins.UpdateAmmoCount(fullAuto.ammoMagazine);
 
                 mc.MainCharAnim.SetInteger("CurWeapon", 0);
                 break;
@@ -80,8 +78,8 @@ public class BaseGunScript : MonoBehaviour {
 
                 semiAuto.GetDelegate();
 
-                UIController.UpdateWeaponText(1);
-                UIController.UpdateAmmoCount(semiAuto.ammoMagazine);
+                UI_Controller.ins.UpdateWeaponText(1);
+                UI_Controller.ins.UpdateAmmoCount(semiAuto.ammoMagazine);
 
                 mc.MainCharAnim.SetInteger("CurWeapon", 1);
                 break;

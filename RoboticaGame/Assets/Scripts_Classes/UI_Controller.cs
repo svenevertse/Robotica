@@ -21,6 +21,15 @@ public class UI_Controller : MonoBehaviour {
     public string oldReloadText;
 
     public GameObject reloadText;
+
+    public static UI_Controller ins;
+
+    void Awake ()
+    {
+
+        ins = this;
+
+    }
 	
 	void Start ()
     {

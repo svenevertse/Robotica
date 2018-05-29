@@ -45,7 +45,7 @@ public class GameOverMenu : MonoBehaviour
    public  void GetCurrentScore()
     {
 
-        currentScoreText.text = "Current Score : " + GameObject.Find("GameManager").GetComponent<GameManager>().currentPoints;
+        currentScoreText.text = "Current Score : " + GameManager.ins.currentPoints;
 
     }
 }

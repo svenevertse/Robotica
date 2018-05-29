@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class SemiAutoGun : MonoBehaviour {
 
     public BaseGunScript baseGun;
-    public UI_Controller UIController;
     public Transform muzzleFlashPos;
     public MainCharacterController player;
 
@@ -34,7 +33,7 @@ public class SemiAutoGun : MonoBehaviour {
 
         ammoMagazine = magazineSize;
         canFire = true;
-        UIController.UpdateAmmoCount(ammoMagazine);
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);
 
         GetDelegate();
 
@@ -104,7 +103,7 @@ public class SemiAutoGun : MonoBehaviour {
 
         ammoMagazine--;
 
-        UIController.UpdateAmmoCount(ammoMagazine);
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);
 
         bullet.Play();
 
@@ -127,7 +126,7 @@ public class SemiAutoGun : MonoBehaviour {
         if (ammoMagazine <= 2)
         {
 
-            UIController.ShowReloadText(true);
+            UI_Controller.ins.ShowReloadText(true);
 
         }
 
@@ -142,15 +141,15 @@ public class SemiAutoGun : MonoBehaviour {
 
         canFire = false;
         mayReload = false;
-        UIController.reloadText.GetComponent<Text>().text = "Reloading!";
-        UIController.ShowReloadText(true);
+        UI_Controller.ins.reloadText.GetComponent<Text>().text = "Reloading!";
+        UI_Controller.ins.ShowReloadText(true);
 
         yield return new WaitForSeconds(speed);
 
         ammoMagazine = newAmmo;
-        UIController.UpdateAmmoCount(ammoMagazine);
-        UIController.reloadText.GetComponent<Text>().text = UIController.oldReloadText;
-        UIController.ShowReloadText(false);
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);
+        UI_Controller.ins.reloadText.GetComponent<Text>().text = UI_Controller.ins.oldReloadText;
+        UI_Controller.ins.ShowReloadText(false);
         canFire = true;
 
     }

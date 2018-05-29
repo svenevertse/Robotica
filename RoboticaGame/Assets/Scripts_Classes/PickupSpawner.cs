@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class PickupSpawner : MonoBehaviour {
 
-    public GameManager gameManager;
-
     public float spawnTime;
 
     public Transform[] spawnLocations;
 
 	void Start () {
-
-        gameManager = GetComponent<GameManager>();
 
         StartCoroutine(SpawnTimer(spawnTime));
 

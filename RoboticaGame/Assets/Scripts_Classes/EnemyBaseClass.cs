@@ -18,8 +18,6 @@ abstract public class EnemyBaseClass : MonoBehaviour {
 
     public GameObject player;
 
-    public GameManager gameManager;
-
     public DifficultyStats diffStats;
 
     public abstract void Movement();                    //abstracte functie voor de movement van de enemy

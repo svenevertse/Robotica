@@ -25,8 +25,14 @@ public class WaveBasedSystem : MonoBehaviour {
     public GameObject[] spawnPosHard;
     public GameObject[] spawnPosVeteran;
 
-    public GameManager gameManager;
-    public UI_Controller UIController;
+    public static WaveBasedSystem ins;
+
+    void Awake ()
+    {
+
+        ins = this;
+
+    }
 
 	void Start () {
 
@@ -76,21 +82,21 @@ public class WaveBasedSystem : MonoBehaviour {
         for (int i = 0; i < spawnAmount; i++)
         {
 
-            CheckDifficulty(gameManager.enemyDifficulty);
+            CheckDifficulty(GameManager.ins.enemyDifficulty);
             int r = Random.Range(0, spawnPositions.Length);
             GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
             instancedEnemy.name = "Enemy" + (i + 1);
             spacing --;
             curInLevel = i + 1;
             instancedEnemy.GetComponent<EnemyRobot>().diffStats = GameObject.Find("GameManager").GetComponent<DifficultyStats>();
-            instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(gameManager.enemyDifficulty);
+            instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(GameManager.ins.enemyDifficulty);
 
         }
 
         currentWave++;
-        UIController.UpdateWaveText(currentWave);
+        UI_Controller.ins.UpdateWaveText(currentWave);
 
-        gameManager.UpdateEnemyAmount(enemyAmount);
+        GameManager.ins.UpdateEnemyAmount(enemyAmount);
 
         
 
@@ -123,14 +129,14 @@ public class WaveBasedSystem : MonoBehaviour {
 
 
 
-            CheckDifficulty(gameManager.enemyDifficulty);
+            CheckDifficulty(GameManager.ins.enemyDifficulty);
             int r = Random.Range(0, spawnPositions.Length);
             GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
             curInLevel++;
             spacing--;
             instancedEnemy.name = "Enemy" + curInLevel;
             instancedEnemy.GetComponent<EnemyRobot>().diffStats = GameObject.Find("GameManager").GetComponent<DifficultyStats>();
-            instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(gameManager.enemyDifficulty);
+            instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(GameManager.ins.enemyDifficulty);
 
 
 
