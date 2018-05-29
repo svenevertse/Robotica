@@ -20,9 +20,7 @@ public class WaveBasedSystem : MonoBehaviour {
 
     public GameObject[] spawnPositions;
     public GameObject[] spawnPosRecruit;
-    public GameObject[] spawnPosEasy;
     public GameObject[] spawnPosMedium;
-    public GameObject[] spawnPosHard;
     public GameObject[] spawnPosVeteran;
 
     public static WaveBasedSystem ins;

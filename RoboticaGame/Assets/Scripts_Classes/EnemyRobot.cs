@@ -13,9 +13,7 @@ public class EnemyRobot : EnemyBaseClass {
 
 	void Start ()
     {
-
-        player = GameObject.FindGameObjectWithTag("Player");
-
+    
         agent = GetComponent<NavMeshAgent>();
 
         agent.speed = speed;                                                            //set de snelheids waarde van de navagent
@@ -47,8 +45,8 @@ public class EnemyRobot : EnemyBaseClass {
 
         if(isDead == false)                                                             //conditie die checked of de enemy niet dood is om er voor te zorgen dat hij deze functie niet uitvoert als hij dood is
         {
-            
-            player.GetComponent<MainCharacterController>().CheckHealth(attackDamage);       //geeft damage aan de speler en set de aanval animatie trigger
+
+            MainCharacterController.ins.CheckHealth(attackDamage);                     //geeft damage aan de speler en set de aanval animatie trigger
             animator.SetTrigger("Attack");
             
             agent.isStopped = true;                                                     //laat de navagent stoppen met bewegen om er voor de zorgen dat de enemy niet loopt en slaat tegelijk

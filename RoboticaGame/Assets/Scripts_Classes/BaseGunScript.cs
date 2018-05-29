@@ -15,12 +15,7 @@ public class BaseGunScript : MonoBehaviour {
     public GameObject fullAutoMesh;
     public GameObject semiAutoMesh;
 
-    public MainCharacterController mc;
-
-
 	void Start () {
-
-        mc = GetComponent<MainCharacterController>();   //set de variable van de MainCharacterController
 
         SwitchWeapon(0);                                //activeert de functie die het wapen selecteerd
 		
@@ -66,7 +61,7 @@ public class BaseGunScript : MonoBehaviour {
                 UI_Controller.ins.UpdateWeaponText(0);
                 UI_Controller.ins.UpdateAmmoCount(fullAuto.ammoMagazine);
 
-                mc.MainCharAnim.SetInteger("CurWeapon", 0);
+                MainCharacterController.ins.MainCharAnim.SetInteger("CurWeapon", 0);
                 break;
 
             case 1:
@@ -81,7 +76,7 @@ public class BaseGunScript : MonoBehaviour {
                 UI_Controller.ins.UpdateWeaponText(1);
                 UI_Controller.ins.UpdateAmmoCount(semiAuto.ammoMagazine);
 
-                mc.MainCharAnim.SetInteger("CurWeapon", 1);
+                MainCharacterController.ins.MainCharAnim.SetInteger("CurWeapon", 1);
                 break;
 
 

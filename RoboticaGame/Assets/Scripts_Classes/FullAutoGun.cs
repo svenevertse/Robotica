@@ -7,7 +7,6 @@ public class FullAutoGun : MonoBehaviour {
 
     public BaseGunScript baseGun;                               //de delegate class voor de wapens
     public Transform muzzleFlashPos;                            //de positie waaruit de bullet particle schiet
-    public MainCharacterController player;
 
     public ParticleSystem bullet;
 
@@ -72,7 +71,7 @@ public class FullAutoGun : MonoBehaviour {
         else
         {
 
-            player.MainCharAnim.SetBool("Shoot", false);                                
+            MainCharacterController.ins.MainCharAnim.SetBool("Shoot", false);                                
 
         }
     }
@@ -107,7 +106,7 @@ public class FullAutoGun : MonoBehaviour {
 
         bullet.Play();                                              //activeert het particle systeem voor de laser
 
-        player.MainCharAnim.SetBool("Shoot", true);
+        MainCharacterController.ins.MainCharAnim.SetBool("Shoot", true);
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(0, 0, range), out rayHit, range))
         {

@@ -7,7 +7,6 @@ public class SemiAutoGun : MonoBehaviour {
 
     public BaseGunScript baseGun;
     public Transform muzzleFlashPos;
-    public MainCharacterController player;
 
     public ParticleSystem bullet;
 
@@ -72,7 +71,7 @@ public class SemiAutoGun : MonoBehaviour {
         else
         {
 
-            player.MainCharAnim.SetBool("Shoot", false);
+            MainCharacterController.ins.MainCharAnim.SetBool("Shoot", false);
 
         }
     }
@@ -107,7 +106,7 @@ public class SemiAutoGun : MonoBehaviour {
 
         bullet.Play();
 
-        player.MainCharAnim.SetBool("Shoot", true);
+        MainCharacterController.ins.MainCharAnim.SetBool("Shoot", true);
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(0, 0, range), out rayHit, range))
         {

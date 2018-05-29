@@ -31,6 +31,15 @@ public class MainCharacterController : MonoBehaviour {
 
     private ChromaticAberrationModel caModel;
     private PostProcessingProfile pProfile;
+
+    public static MainCharacterController ins;
+
+    void Awake ()
+    {
+
+        ins = this;
+
+    }
     
 
     void Start () {

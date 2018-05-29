@@ -11,8 +11,6 @@ public class GameManager : MonoBehaviour
 
     public Image img;
 
-    public MainCharacterController cController;
-
     DifficultyStats difficultyStats;
 
     public enum Difficulty
@@ -44,16 +42,14 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(FadeImage(true));
 
-        cController.LockCursor(true);
-        cController.enabled = false;
+        MainCharacterController.ins.LockCursor(true);
+        MainCharacterController.ins.enabled = false;
         StartCoroutine(StartPlayerMovement(1.5f));
 
         Time.timeScale = 1;
 
         XmlManager.ins.Load();
         UI_Controller.ins.UpdateHighscoreText(XmlManager.ins.newHighscore.highscore);
-
-        enemyDifficulty = Difficulty.Veteran;
 
     }
 
@@ -126,7 +122,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(time);
 
-        cController.enabled = true;
+        MainCharacterController.ins.enabled = true;
 
     }
 }

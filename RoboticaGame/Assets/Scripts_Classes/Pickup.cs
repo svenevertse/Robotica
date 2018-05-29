@@ -44,22 +44,22 @@ public class Pickup : MonoBehaviour {
 
                 case Pickup.PickupType.Health:
 
-                    if(trigger.GetComponent<MainCharacterController>().health != 100)
+                    if(MainCharacterController.ins.health != 100)
                     {
 
-                        int newHealth = trigger.GetComponent<MainCharacterController>().health + addedHealth;
+                        int newHealth = MainCharacterController.ins.health + addedHealth;
                         
                         if(newHealth >= 100)
                         {
 
-                            trigger.GetComponent<MainCharacterController>().health = 100;
+                            MainCharacterController.ins.health = 100;
                             UI_Controller.ins.UpdateHealthBar((float)100);
 
                         }
                         else
                         {
 
-                            trigger.GetComponent<MainCharacterController>().CheckHealth(-addedHealth);
+                            MainCharacterController.ins.CheckHealth(-addedHealth);
 
                         }  
                     }      
@@ -67,21 +67,21 @@ public class Pickup : MonoBehaviour {
 
                 case Pickup.PickupType.Stamina:
 
-                    if(trigger.GetComponent<MainCharacterController>().stamina != 100)
+                    if(MainCharacterController.ins.stamina != 100)
                     {
 
-                        float newStamina = trigger.GetComponent<MainCharacterController>().stamina + addedStamina;
+                        float newStamina = MainCharacterController.ins.stamina + addedStamina;
 
                         if(newStamina >= 100)
                         {
 
-                            trigger.GetComponent<MainCharacterController>().stamina = 100;
+                            MainCharacterController.ins.stamina = 100;
 
                         }
                         else
                         {
 
-                            trigger.GetComponent<MainCharacterController>().StaminaPickup(addedStamina);
+                            MainCharacterController.ins.StaminaPickup(addedStamina);
 
                         }
                     }

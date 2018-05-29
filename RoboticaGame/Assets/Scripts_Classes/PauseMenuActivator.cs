@@ -7,8 +7,6 @@ public class PauseMenuActivator : MonoBehaviour {
     public GameObject pauseMenu;
     public GameObject HUD;
 
-    public MainCharacterController mc;
-
     public bool activationToggle;
 
 	void Start () {
@@ -50,7 +48,7 @@ public class PauseMenuActivator : MonoBehaviour {
 
         }
 
-        mc.LockCursor(!activate);
+        MainCharacterController.ins.LockCursor(!activate);
         HUD.SetActive(!activate);
         pauseMenu.SetActive(activate);
 
