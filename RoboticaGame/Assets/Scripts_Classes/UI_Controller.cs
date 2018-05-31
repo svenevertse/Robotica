@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class UI_Controller : MonoBehaviour {
 
-    public Slider staminaBar;
-    public Slider healthBar;
-
     public Text ammoText;
     public Text currentPointText;
     public Text waveText;
@@ -17,6 +14,8 @@ public class UI_Controller : MonoBehaviour {
     public Image hgSelected;
     public Image scarSelected;
     public Image reloadImg;
+    public Image healthFill;
+    public Image staminaFill;
 
     public string oldReloadText;
 
@@ -45,14 +44,14 @@ public class UI_Controller : MonoBehaviour {
     public void UpdateStaminaBar (float stamina)
     {
 
-        staminaBar.value = stamina / 100;
+        staminaFill.fillAmount = stamina / 100;
 
     }
 
     public void UpdateAmmoCount (int ammoAmount)
     {
 
-        ammoText.text = "Ammo : " + ammoAmount;
+        ammoText.text = "" + ammoAmount;
 
     }
 
@@ -82,7 +81,7 @@ public class UI_Controller : MonoBehaviour {
     public void UpdateHealthBar(float health)
     {
 
-        healthBar.value = health / 100;
+        healthFill.fillAmount = health / 100;
 
     }
 
