@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1;
 
+        enemyDifficulty = Difficulty.Recruit;
+
         XmlManager.ins.Load();
         UI_Controller.ins.UpdateHighscoreText(XmlManager.ins.newHighscore.highscore);
 

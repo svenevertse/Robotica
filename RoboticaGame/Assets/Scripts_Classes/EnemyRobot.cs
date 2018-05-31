@@ -28,18 +28,6 @@ public class EnemyRobot : EnemyBaseClass {
 
     }
 	
-	void Update ()         
-    {
-
-        if(player != null && isDead == false)                                           //conditie die checked of de speler in de scene is en of de enemy niet dood is
-        {
-
-            transform.LookAt(player.transform);                                         //LookAt functie om de enemy naar de speler te laten kijken
-
-        }
-
-    }
-
     public override void Attack()                                                       //functie die overgenomen is van de EnemyBaseClass class
     {
 
@@ -65,11 +53,11 @@ public class EnemyRobot : EnemyBaseClass {
     public override void Movement()                                                     //functie die overgenomen is van de EnemyBaseClass class        
     {
 
-        if(agent.enabled == true && player != null)                                     //conditie checked of de navagent aanstaat en de speler niet dood is om ervoor te zorgen dat de enemy alleen mag bewegen als dat moet
+        if(agent.enabled == true && MainCharacterController.ins != null)                                     //conditie checked of de navagent aanstaat en de speler niet dood is om ervoor te zorgen dat de enemy alleen mag bewegen als dat moet
         {
 
             agent.isStopped = false;                                                     //staat toe dat de navagent kan bewegen
-            agent.SetDestination(player.transform.position);                            //laat de enemy bewegen naar de speler
+            agent.SetDestination(MainCharacterController.ins.transform.position);                            //laat de enemy bewegen naar de speler
 
         }
 

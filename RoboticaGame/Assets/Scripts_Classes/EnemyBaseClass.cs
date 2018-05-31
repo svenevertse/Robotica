@@ -16,8 +16,6 @@ abstract public class EnemyBaseClass : MonoBehaviour {
 
     public NavMeshAgent agent;
 
-    public GameObject player;
-
     public DifficultyStats diffStats;
 
     public abstract void Movement();                    //abstracte functie voor de movement van de enemy
