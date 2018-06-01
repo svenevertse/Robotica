@@ -30,7 +30,7 @@ public class FullAutoGun : MonoBehaviour {
 
         ammoMagazine = magazineSize;                                                //vult het magazijn aan het begin van het spel
         canFire = true;                                                             //laat toe dat het wapen kan schieten zodra het wapen geactiveerd is
-        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);                                 
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine, 0);                                 
 
         GetDelegate();                                                              
 
@@ -102,7 +102,7 @@ public class FullAutoGun : MonoBehaviour {
 
         ammoMagazine--;
 
-        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine, 0);
 
         bullet.Play();                                              //activeert het particle systeem voor de laser
 
@@ -159,7 +159,7 @@ public class FullAutoGun : MonoBehaviour {
         yield return new WaitForSeconds(speed);
 
         ammoMagazine = newAmmo;                                                                  //vult het magazijn
-        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);                                             //update het UI element van de ammo
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine, 0);                                             //update het UI element van de ammo
         UI_Controller.ins.reloadText.GetComponent<Text>().text = UI_Controller.ins.oldReloadText;
         UI_Controller.ins.ShowReloadText(false);
         UI_Controller.ins.reloadImg.enabled = false;

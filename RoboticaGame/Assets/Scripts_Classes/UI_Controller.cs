@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class UI_Controller : MonoBehaviour {
 
-    public Text ammoText;
+    public Text ammoTextAR;
+    public Text ammoTextHG;
     public Text currentPointText;
     public Text waveText;
     public Text highscoreText;
@@ -48,10 +49,24 @@ public class UI_Controller : MonoBehaviour {
 
     }
 
-    public void UpdateAmmoCount (int ammoAmount)
+    public void UpdateAmmoCount (int ammoAmount, int weaponType)
     {
 
-        ammoText.text = "" + ammoAmount;
+        switch (weaponType)
+        {
+
+            case 0 :
+
+                ammoTextAR.text = "" + ammoAmount;
+                break;
+
+            case 1: 
+
+                ammoTextHG.text = "" + ammoAmount;
+                break;
+
+        }
+        
 
     }
 

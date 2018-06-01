@@ -32,7 +32,7 @@ public class SemiAutoGun : MonoBehaviour {
 
         ammoMagazine = magazineSize;
         canFire = true;
-        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine, 1);
 
         GetDelegate();
 
@@ -102,7 +102,7 @@ public class SemiAutoGun : MonoBehaviour {
 
         ammoMagazine--;
 
-        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine, 1);
 
         bullet.Play();
 
@@ -146,7 +146,7 @@ public class SemiAutoGun : MonoBehaviour {
         yield return new WaitForSeconds(speed);
 
         ammoMagazine = newAmmo;
-        UI_Controller.ins.UpdateAmmoCount(ammoMagazine);
+        UI_Controller.ins.UpdateAmmoCount(ammoMagazine, 1);
         UI_Controller.ins.reloadText.GetComponent<Text>().text = UI_Controller.ins.oldReloadText;
         UI_Controller.ins.ShowReloadText(false);
         canFire = true;
