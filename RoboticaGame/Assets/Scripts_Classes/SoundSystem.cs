@@ -7,10 +7,15 @@ public class SoundSystem : MonoBehaviour {
     public static SoundSystem ins;
 
     AudioSource audioSource;
+    AudioSource playerAudio;
+
+    Coroutine ambientRoutine;
 
     public AudioClip waveIntro;
     public AudioClip waveEnding;
     public AudioClip ambient;
+    public AudioClip fireGunSound;
+    public AudioClip getDamagePlayerSound;
 
     public enum SoundState
     {
@@ -18,6 +23,9 @@ public class SoundSystem : MonoBehaviour {
         WaveStart,
         WaveEnding,
         Ambient,
+        PlayerDamage,
+        FireGun,
+        
 
     }
 
@@ -34,6 +42,7 @@ public class SoundSystem : MonoBehaviour {
     {
 
         audioSource = GetComponent<AudioSource>();
+        playerAudio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
 
 	}
 	
@@ -54,12 +63,15 @@ public class SoundSystem : MonoBehaviour {
 
                 audioSource.clip = waveIntro;
                 audioSource.Play();
+                ambientRoutine = StartCoroutine(AmbientSound(25f));
+
                 break;
 
             case SoundState.WaveEnding:
 
                 audioSource.clip = waveEnding;
                 audioSource.Play();
+                StopCoroutine(ambientRoutine);
                 break;
 
             case SoundState.Ambient:
@@ -68,8 +80,29 @@ public class SoundSystem : MonoBehaviour {
                 audioSource.Play();
                 break;
 
+            case SoundState.PlayerDamage:
+
+                playerAudio.clip = getDamagePlayerSound;
+                playerAudio.Play();
+                break;
+
+            case SoundState.FireGun:
+
+                playerAudio.clip = fireGunSound;
+                playerAudio.Play();
+                break;
+
 
         }
+
+    }
+
+    IEnumerator AmbientSound (float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+
+        PlayAudio(SoundState.Ambient);
 
     }
 

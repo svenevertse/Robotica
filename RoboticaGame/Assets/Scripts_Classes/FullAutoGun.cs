@@ -105,6 +105,7 @@ public class FullAutoGun : MonoBehaviour {
         UI_Controller.ins.UpdateAmmoCount(ammoMagazine, 0);
 
         bullet.Play();                                              //activeert het particle systeem voor de laser
+        SoundSystem.ins.PlayAudio(SoundSystem.SoundState.FireGun);
 
         MainCharacterController.ins.MainCharAnim.SetBool("Shoot", true);
 

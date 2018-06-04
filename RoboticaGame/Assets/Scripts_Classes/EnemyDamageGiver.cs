@@ -15,6 +15,7 @@ public class EnemyDamageGiver : MonoBehaviour
 
             enemyController.mayAttack = true;           //set de boolen om het sein te geven dat de enemy damage mag geven aan de speler
             enemyController.Attack();                   //voert de aanval functie uit van de enemy        
+            SoundSystem.ins.PlayAudio(SoundSystem.SoundState.PlayerDamage);
 
 
         }
