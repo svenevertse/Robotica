@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 114840426882918534}
   - component: {fileID: 195014085174646610}
   - component: {fileID: 65280437314340476}
+  - component: {fileID: 82382534337459342}
   m_Layer: 0
   m_Name: Sci-Fi_Soldier_Spawn
   m_TagString: Enemy
@@ -1538,6 +1539,87 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &82382534337459342
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1199032312038496}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ef0bfb9321e9f6f46aae52082e336dc0,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.203
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 1.3
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.21944444
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.648
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95334584508510562
 Animator:
   serializedVersion: 3
@@ -1618,9 +1700,12 @@ MonoBehaviour:
   points: 25
   mayAttack: 0
   agent: {fileID: 0}
-  player: {fileID: 0}
-  gameManager: {fileID: 0}
   diffStats: {fileID: 0}
+  audioClips:
+  - {fileID: 8300000, guid: 53a1bc248c3fbb24290c6f6c0a415108, type: 3}
+  - {fileID: 8300000, guid: d45188a95d313834aa301793d849b12c, type: 3}
+  - {fileID: 8300000, guid: 559e8d90bdab7e248bf9bc39414d9b17, type: 3}
+  audioSource: {fileID: 82382534337459342}
   animator: {fileID: 95334584508510562}
   isDead: 0
 --- !u!137 &137312576852551604

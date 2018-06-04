@@ -18,6 +18,9 @@ abstract public class EnemyBaseClass : MonoBehaviour {
 
     public DifficultyStats diffStats;
 
+    public AudioClip[] audioClips;
+    public AudioSource audioSource;
+
     public abstract void Movement();                    //abstracte functie voor de movement van de enemy
 
     public abstract void Attack();                      //abstracte functie voor de aanval van de enmemy

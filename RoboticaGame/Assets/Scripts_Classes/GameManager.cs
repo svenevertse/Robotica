@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int currentAmountEnemies;
 
     public Image img;
+    public Text text;
 
     DifficultyStats difficultyStats;
 
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
         difficultyStats = GetComponent <DifficultyStats>();
 
         StartCoroutine(FadeImage(true));
+        StartCoroutine(FadeText(10f));
 
         MainCharacterController.ins.LockCursor(true);
         MainCharacterController.ins.enabled = false;
@@ -118,7 +120,21 @@ public class GameManager : MonoBehaviour
 
             }
         }
+
+        yield return new WaitForSeconds(2f);
+        img.color = new Color(0, 0, 0, 0);
+
     }
+
+    IEnumerator FadeText(float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+
+            text.color = new Color(1, 0, 0, 0);
+
+    }
+
 
     IEnumerator StartPlayerMovement (float time)
     {

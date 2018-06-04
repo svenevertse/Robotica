@@ -19,6 +19,7 @@ public class EnemyRobot : EnemyBaseClass {
         agent.speed = speed;                                                            //set de snelheids waarde van de navagent
 
         StartCoroutine(WaitForNewDestination(2f));                                       //Start de coroutine die om de paar miliseconden checked waar de speler is
+        StartCoroutine(WaitForNarrative(Random.Range(10f, 100f)));
 
         GameObject particle = Instantiate(Resources.Load("SmokeEffect 1", typeof(GameObject)), transform.position, Quaternion.identity) as GameObject;
         particle.transform.Rotate(-90f, 0, 0);
@@ -114,6 +115,24 @@ public class EnemyRobot : EnemyBaseClass {
                 break;
 
         }
+
+    }
+
+    void PlayNarrative ()
+    {
+
+        audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
+        audioSource.Play();
+        StartCoroutine(WaitForNarrative(Random.Range(10f, 100f)));
+
+    }
+
+    IEnumerator WaitForNarrative (float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+
+        PlayNarrative ();
 
     }
 
