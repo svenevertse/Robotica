@@ -64,6 +64,8 @@ public class WaveBasedSystem : MonoBehaviour {
 
         spacing = enemyAmount;
 
+        SoundSystem.ins.PlayAudio(SoundSystem.SoundState.WaveStart);
+
         if(enemyAmount > enemyInLevelCap)
         {
 

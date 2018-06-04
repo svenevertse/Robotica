@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour
         if (currentAmountEnemies < 1)
         {
 
+            SoundSystem.ins.PlayAudio(SoundSystem.SoundState.WaveEnding);
             difficultyStats.CalulateDifficulty();
             WaveBasedSystem.ins.CalculateEnemyAmount(WaveBasedSystem.ins.enemyAmount);
             
