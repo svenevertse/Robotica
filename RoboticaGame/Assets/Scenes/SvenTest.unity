@@ -10514,7 +10514,7 @@ Prefab:
     - target: {fileID: 114468780465415980, guid: c9446d91640ec16498cedf3b79e0e425,
         type: 2}
       propertyPath: timeTillWave
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114605678434652574, guid: c9446d91640ec16498cedf3b79e0e425,
         type: 2}
@@ -61581,8 +61581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59fdf31e69bd9046a16d7e71198ef36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveIntro: {fileID: 8300000, guid: 193e4cd1fe023854d9350223005b0bfe, type: 3}
-  waveEnding: {fileID: 8300000, guid: 4a2fcdb69c6f9764b8f848332c3ca89d, type: 3}
+  waveIntro: {fileID: 8300000, guid: ef297fa3f4cff7c4a915e495d32a658b, type: 3}
+  waveEnding: {fileID: 8300000, guid: 887dcd285989a5f4bbd911a08c6b79f6, type: 3}
   ambient: {fileID: 0}
   soundState: 0
 --- !u!4 &1497205729

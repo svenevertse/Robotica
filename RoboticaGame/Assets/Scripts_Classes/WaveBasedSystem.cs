@@ -34,7 +34,7 @@ public class WaveBasedSystem : MonoBehaviour {
 
 	void Start () {
 
-        StartCoroutine(StartWave(timeTillWave));
+        StartCoroutine(StartWave(5));
 
         StartCoroutine(SpawnNewInWave(timeTillNewEnemySpawn));
 		
