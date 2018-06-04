@@ -16,6 +16,8 @@ public class SoundSystem : MonoBehaviour {
     public AudioClip ambient;
     public AudioClip fireGunSound;
     public AudioClip getDamagePlayerSound;
+    public AudioClip reloadAr, reloadHG;
+    public AudioClip EEsong;
 
     public enum SoundState
     {
@@ -25,6 +27,9 @@ public class SoundSystem : MonoBehaviour {
         Ambient,
         PlayerDamage,
         FireGun,
+        ReloadAR,
+        ReloadHG,
+        EESong,
         
 
     }
@@ -89,6 +94,24 @@ public class SoundSystem : MonoBehaviour {
             case SoundState.FireGun:
 
                 playerAudio.clip = fireGunSound;
+                playerAudio.Play();
+                break;
+
+            case SoundState.ReloadAR:
+
+                playerAudio.clip = reloadAr;
+                playerAudio.Play();
+                break;
+
+            case SoundState.ReloadHG:
+
+                playerAudio.clip = reloadHG;
+                playerAudio.Play();
+                break;
+
+            case SoundState.EESong:
+
+                playerAudio.clip = EEsong;
                 playerAudio.Play();
                 break;
 

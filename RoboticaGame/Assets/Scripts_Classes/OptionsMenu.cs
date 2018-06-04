@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class OptionsMenu : MonoBehaviour {
 
     public AudioMixer masterAudio;
+    public AudioMixer musicAudio;
 
     public Dropdown resDropdown;
     public Dropdown graphDropDown;

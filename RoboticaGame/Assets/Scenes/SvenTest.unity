@@ -61674,6 +61674,9 @@ MonoBehaviour:
   fireGunSound: {fileID: 8300000, guid: f645f3fbbdabe424f8a725cf0f3a389b, type: 3}
   getDamagePlayerSound: {fileID: 8300000, guid: 3d0331ce960192b4da9ac782041ef815,
     type: 3}
+  reloadAr: {fileID: 8300000, guid: 18680e62c520b7d4f9a7d67fe875a912, type: 3}
+  reloadHG: {fileID: 8300000, guid: c7cf9bff20989524db947aca4b94a727, type: 3}
+  EEsong: {fileID: 0}
   soundState: 0
 --- !u!4 &1497205729
 Transform:
@@ -77500,6 +77503,12 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114108682593716998, guid: e76aec7e8ffacc447a37b7896c1db5c7,
+        type: 2}
+      propertyPath: musicAudio
+      value: 
+      objectReference: {fileID: 24100000, guid: 2cb22d1f4c34cf04fbf6ede1e3d255a5,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e76aec7e8ffacc447a37b7896c1db5c7, type: 2}
   m_IsPrefabParent: 0

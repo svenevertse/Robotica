@@ -105,6 +105,7 @@ public class SemiAutoGun : MonoBehaviour {
         UI_Controller.ins.UpdateAmmoCount(ammoMagazine, 1);
 
         bullet.Play();
+        SoundSystem.ins.PlayAudio(SoundSystem.SoundState.FireGun);
 
         MainCharacterController.ins.MainCharAnim.SetBool("Shoot", true);
 
@@ -140,6 +141,7 @@ public class SemiAutoGun : MonoBehaviour {
 
         canFire = false;
         mayReload = false;
+        SoundSystem.ins.PlayAudio(SoundSystem.SoundState.ReloadHG);
         UI_Controller.ins.reloadText.GetComponent<Text>().text = "Reloading!";
         UI_Controller.ins.ShowReloadText(true);
 

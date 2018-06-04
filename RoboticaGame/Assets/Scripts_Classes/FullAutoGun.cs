@@ -153,6 +153,7 @@ public class FullAutoGun : MonoBehaviour {
 
         canFire = false;                                                                         //zet deze boolean uit zodat het wapen niet kan vuren als het wapen aan het herladen is
         mayReload = false;                                                                       //zet deze boolean uit zodat je het wapen niet kan herladen als het wapen al aan het herladen is
+        SoundSystem.ins.PlayAudio(SoundSystem.SoundState.ReloadAR);
         UI_Controller.ins.reloadText.GetComponent<Text>().text = "Reloading!";
         UI_Controller.ins.ShowReloadText(true);                                                       //activeert de reload text
         UI_Controller.ins.reloadImg.enabled = true;                                                  
