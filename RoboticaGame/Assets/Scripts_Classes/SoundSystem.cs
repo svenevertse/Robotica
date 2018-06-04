@@ -9,6 +9,8 @@ public class SoundSystem : MonoBehaviour {
     AudioSource audioSource;
     AudioSource playerAudio;
 
+    public AudioSource easterEgg;
+
     Coroutine ambientRoutine;
 
     public AudioClip waveIntro;
@@ -17,6 +19,7 @@ public class SoundSystem : MonoBehaviour {
     public AudioClip fireGunSound;
     public AudioClip getDamagePlayerSound;
     public AudioClip reloadAr, reloadHG;
+    public AudioClip startGame;
     public AudioClip EEsong;
 
     public enum SoundState
@@ -30,7 +33,7 @@ public class SoundSystem : MonoBehaviour {
         ReloadAR,
         ReloadHG,
         EESong,
-        
+        StartGame,
 
     }
 
@@ -48,8 +51,9 @@ public class SoundSystem : MonoBehaviour {
 
         audioSource = GetComponent<AudioSource>();
         playerAudio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+        PlayAudio(SoundState.StartGame);
 
-	}
+    }
 	
 	void Update ()
     {
@@ -111,8 +115,15 @@ public class SoundSystem : MonoBehaviour {
 
             case SoundState.EESong:
 
-                playerAudio.clip = EEsong;
-                playerAudio.Play();
+                easterEgg.clip = EEsong;
+                easterEgg.Play();
+                audioSource.enabled = false;
+                break;
+
+            case SoundState.StartGame:
+
+                audioSource.clip = startGame;
+                audioSource.Play();
                 break;
 
 

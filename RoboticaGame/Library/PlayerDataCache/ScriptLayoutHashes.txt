@@ -19,8 +19,9 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 63f540f40c8e381a48dd2b0719ea9919 Assembly-CSharp.dll:.EnemyMainMenu
-838e7c34e894c1a3c8bdd33217f503ba Assembly-CSharp.dll:.OptionsMenu
+5c03646ee597850f6b2558a5ac3dacbc Assembly-CSharp.dll:.OptionsMenu
 703bea579b03dacf14f47b7b445b0d2c Assembly-CSharp.dll:.CharacterViewer
+b6d87f8bd5e622f24e84e754555f47d6 Assembly-CSharp.dll:.SoundSystem
 7a0a17a9e1977dd3c0827b56dc75bbab Assembly-CSharp.dll:.CharacterPanel
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -263,3 +264,4 @@ af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExam
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MouseClickerMM
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EasterEggSong
