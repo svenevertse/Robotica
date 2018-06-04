@@ -140,5 +140,14 @@ public class SoundSystem : MonoBehaviour {
 
     }
 
-    
+    IEnumerator EndEESong ()
+    {
+
+        yield return new WaitForSeconds(easterEgg.clip.length);
+
+        easterEgg.enabled = false;
+        audioSource.enabled = true;
+
+    }
+
 }
