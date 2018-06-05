@@ -36,8 +36,6 @@ public class WaveBasedSystem : MonoBehaviour {
     {
 
         StartCoroutine(StartWave(5));
-
-        StartCoroutine(SpawnNewInWave(timeTillNewEnemySpawn));
 		
 	}
 	
@@ -62,46 +60,16 @@ public class WaveBasedSystem : MonoBehaviour {
     public void StartWaveSpawning ()
     {
 
-        int spawnAmount;
-
         spacing = enemyAmount;
 
         SoundSystem.ins.PlayAudio(SoundSystem.SoundState.WaveStart);
 
-        if(enemyAmount > enemyInLevelCap)
-        {
-
-            spawnAmount = enemyInLevelCap;
-
-        }
-        else
-        {
-
-            spawnAmount = enemyAmount;
-
-        }
-
-        for (int i = 0; i < spawnAmount; i++)
-        {
-
-            CheckDifficulty(GameManager.ins.enemyDifficulty);
-            int r = Random.Range(0, spawnPositions.Length);
-            GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
-            instancedEnemy.name = "Enemy" + (i + 1);
-            spacing --;
-            curInLevel = i + 1;
-            instancedEnemy.GetComponent<EnemyRobot>().diffStats = GameObject.Find("GameManager").GetComponent<DifficultyStats>();
-            instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(GameManager.ins.enemyDifficulty);
-
-        }
+        StartCoroutine(SpawnNewInWave(timeTillNewEnemySpawn));
 
         currentWave++;
         UI_Controller.ins.UpdateWaveText(currentWave);
 
         GameManager.ins.UpdateEnemyAmount(enemyAmount);
-
-        
-
 
     }
 
