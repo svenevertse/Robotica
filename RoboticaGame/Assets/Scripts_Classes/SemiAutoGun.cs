@@ -18,8 +18,6 @@ public class SemiAutoGun : MonoBehaviour {
     public float reloadSpeed;
     public float range;
 
-    public string weaponName;
-
     public GameObject hitMarker;
 
     bool canFire;
@@ -43,6 +41,8 @@ public class SemiAutoGun : MonoBehaviour {
 
         baseGun.fireGun(ammoMagazine, fireRateVar * Time.deltaTime);
         baseGun.reload(magazineSize, reloadSpeed);
+
+        ReloadImg();
 
     }
 
@@ -136,6 +136,18 @@ public class SemiAutoGun : MonoBehaviour {
 
     }
 
+    void ReloadImg()
+    {
+
+        if (UI_Controller.ins.reloadImg.enabled == true)
+        {
+
+            UI_Controller.ins.reloadImg.fillAmount += Mathf.Lerp(0f, 1f, reloadSpeed / 100 * 0.48f);
+
+        }
+
+    }
+
     IEnumerator ReloadTimer (float speed, int newAmmo)
     {
 
@@ -144,6 +156,7 @@ public class SemiAutoGun : MonoBehaviour {
         SoundSystem.ins.PlayAudio(SoundSystem.SoundState.ReloadHG);
         UI_Controller.ins.reloadText.GetComponent<Text>().text = "Reloading!";
         UI_Controller.ins.ShowReloadText(true);
+        UI_Controller.ins.reloadImg.enabled = true;
 
         yield return new WaitForSeconds(speed);
 
@@ -151,6 +164,8 @@ public class SemiAutoGun : MonoBehaviour {
         UI_Controller.ins.UpdateAmmoCount(ammoMagazine, 1);
         UI_Controller.ins.reloadText.GetComponent<Text>().text = UI_Controller.ins.oldReloadText;
         UI_Controller.ins.ShowReloadText(false);
+        UI_Controller.ins.reloadImg.enabled = false;
+        UI_Controller.ins.reloadImg.fillAmount = 0f;
         canFire = true;
 
     }
