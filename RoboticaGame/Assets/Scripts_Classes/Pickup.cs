@@ -23,13 +23,10 @@ public class Pickup : MonoBehaviour {
 
     public PickupType pType;
 
-	void Start () {
+	void Start ()
+    {
 
         CheckType(pType);
-		
-	}
-	
-	void Update () {
 		
 	}
 
@@ -44,16 +41,16 @@ public class Pickup : MonoBehaviour {
 
                 case Pickup.PickupType.Health:
 
-                    if(MainCharacterController.ins.health != 100)
+                    if(MainCharacterController.ins.health != MainCharacterController.ins.maxHealth)
                     {
 
                         int newHealth = MainCharacterController.ins.health + addedHealth;
                         
-                        if(newHealth >= 100)
+                        if(newHealth >= MainCharacterController.ins.maxHealth)
                         {
 
-                            MainCharacterController.ins.health = 100;
-                            UI_Controller.ins.UpdateHealthBar((float)100);
+                            MainCharacterController.ins.health = MainCharacterController.ins.maxHealth;
+                            UI_Controller.ins.UpdateHealthBar((float)MainCharacterController.ins.maxHealth);
 
                         }
                         else
@@ -67,15 +64,15 @@ public class Pickup : MonoBehaviour {
 
                 case Pickup.PickupType.Stamina:
 
-                    if(MainCharacterController.ins.stamina != 100)
+                    if(MainCharacterController.ins.stamina != MainCharacterController.ins.maxStamina)
                     {
 
                         float newStamina = MainCharacterController.ins.stamina + addedStamina;
 
-                        if(newStamina >= 100)
+                        if(newStamina >= MainCharacterController.ins.maxStamina)
                         {
 
-                            MainCharacterController.ins.stamina = 100;
+                            MainCharacterController.ins.stamina = MainCharacterController.ins.maxStamina;
 
                         }
                         else

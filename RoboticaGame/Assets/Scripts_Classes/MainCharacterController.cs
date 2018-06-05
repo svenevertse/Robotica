@@ -5,23 +5,25 @@ using UnityEngine.PostProcessing;
 
 public class MainCharacterController : MonoBehaviour {
 
-    public float speed = 5f;
-    public float sprintSpeed = 18f;
-    public float boostSpeed = 30f;
-    public float jumpSpeed = 10f;
-    public float rayDis = 1f;
+    public float speed;
+    public float sprintSpeed;
+    public float boostSpeed;
+    public float jumpSpeed;
+    public float rayDis;
     public float rayDisJump;
-    public float hCamSpeed = 20f;
-    public float vCamSpeed = 20f;
+    public float hCamSpeed;
+    public float vCamSpeed;
+    public float stamina;
+    public float maxStamina;
+    public float staminaRegain;
+    public float staminaReduceSprint, staminaReduceJump, staminaReduceBoost;
 
     float oldSpeed;
 
     bool mayGiveBackStamina;
 
-    public int health = 100;
-    public float stamina = 100f;
-    public float staminaRegain;
-    public float staminaReduceSprint, staminaReduceJump, staminaReduceBoost;
+    public int health;
+    public int maxHealth;
 
     public GameObject mainCam;
     public GameObject gameOverMenu;
@@ -45,12 +47,12 @@ public class MainCharacterController : MonoBehaviour {
     void Start () {
 
         oldSpeed = speed;
+        health = maxHealth;
 
         var behaviour = mainCam.GetComponent<PostProcessingBehaviour>();
         pProfile = behaviour.profile;
 
         caModel = pProfile.chromaticAberration;
-
 
     }
 	
@@ -174,15 +176,14 @@ public class MainCharacterController : MonoBehaviour {
     {
 
 
-        if (stamina >= 0.1f)
-           {
+        if (stamina > 0.1f)
+        {
 
             ChangeCA(caAmount);
             
             speed = newSpeed;
-             ReduceStamina(reduceStamina, false);
-             MainCharAnim.SetFloat("SprintSpeedMulti", animSpeed);
-
+            ReduceStamina(reduceStamina, false);
+            MainCharAnim.SetFloat("SprintSpeedMulti", animSpeed);
 
         }
 

@@ -32,7 +32,8 @@ public class WaveBasedSystem : MonoBehaviour {
 
     }
 
-	void Start () {
+	void Start ()
+    {
 
         StartCoroutine(StartWave(5));
 
@@ -41,7 +42,8 @@ public class WaveBasedSystem : MonoBehaviour {
 	}
 	
 
-	void Update () {
+	void Update ()
+    {
 
         CalculateNewEnemies();
 		
@@ -127,8 +129,6 @@ public class WaveBasedSystem : MonoBehaviour {
         if (spacing >= 1 && curInLevel < enemyInLevelCap)
         {
 
-
-
             CheckDifficulty(GameManager.ins.enemyDifficulty);
             int r = Random.Range(0, spawnPositions.Length);
             GameObject instancedEnemy = Instantiate(Resources.Load(pathEnemyPrefab, typeof(GameObject)), spawnPositions[r].transform.position, Quaternion.identity) as GameObject;
@@ -138,9 +138,8 @@ public class WaveBasedSystem : MonoBehaviour {
             instancedEnemy.GetComponent<EnemyRobot>().diffStats = GameObject.Find("GameManager").GetComponent<DifficultyStats>();
             instancedEnemy.GetComponent<EnemyRobot>().CheckDifficulty(GameManager.ins.enemyDifficulty);
 
-
-
             StartCoroutine(SpawnNewInWave(timeTillNewEnemySpawn));
+
         }
 
         StartCoroutine(SpawnNewInWave(timeTillNewEnemySpawn));
@@ -168,7 +167,6 @@ public class WaveBasedSystem : MonoBehaviour {
                 spawnPositions = spawnPosVeteran;
                 break;
 
-
         }
 
     }
@@ -181,7 +179,6 @@ public class WaveBasedSystem : MonoBehaviour {
 
         StartWaveSpawning();
 
-
     }
 
     public IEnumerator SpawnNewInWave (float waitTime)
@@ -190,7 +187,6 @@ public class WaveBasedSystem : MonoBehaviour {
         yield return new WaitForSeconds(waitTime);
 
         SpawnNewEnemiesInWave();
-
 
     }
 }
