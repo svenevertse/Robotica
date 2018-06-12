@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class die de meeste belangrijke gegevens van het spel bijhoud en managed.
+/// Deze class houd bij hoeveel enemies er in de wave zijn, de score van de speler, de highscore van de speler en de moeilijkheidgraad van het spel
+/// Ook update deze class de Highscore.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
 
     public int currentPoints;
     public int currentAmountEnemies;
 
-    public Image img;
-    public Text text;
+    public Image img;                                                       //zwarte afbeelding die langzaam verdwijnt aan het begin van het spel
+    public Text text;                                                       //text met instructies voor de speler
 
     DifficultyStats difficultyStats;
 
-    public enum Difficulty
+    public enum Difficulty                                                  //enum voor de moeilijkheidsgraad van het spel
     {
 
         Recruit = 0,
@@ -36,6 +41,10 @@ public class GameManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// De start functie die alles in het spel initialiseerd. 
+    /// Ook laad hij de Highscore tijdens deze start functie en laat deze functie de speler pas bewegen op het moment dat de coroutine afgelopen is.
+    /// </summary>
     void Start()
     {
 
@@ -57,6 +66,10 @@ public class GameManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Functie die de punten opslaat en bijhoud die de speler verdient.
+    /// Ook checked deze functie of de Highscore verbroken is.
+    /// </summary>
     public void GetPoints(int givenPoints)
     {
 
@@ -72,6 +85,9 @@ public class GameManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Functie die de highscore update en opslaat in het XML bestand
+    /// </summary>
     public void UpdateHighscore()
     {
 
@@ -81,6 +97,10 @@ public class GameManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Functie die telkens als er een enemy uitgeschakeld word update en checked hoeveel enemies er nog beschikbaar zijn voor deze wave.
+    /// Ook checked deze functie of er geen enemies meer zijn voor deze wave en activeerd dan de nieuwe wave.
+    /// </summary>
     public void EraseEnemy()
     {
 
@@ -99,6 +119,9 @@ public class GameManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Functie die tijdens de start van een nieuwe wave enemies aangeeft hoeveel enemies er deze wave zijn
+    /// </summary>
     public void UpdateEnemyAmount(int enemyAmount)
     {
 
@@ -106,13 +129,17 @@ public class GameManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Coroutine die ervoor zorgt dat je een Image Fade effect krijgt. 
+    /// Daarmee bedoel ik dat : Op het moment dat het spel start heb je een zwart scherm wat langzaam verdwijnt.
+    /// </summary>
     IEnumerator FadeImage(bool fadeAway)
     {
 
         if (fadeAway == true)
         {
 
-            for (float i = 1; i >= 0; i -= Time.deltaTime)
+            for (float i = 1; i >= 0; i -= Time.deltaTime)                                          //for loop dat er voor zorgt dat je het effect krijgt dat het zwarte scherm ook langzaam verdwijnt.
             {
 
                 img.color = new Color(0, 0, 0, i);
@@ -122,10 +149,13 @@ public class GameManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2f);
-        img.color = new Color(0, 0, 0, 0);
+        img.color = new Color(0, 0, 0, 0);                                                          //zorgt ervoor dat het zwarte scherm ook helemaal weg is aan het eind van deze coroutine
 
     }
 
+    /// <summary>
+    /// Coroutine die ervoor zorgt dat de text met instructies na verloop van tijd verdwijnt.
+    /// </summary>
     IEnumerator FadeText(float waitTime)
     {
 
@@ -135,7 +165,10 @@ public class GameManager : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// Coroutine die ervoor zorgt dat de speler pas kan bewegen na een paar seconden.
+    /// Hier is voor gekozen zodat tijdens dat het zwarte scherm uitfade de speler niet kan lopen en het level goed kan laden.
+    /// </summary>
     IEnumerator StartPlayerMovement (float time)
     {
 

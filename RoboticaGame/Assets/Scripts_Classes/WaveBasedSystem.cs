@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WaveBasedSystem : MonoBehaviour {
 
-    public int enemyAmount;
-    public int enemyInLevelCap;
-    public int curInLevel;
-    public int spacing;
-    public int newEnemyAmount;
+    public int enemyAmount;                                                                     //Het aantal dat er over de gehele wave beschikbaar is
+    public int enemyInLevelCap;                                                                 //Het maximale aantal dat op dat moment in het level mag zijn
+    public int curInLevel;                                                                      //Het aantal dat op dat moment in het level zit
+    public int spacing;                                                                         //Het aantal enemies dat nog niet in het level zit omdat het maximale aantal al in het level zit
+    public int newEnemyAmount;                                                                  
 
     int currentWave;
 

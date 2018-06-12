@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class die de delegate functies van de wapens controleert 
+/// Ook controleerd deze functie het wapen switchen
+/// </summary>
 public class BaseGunScript : MonoBehaviour {
 
     public delegate void FireGun(int ammoMagazine, float fireRate); //Delegate functies voor het vuren en herladen van de wapens
@@ -9,18 +13,24 @@ public class BaseGunScript : MonoBehaviour {
     public FireGun fireGun;
     public Reload reload;
 
-    public FullAutoGun fullAuto; 
-    public SemiAutoGun semiAuto;
+    public AssaultRifle fullAuto;                       
+    public HandGun semiAuto;
+
+    public GunParentClass currentSelectedGun;                       //variable die bijhoud welk wapen op het moment geselecteerd is.
 
     public GameObject fullAutoMesh;
     public GameObject semiAutoMesh;
 
+    /// <summary>
+    /// Start functie die aangeeft welk wapen er aan het begin geselecteerd moet zijn
+    /// Ook update deze functie de HUD elementen voor het aantal ammo wat deze wapens op het moment in hun magazijn hebben zitten
+    /// </summary>
 	void Start () {
 
         SwitchWeapon(0);                                //activeert de functie die het wapen selecteerd
 
-        UI_Controller.ins.UpdateAmmoCount(semiAuto.ammoMagazine, 1);
-        UI_Controller.ins.UpdateAmmoCount(fullAuto.ammoMagazine, 0);
+        UI_Controller.ins.UpdateAmmoCount(semiAuto.ammoMagazine, fullAuto);
+        UI_Controller.ins.UpdateAmmoCount(fullAuto.ammoMagazine, semiAuto);
         
 
     }
@@ -32,22 +42,28 @@ public class BaseGunScript : MonoBehaviour {
 		
 	}
 
-    void CheckScrollInput()                             //functie die checked of je het scrollwheel gebruikt
+    /// <summary>
+    /// Functie die checked of je het scrollwheel gebruikt en gebaseerd op welke kant je dat beweegt word de functie aangeroepen die het wapen wisselt
+    /// </summary>
+    void CheckScrollInput()                             
     {
 
-        if(Input.GetAxis("Mouse ScrollWheel") > 0 && Time.timeScale == 1)   //conditie die checked of er naar boven gescrolled word
+        if(Input.GetAxis("Mouse ScrollWheel") > 0 && Time.timeScale == 1)   
         {
             SwitchWeapon(0);                            
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0 && Time.timeScale == 1)  //conditie die checked of er naar beneden gescrolled word
+        if (Input.GetAxis("Mouse ScrollWheel") < 0 && Time.timeScale == 1)  
         {
             SwitchWeapon(1);
         }
 
     }
 
-    void SwitchWeapon (int currentWeapon)               //functie die de wapens switched en al de benodigde variablen set
+    /// <summary>
+    /// Functie die de wapens switched, De meshes aan en uit zet, De classes van de wapens aan en uit zet en de Animatie aanpast.
+    /// </summary>
+    void SwitchWeapon (int currentWeapon)              
     {
 
         switch (currentWeapon)
@@ -57,12 +73,12 @@ public class BaseGunScript : MonoBehaviour {
                 fullAuto.enabled = true;
                 semiAuto.enabled = false;
 
-                fullAuto.GetDelegate();
-
                 fullAutoMesh.SetActive(true);
                 semiAutoMesh.SetActive(false);
 
-                UI_Controller.ins.UpdateWeaponText(0);
+                currentSelectedGun = fullAuto;
+
+                UI_Controller.ins.UpdateWeaponText(0);                                              //Update het wapen icoontje in de HUD
 
                 MainCharacterController.ins.MainCharAnim.SetInteger("CurWeapon", 0);
                 break;
@@ -74,14 +90,16 @@ public class BaseGunScript : MonoBehaviour {
                 fullAutoMesh.SetActive(false);
                 semiAutoMesh.SetActive(true);
 
-                semiAuto.GetDelegate();
+                currentSelectedGun = semiAuto;
 
                 UI_Controller.ins.UpdateWeaponText(1);
 
                 MainCharacterController.ins.MainCharAnim.SetInteger("CurWeapon", 1);
                 break;
 
-
         }
+
+        currentSelectedGun.GetDelegate();                                                       //Voert de delegate functie voor het geselecteerde uit zodat de functies alleen beschikbaar zijn voor                                                                  
+                                                                                                //het geselecteerde wapen
     }
 }

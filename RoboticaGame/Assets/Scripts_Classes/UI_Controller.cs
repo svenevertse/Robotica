@@ -49,18 +49,20 @@ public class UI_Controller : MonoBehaviour {
 
     }
 
-    public void UpdateAmmoCount (int ammoAmount, int weaponType)
+    public void UpdateAmmoCount (int ammoAmount, GunParentClass weaponType)
     {
 
-        switch (weaponType)
+        print(weaponType.weaponName);
+
+        switch (weaponType.weaponName)
         {
 
-            case 0 :
+            case "AssaultRifle" :
 
                 ammoTextAR.text = "" + ammoAmount;
                 break;
 
-            case 1: 
+            case "HandGun" : 
 
                 ammoTextHG.text = "" + ammoAmount;
                 break;

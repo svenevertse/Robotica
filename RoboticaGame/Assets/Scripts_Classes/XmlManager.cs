@@ -5,6 +5,9 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
 
+/// <summary>
+/// Manager die de highscore opslaat en laad.
+/// </summary>
 public class XmlManager : MonoBehaviour {
 
     public static XmlManager ins;
@@ -18,6 +21,10 @@ public class XmlManager : MonoBehaviour {
 
     public Highscore newHighscore;
 
+    /// <summary>
+    /// Functie dat de Highscore naar het XML bestand streamt. Word elke keer uitgevoerd wanneer de speler een nieuwe Highscore behaalt.
+    /// Er is gekozen voor de persistent data pad zodat de speler moeilijker bij het bestand kan komen om eventueel vals te spelen 
+    /// </summary>
     public void Save ()
     {
 
@@ -28,6 +35,9 @@ public class XmlManager : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// Functie die de highscore laad en deserialized van het XML bestand.
+    /// </summary>
     public void Load ()
     {
 
@@ -41,6 +51,9 @@ public class XmlManager : MonoBehaviour {
 }
 
 
+/// <summary>
+/// class met de Highscore variable die opgeslagen word
+/// </summary>
 [System.Serializable]
 public class Highscore
 {

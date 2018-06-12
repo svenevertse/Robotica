@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class die ervoor zorgt dat de speler deze kan oppakken om zijn statistieken te verbeteren.
+/// Hier word het type van de pickup aangegeven en de statistieken toegevoegd bij de speler.
+/// </summary>
 public class Pickup : MonoBehaviour {
 
     public int addedHealth;
 
     public float addedStamina;
 
-    public Material[] materials;
-    public MeshFilter[] meshes;
+    public Material[] materials;                                                //array voor de materials die de pickups hebben
+    public MeshFilter[] meshes;                                                 //array voor de meshes die de pickups bevatten
 
     public Transform spawnedLoc;
 
-    public enum PickupType
+    public enum PickupType                                                      //enum voor het type pickup
     {
 
         Health = 0,
@@ -23,6 +27,9 @@ public class Pickup : MonoBehaviour {
 
     public PickupType pType;
 
+    /// <summary>
+    /// Checked op het moment dat de pickup gespawned is welk type het is.
+    /// </summary>
 	void Start ()
     {
 
@@ -30,6 +37,11 @@ public class Pickup : MonoBehaviour {
 		
 	}
 
+    /// <summary>
+    /// OnTriggerEnter functie die een bepaalde statistiek toevoegd aan de speler zijn statistieken.
+    /// Deze fucntie checked of de pickup collide met de speler.
+    /// Deze functie bevat een switch statement. Deze statement checked welk type het is en voert dan uit wat dat type uit zou moeten voeren.
+    /// </summary>
     void OnTriggerEnter (Collider trigger)
     {
 
@@ -41,16 +53,16 @@ public class Pickup : MonoBehaviour {
 
                 case Pickup.PickupType.Health:
 
-                    if(MainCharacterController.ins.health != MainCharacterController.ins.maxHealth)
+                    if(MainCharacterController.ins.health != MainCharacterController.ins.maxHealth)                        //conditie die checked of de speler al niet het maximale aantal heeft
                     {
-
-                        int newHealth = MainCharacterController.ins.health + addedHealth;
+                           
+                        int newHealth = MainCharacterController.ins.health + addedHealth;                                   //Variable voor het nieuwe aantal statistiek wat de speler krijgt
                         
-                        if(newHealth >= MainCharacterController.ins.maxHealth)
+                        if(newHealth >= MainCharacterController.ins.maxHealth)                                              //conditie die checked of het toegevoegde aantal groter is dan het maximale aantal
                         {
 
                             MainCharacterController.ins.health = MainCharacterController.ins.maxHealth;
-                            UI_Controller.ins.UpdateHealthBar((float)MainCharacterController.ins.maxHealth);
+                            UI_Controller.ins.UpdateHealthBar((float)MainCharacterController.ins.maxHealth);            
 
                         }
                         else
@@ -86,14 +98,18 @@ public class Pickup : MonoBehaviour {
 
             }
 
-            spawnedLoc.GetComponent<PickupChecker>().gotPickup = false;
-
-            Destroy(gameObject);
+            spawnedLoc.GetComponent<PickupChecker>().gotPickup = false;                                                         //geeft aan op de spawn locatie van de pickup dat deze al een pickup                                                                                                                                
+                                                                                                                                //bevat zodat er geen pickups in elkaar kunnen spawnen
+            Destroy(gameObject);                                                                                                
 
         }
 
     }
 
+    /// <summary>
+    /// Functie die checked welk type de pickup is
+    /// Het visuele aspect van de pickup word aangepast gebaseerd op welk type de pickup is.
+    /// </summary>
     void CheckType (PickupType pType)
     {
 
